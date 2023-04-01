@@ -26,6 +26,13 @@
 | Move Caret to matching brace         | Strg + Shift + M            |                            |
 | *Show Emojis                         | AltGr + E                   |                            |
 | *Hide Project Sidebar                | Alt + 1                     |                            |
-| rename file                          | Shift + F6                  |                            |
-| comment line                         | Strg + # / Strg + Shift + 7 |                            |
-| comment multiple lines               | Strg + Shift + #            |                            |             
+| Rename file                          | Shift + F6                  |                            |
+| Comment line                         | Strg + # / Strg + Shift + 7 |                            |
+| Comment multiple lines               | Strg + Shift + #            |                            | 
+| *Close other tabs                    | Strg + Shift + 2            |                            |
+| *Close tabs to the left              | Strg + Shift + 1            |                            |
+| *Close tabs to the right             | Strg + Shift + 3            |                            |
+| *Reopen closed tab                   | Strg + Shift + Alt + Q      |                            |
+| *Close tab                           | Alt + W                     |                            |
+| Move function, method, section ...   | Strg + Shift + up/down      |                            |
+
