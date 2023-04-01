@@ -16,10 +16,10 @@
 <body>
 <h1>Aufgabe 1</h1>
 <?php
+
 // 1. Erstelle ein Array mit folgender Zahlenfolge
 // 0 1 1 2 3 5 8 13 21 ....
 // es soll keine Zahl vorkommen die > 1000 ist
-
 
 $i = 1;
 $fib[] = 0;

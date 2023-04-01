@@ -23,8 +23,8 @@ $employeeSalesVolumes = [
   [['Harrison', 'Smith', 'Umsatz' => 33333], ['Cathrin', 'Laghrey', 'Umsatz' => 23232]]
 ];
 
-// Aufgabe: Gib vorname, nachname und Umsatz pro Mitarbeiter aus
-//  Gib den Gesamtumsatz aus
+// Gib Vorname, Nachname und Umsatz pro Mitarbeiter aus.
+// Gib den Gesamtumsatz aus.
 /**
  * @param array $group
  * @return void

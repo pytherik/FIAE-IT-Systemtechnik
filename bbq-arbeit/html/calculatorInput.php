@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <form action="calc_receive.php" method="POST">
+    <form action="calculatorOutput.php" method="POST">
         <label for="number1">Zahl1</label>
         <input type="number" id="number1" name="number1" required autofocus><br>
         <label for="number2">Zahl2</label>

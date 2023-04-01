@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-<form action="sprachen_ergebnis.php" method="post">
+<form action="formInputTypesOutput.php" method="post">
     <label for="vorname">Vorname</label><br>
     <input type="text" name="vorname" id="vorname"><br>
     <label for="nachname">Nachname</label><br>
