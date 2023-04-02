@@ -1,0 +1,14 @@
+li,
+p {
+    font-size: 1.3rem;
+}
+.btn {
+    margin-top: .5rem;
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.hint {
+    color: var(--green-lgt);
+}
+

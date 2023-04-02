@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     --work-sans: 'Work Sans', Arial, Helvetica, sans;
+    --input-font-size: 1.3rem;
     --white-lgt: #ffffff;
     --white-med: #dddddd;
     --white-drk: #aaaaaa;
