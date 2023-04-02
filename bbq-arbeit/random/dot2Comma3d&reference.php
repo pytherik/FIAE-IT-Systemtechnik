@@ -1,20 +1,15 @@
 <!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=">
-    <title>pampeldoc</title>
-    <style>
-        body {
-            background-color: #444;
-            color: #ddd;
-            font-size: 1.4rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=">
+  <link rel="stylesheet" href="../public/css/style.css">
+  <title>pampeldoc</title>
 </head>
 <body>
+
 <?php
 /**
  * @param int $begin
@@ -27,7 +22,7 @@ function decRand(int $begin, int $end, float $step): float
   return rand($begin, $end) * $step;
 }
 
-// Aufgabe: Nimm ein w-dim Array, welches Zufallszahlen enthält
+// Aufgabe: Nimm ein 2-dim Array, welches Zufallszahlen enthält
 // und ersetze in allen Zellen den Punkt durch ein Komma.
 /**
  * @param int $num_rows

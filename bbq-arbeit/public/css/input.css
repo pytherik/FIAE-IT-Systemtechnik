@@ -1,0 +1,37 @@
+textarea,
+select {
+    font-family: var(--work-sans);
+    font-size: 1.3rem;
+}
+
+.btn {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border: none;
+    font-family: var(--work-sans);
+}
+
+.btn:hover {
+    filter: brightness(120%);
+}
+
+.txt {
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.o-off {
+    outline: none;
+}
+
+.no-scroll {
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+

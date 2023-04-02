@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('container.css');
+@import url('input.css');
+@import url('measures.css');
+@import url('colors.css');
+
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --work-sans: 'Work Sans', Arial, Helvetica, sans;
+    --white-lgt: #ffffff;
+    --white-med: #dddddd;
+    --white-drk: #aaaaaa;
+    --grey-lgt: #666666;
+    --grey-med: #444444;
+    --grey-drk: #222222;
+    --red-lgt: #FC2947;
+    --red-med: #DC0000;
+    --red-drk: #9C254D;
+    --green-lgt: #B3E5BE;
+    --green-med: #609966;
+    --green-drk: #698269;
+    --blue-lgt: #B9E9FC;
+    --blue-med: #62CDFF;
+    --blue-drk: #3E54AC;
+}
+
+body {
+    background-color: var(--grey-med);
+    color: var(--white-med);
+    font-family: var(--work-sans);
+    font-size: 1rem;
+}
+
+.center {
+    text-align: center;
+}

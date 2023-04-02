@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --body-font: 'Work Sans', Arial, Helvetica, sans;
+    --fg-col: #dddddd;
+    --bg-col: #444444;
+}
+
+body {
+    background-color: var(--bg-col);
+    color: var(--fg-col);
+    font-family: var(--body-font);
+    font-size: 1.4rem;
+}
+
+.center {
+    text-align: center;
+}

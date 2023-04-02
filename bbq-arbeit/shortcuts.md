@@ -35,4 +35,4 @@
 | *Reopen closed tab                   | Strg + Shift + Alt + Q      |                            |
 | *Close tab                           | Alt + W                     |                            |
 | Move function, method, section ...   | Strg + Shift + up/down      |                            |
-
+| *Surround selection with ...         | AltGr + T                   | Strg + Alt + T             |

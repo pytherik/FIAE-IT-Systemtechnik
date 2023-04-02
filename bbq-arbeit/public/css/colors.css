@@ -1,0 +1,24 @@
+.gl {
+    background-color: var(--green-lgt);
+    color: var(--grey-med);
+}
+
+.gm {
+    background-color: var(--green-med);
+    color: var(--grey-drk);
+}
+
+.gd {
+    background-color: var(--green-drk);
+    color: var(--white-med);
+}
+
+.tra-li {
+    background-color: transparent;
+    color: var(--white-med);
+}
+
+.tra-da {
+    background-color: transparent;
+    color: var(--grey-drk);
+}
