@@ -1,0 +1,3 @@
+Erstelle eine Klasse Mitarbeiter.
+Der Mitarbeiter hat einen Vornamen, einen Nachnamen und eine abteilung_id.
+Erstelle 3 Mitarbeiter und gin sie mit allen Attributen aus.

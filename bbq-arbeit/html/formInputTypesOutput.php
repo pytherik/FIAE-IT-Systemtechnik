@@ -12,7 +12,8 @@
 <body>
 <?php
 if (isset($_POST['vorname']) && isset($_POST['nachname']) &&
-  isset($_POST['geschlecht']) && isset($_POST['sprache'])) {
+  isset($_POST['geschlecht']) && isset($_POST['sprache']) &&
+  isset ($_POST['email']) && isset($_POST['comment'])) {
   $vorname = $_POST['vorname'];
   $nachname = $_POST['nachname'];
   $geschlecht = $_POST['geschlecht'];
