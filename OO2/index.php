@@ -27,12 +27,12 @@ $employee3 = new Employee('Grobi', 'Bird', 3);
 // Wie erzwinge ich, dass alle benötigten Parameter auch gesetzt werden?
 // Man schreibt einen Konstruktor in der Klasse Employee.
 $employees = [$employee1, $employee2, $employee3];
-//foreach ($employees as $employee) {
-//  echo "Vorname: " . $employee->getFirstname() . "<br>";
-//  echo "Nachname: " . $employee->getLastname() . "<br>";
-//  echo "Id: " . $employee->getDepartmentId() . "<br>";
-//  $employee->store();
-//}
+foreach ($employees as $employee) {
+  echo "Vorname: " . $employee->getFirstname() . "<br>";
+  echo "Nachname: " . $employee->getLastname() . "<br>";
+  echo "Id: " . $employee->getDepartmentId() . "<br>";
+  $employee->store();
+}
 // Wir brauchen Persistenz, d.h. wir wollen die Daten so speichern können,
 // dass sie nicht verloren gehen, wenn das Programm stoppt//.
 function output(array $newEmps):void

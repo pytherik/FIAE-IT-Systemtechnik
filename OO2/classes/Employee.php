@@ -73,14 +73,14 @@ class Employee
 
   public function store(): void
   {
-//    echo filesize('employeeData.csv');
-    if (file_exists('employeeData.csv') &&
-      !(trim(file_get_contents('employeeData.csv')) == false)) {
+//    echo filesize(PATH_DATA);
+    if (file_exists(PATH_DATA) &&
+      !(trim(file_get_contents(PATH_DATA)) == false)) {
       $separator = "\n";
     } else {
       $separator = "";
     }
-    file_put_contents('employeeData.csv',
+    file_put_contents(PATH_DATA,
       $separator . $this->firstname . ',' . $this->lastname . ',' .
       $this->department_id, FILE_APPEND);
   }
@@ -88,8 +88,8 @@ class Employee
   public function read(): array
   {
     $employees = [];
-    if (file_exists('employeeData.csv')) {
-      $fileContents = explode("\n", file_get_contents('employeeData.csv'));
+    if (file_exists(PATH_DATA)) {
+      $fileContents = explode("\n", file_get_contents(PATH_DATA));
       foreach ($fileContents as $line) {
         $employeeArray = explode(',', $line);
         $employees[] = new Employee($employeeArray[0], $employeeArray[1], $employeeArray[2]);
@@ -101,7 +101,7 @@ class Employee
   public function delete(): array
   {
     $employees = $this->read();
-    unlink('employeeData.csv');
+    unlink(PATH_DATA);
     foreach($employees as $employee){
       if ($employee != $this){
         $employee->store();
@@ -125,7 +125,7 @@ class Employee
 //    }
 //    array_splice($employees, $index, 1);
 //    // löschen von employeeData.csv
-//    unlink('employeeData.csv');
+//    unlink(PATH_DATA);
 //    foreach ($employees as $employee) {
 //      $employee->store();
 //    }
@@ -140,9 +140,9 @@ class Employee
 //  {
 //    $content = implode(',', [$this->getFirstname(), $this->getLastname(), $this->getDepartmentId()]);
 //
-//    if (file_exists('employeeData.csv')) {
-//      file_put_contents('employeeData.csv', "\n" . $content, FILE_APPEND);
+//    if (file_exists(PATH_DATA)) {
+//      file_put_contents(PATH_DATA, "\n" . $content, FILE_APPEND);
 //    } else {
-//      file_put_contents('employeeData.csv', $content);
+//      file_put_contents(PATH_DATA, $content);
 //    }
 //  }
