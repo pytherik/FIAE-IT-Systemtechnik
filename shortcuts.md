@@ -36,3 +36,4 @@
 | *Close tab                           | Alt + W                     |                            |
 | Move function, method, section ...   | Strg + Shift + up/down      |                            |
 | *Surround selection with ...         | AltGr + T                   | Strg + Alt + T             |
+| Save as live template                | AltGr + Shift + T           | Strg + Alt + Shift + T     |
