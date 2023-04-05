@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace garage;
 
@@ -11,9 +11,10 @@ class Garage
   static int $countCars = 0;
 
   public function __construct(string $name, string $color) {
-    if (self::$countCars <= $this->maxCars) {
+    if (self::$countCars < $this->maxCars) {
       $this->name = $name;
       $this->color = $color;
+      echo "Der ".$color."e $name steht in der Garage!<br>";
       self::$countCars++;
     } else {
       echo "Garage ist voll!"."<br>";
