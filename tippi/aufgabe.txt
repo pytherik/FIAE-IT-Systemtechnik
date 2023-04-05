@@ -3,3 +3,6 @@ mit dem man Personen zählen kann.
 Tippi, das Zelt, hat einen offenen Eingang mit einem Zähler.
 Wenn 100 Personen in dem Zelt sind, soll aus feuerpolizeilichen Gründen
 keiner mehr reingelassen werden.
+
+Schreibe eine App, die aufpasst, dass nur 2 Autos in einer
+Garage abgestellt werden.
