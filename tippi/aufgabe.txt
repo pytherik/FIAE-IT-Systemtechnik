@@ -1,0 +1,5 @@
+Schreibe eine Anvendung auf der Konsole die einen Zähler erstellt,
+mit dem man Personen zählen kann.
+Tippi, das Zelt, hat einen offenen Eingang mit einem Zähler.
+Wenn 100 Personen in dem Zelt sind, soll aus feuerpolizeilichen Gründen
+keiner mehr reingelassen werden.

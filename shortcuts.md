@@ -29,11 +29,11 @@
 | Rename file                          | Shift + F6                  |                            |
 | Comment line                         | Strg + # / Strg + Shift + 7 |                            |
 | Comment multiple lines               | Strg + Shift + #            |                            | 
-| *Close other tabs                    | Strg + Shift + 2            |                            |
-| *Close tabs to the left              | Strg + Shift + 1            |                            |
-| *Close tabs to the right             | Strg + Shift + 3            |                            |
+| *Close other tabs                    | Strg + Shift + 2            | Alt + Shift + 2            |
+| *Close tabs to the left              | Strg + Shift + 1            | Alt + Shift + 1            |
+| *Close tabs to the right             | Strg + Shift + 3            | Alt + Shift + 3            |
 | *Reopen closed tab                   | Strg + Shift + Alt + Q      |                            |
 | *Close tab                           | Alt + W                     |                            |
 | Move function, method, section ...   | Strg + Shift + up/down      |                            |
 | *Surround selection with ...         | AltGr + T                   | Strg + Alt + T             |
-| Save as live template                | AltGr + Shift + T           | Strg + Alt + Shift + T     |
+| Save as live template                | AltGr + Shift + T           | Strg + Alt + Shift + S     |

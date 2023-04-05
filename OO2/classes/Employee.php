@@ -85,6 +85,9 @@ class Employee
       $this->department_id, FILE_APPEND);
   }
 
+  /**
+   * @return Employee[]
+   */
   public function read(): array
   {
     $employees = [];
@@ -112,6 +115,44 @@ class Employee
     }
     return $this->read();
   }
+
+
+  public function update(string $action, string $newValue): void
+  {
+    $employees = $this->read();
+    foreach ($employees as $employee) {
+      if ($this == $employee){
+        if ($action == 'firstname') {
+          $employee->setFirstname($newValue);
+        } else if ($action == 'lastname') {
+          $employee->setLastname($newValue);
+        } else if ($action === 'id') {
+          $employee->setDepartmentId($newValue);
+        }
+      break;
+      }
+    }
+    unlink(PATH_DATA);
+    foreach ($employees as $employee) {
+      $employee->store();
+    }
+  }
+//  public function update(int $index, array $attributeValue): void
+//  {
+//    $employees = $this->read();
+//    if (key_exists('firstname', $attributeValue)) {
+//      $employees[$index]->setFirstname($attributeValue['firstname']);
+//    } else if (key_exists('lastname', $attributeValue)) {
+//      $employees[$index]->setLastname($attributeValue['lastname']);
+//    } else if (key_exists('id', $attributeValue)) {
+//      $employees[$index]->setDepartmentId($attributeValue['id']);
+//    }
+//
+//    unlink(PATH_DATA);
+//    foreach ($employees as $employee) {
+//      $employee->store();
+//    }
+//  }
 }
 //  public function delete(): void
 //  {

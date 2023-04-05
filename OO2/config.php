@@ -1,3 +1,3 @@
 <?php
 // constanten definieren 
-define('PATH_DATA', 'employeeData.csv');
+const PATH_DATA = 'employeeData.csv';

@@ -20,21 +20,26 @@ include './classes/Employee.php';
 </head>
 <body>
 <?php
+
+if (file_exists(PATH_DATA)){
+  unlink(PATH_DATA);
+}
 $employee1 = new Employee('Hansi', 'Pample', 1);
 $employee2 = new Employee('Hans', 'Wurst', 2);
 $employee3 = new Employee('Grobi', 'Bird', 3);
 
+$employees = [$employee1, $employee2, $employee3];
+
 // Wie erzwinge ich, dass alle benötigten Parameter auch gesetzt werden?
 // Man schreibt einen Konstruktor in der Klasse Employee.
-$employees = [$employee1, $employee2, $employee3];
-foreach ($employees as $employee) {
-  echo "Vorname: " . $employee->getFirstname() . "<br>";
-  echo "Nachname: " . $employee->getLastname() . "<br>";
-  echo "Id: " . $employee->getDepartmentId() . "<br>";
-  $employee->store();
-}
 // Wir brauchen Persistenz, d.h. wir wollen die Daten so speichern können,
 // dass sie nicht verloren gehen, wenn das Programm stoppt//.
+
+foreach ($employees as $employee) {
+  $employee->store();
+}
+
+
 function output(array $newEmps):void
 {
   foreach($newEmps as $newEmp) {
@@ -44,33 +49,28 @@ function output(array $newEmps):void
 }
 
 $emp = new Employee();
-$newEmps = $emp->read();
-output($newEmps);
-
-$employees = $newEmps[1]->delete();
+$employees = $emp->read();
+echo "Vor der Änderung<br>";
 output($employees);
-echo "<pre>";
-print_r($employees);
-echo "</pre>";
 
-//echo "<pre>";
-//print_r($newEmps);
-//echo "</pre>";
-//var_dump($newEmps);
-//foreach($newEmps as $newEmp) {
-//  echo "<pre>";
-//  print_r($newEmp);
-//  echo "</pre>";
-//}
-//
-//foreach($newEmps as $newEmp) {
-//  echo $newEmp->getFirstname().','.$newEmp->getLastname().
-//    ','.$newEmp->getDepartmentId().'<br>';
-//}
-// um einen Employee ($newEmp[2]) zu löschen wird Methode delete aufgerufen
+
+// Um einen Employee ($newEmp[2]) zu löschen wird Methode delete aufgerufen
+//$employees = $newEmps[1]->delete();
 
 //$newEmps = $emp->read();
 //output($newEmps);
+
+// Um Attribute eines Employees zu ändern wird Methode update benötigt
+$employees[0]->update('firstname' , 'Grobi');
+$employees[2]->update('lastname' , 'Habich');
+$employees[1]->update('id', 200042);
+//$emp->update(1, ['firstname' => 'Grobi']);
+//$emp->update(0, ['lastname' => 'Habich']);
+//$emp->update(2, ['id' => 2167432]);
+
+$employees = $emp->read();
+echo "<br>Nach der Änderung<br>";
+output($employees);
 ?>
 
 </body>
