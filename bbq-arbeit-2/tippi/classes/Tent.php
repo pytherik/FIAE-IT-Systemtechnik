@@ -23,15 +23,15 @@ class Tent
         }
       }*/
   {
-    self::$totalCounter += $amount;
-    $say = "Hallo, kommt rein!";
-    if (self::$totalCounter > $this->maxPersons) {
-      if ((self::$totalCounter - $amount) < $this->maxPersons) {
-        $say = "Nur noch " . abs($this->maxPersons - self::$totalCounter) . " Leute!";
-      } else {
-        $say = "Voll! Geht weg!";
-      }
+//    self::$totalCounter += $amount;
+    if (self::$totalCounter >= $this->maxPersons) {
+      $say = "Voll! Geht weg!";
+    } else if ((self::$totalCounter + $amount) > $this->maxPersons) {
+        $say = "Oh, ihr seid zu ".$amount."t!<br>Ich kann aber leider nur noch " . $this->maxPersons - self::$totalCounter . " Leute reinlassen!";
       self::$totalCounter = $this->maxPersons;
+    } else {
+      $say = "Hallo ihr $amount! Willkommen im Club!";
+      self::$totalCounter += $amount;
     }
     return $say . " Wir sind jetzt " . self::$totalCounter . " !";
   }
