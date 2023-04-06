@@ -7,11 +7,11 @@ class Garage
   private string $name;
   private string $color;
 
-  private int $maxCars = 2;
+  const MAX_CARS = 2;
   static int $countCars = 0;
 
   public function __construct(string $name, string $color) {
-    if (self::$countCars < $this->maxCars) {
+    if (self::$countCars < $this->MAX_CARS) {
       $this->name = $name;
       $this->color = $color;
       echo "Der ".$color."e $name steht in der Garage!<br>";

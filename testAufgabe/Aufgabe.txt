@@ -1,0 +1,20 @@
+
+Eine Person besteht aus den Attributen id, vorname, nachname und geburtsdatum.
+Erstelle eine Klasse Person mit diesen Attributen und den zugehörigen Getter-Methoden.
+Schreibe einen Konstruktor, der alle Attribute füllt.
+
+Binde diese Klasse in der index.php ein.
+Erstelle 5 Personen Objekte und füge sie zu einem Array zusammen.
+
+Schreibe in der Klasse Person eine Methode, die diese Daten in einer csv-Datei speichert.
+Rufe diese Methode in der index.php auf.
+
+Schreibe in der Klasse Person eine Methode, die obige csv-Datei ausliest und
+aus den Daten eine HTML-Tabelle zurückgibt.
+
+Rufe die Methode im body der index.php auf.
+
+Wenn Du fertig bist, speichere das Projekt, zippe den Projektordner und sende mir im chat zu.
+die zip-Datei soll Deinen Vornamen haben, damit ich sie leichter dem zuordnen kann.
+
+Viel Erfolg!
