@@ -1,0 +1,89 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1e1e1e;
+    color: #4f732c;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container-row {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-row {
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.buttons-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-content: center;*/
+    /*align-items: center;*/
+    /*text-align: center;*/
+}
+
+.two-pics {
+    width: 38.6%;
+}
+
+select {
+    background-color: #4b0082;
+    color: #daa520;
+    margin: 0 2rem;
+    margin-top: 1rem;
+}
+
+.btn-rd,
+.btn-sm {
+    background-color: #4b0082;
+    color: #daa520;
+    width: 2.3rem;
+    height: 2.3rem;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 1rem;
+    margin-top: .5rem;
+    line-height: 3px;
+}
+
+.btn-sm {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+.numPics {
+    color: #aaa;
+    padding: 0 2rem;
+}
+
+.numPics:hover {
+    color: lightblue;
+}
+.panel-button {
+    /*text-align: center;*/
+}
+
+.flippedX {
+    transform: scaleX(-1);
+}
+
+.flippedY {
+    transform: scaleY(-1);
+}

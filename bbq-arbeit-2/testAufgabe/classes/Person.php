@@ -82,11 +82,10 @@ class Person
     $html = '';
     if (file_exists(DATA_PATH)) {
       $html = "<table>
-                <th>
-                  <td>Id</td>
-                  <td>Vorname</td>
-                  <td>Nachname</td>
-                </th>";
+                  <th>Id</th>
+                  <th>Vorname</th>
+                  <th>Nachname</th>
+                  <th>Geburtstag</th>";
       $persons = explode("\n", file_get_contents(DATA_PATH));
       foreach ($persons as $line) {
         $person = explode(',', $line);

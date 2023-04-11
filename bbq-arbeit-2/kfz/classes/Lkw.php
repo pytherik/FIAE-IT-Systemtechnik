@@ -1,6 +1,6 @@
 <?php
 
-namespace classes;
+namespace kfz\classes;
 
 class Lkw extends Kfz
 {

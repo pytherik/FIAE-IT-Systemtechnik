@@ -7,11 +7,11 @@ class Employee
   private int $department_id;
 
   /**
-   * @param string | null $firstname
-   * @param string | null $lastname
-   * @param int | null $department_id
+   * @param string|null $firstname
+   * @param string|null $lastname
+   * @param int|null $department_id
    */
-  public function __construct(string|null $firstname = null, string|null $lastname = null, int|null $department_id = null)
+  public function __construct(?string $firstname = null, ?string $lastname = null, ?int $department_id = null)
   {
     if (isset($firstname) && isset($lastname) && isset($department_id)) {
       $this->firstname = $firstname;
