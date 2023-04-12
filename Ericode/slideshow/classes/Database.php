@@ -49,14 +49,14 @@ class Database
   {
     $db = $this->dbConnection();
     try {
-      $db->query("DROP TABLE IF EXISTS favorites_pictures");
+      $db->query("DROP TABLE IF EXISTS favs_pictures");
       $db->query("DROP TABLE IF EXISTS pictures");
-      $db->query("DROP TABLE IF EXISTS favorites");
+      $db->query("DROP TABLE IF EXISTS favs");
       $db->query("CREATE TABLE pictures (id INT AUTO_INCREMENT PRIMARY KEY, pic_path VARCHAR(250))");
-      $db->query("CREATE TABLE favorites (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(25))");
-      $db->query("CREATE TABLE favorites_pictures (pic_id INT, fav_id INT, PRIMARY KEY (pic_id, fav_id), 
-    CONSTRAINT fk_favorites_pictures_pictures FOREIGN KEY (pic_id) REFERENCES pictures (id),
-    CONSTRAINT fk_favorites_pictures_favorites FOREIGN KEY (fav_id) REFERENCES favorites (id)
+      $db->query("CREATE TABLE favs (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(25))");
+      $db->query("CREATE TABLE favs_pictures (pic_id INT, fav_id INT, PRIMARY KEY (pic_id, fav_id), 
+    CONSTRAINT fk_favs_pictures_pictures FOREIGN KEY (pic_id) REFERENCES pictures (id),
+    CONSTRAINT fk_favs_pictures_favorites FOREIGN KEY (fav_id) REFERENCES favorites (id)
     )");
     } catch (PDOException $e) {
       echo "Geht nicht: " . $e->getMessage();

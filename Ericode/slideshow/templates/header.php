@@ -26,6 +26,8 @@ if (!isset($_SESSION['numPics'])) {
   </style>
 </head>
 <body>
-
+<form class="buttons-row" method="post">
+  <?php include 'templates/buttons-bottom.php' ?>
+</form>
 <div class="container">
 

@@ -12,7 +12,7 @@ foreach ($collectFolders as $folder) {
 
 $pdo = new Database();
 
-$pdo->createDB($pictureLocations);
+//$pdo->createDB($pictureLocations);
 
 $num = $_SESSION['numPics'];
 

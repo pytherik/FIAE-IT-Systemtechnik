@@ -2,7 +2,6 @@
   <div class="buttons-col">
     <?php
     include 'templates/buttons-top.php';
-    include 'templates/buttons-bottom.php';
     ?>
   </div>
   <?php
@@ -16,7 +15,6 @@
   <div class="buttons-col">
     <?php
     include 'templates/buttons-top.php';
-    include 'templates/buttons-bottom.php';
     ?>
   </div>
 </div>
