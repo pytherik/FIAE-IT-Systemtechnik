@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #444444;
+/*url('../img/world.jpg') no-repeat fixed center center;*/
+/*    -webkit-background-size: cover;*/
+/*    -moz-background-size: cover;*/
+/*    -o-background-size: cover;*/
+    color: #dddddd;
+}
+
+ul {
+    background-color: #3E54AC88;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 1rem;
+    list-style: none;
+}
+li {
+    line-height: 2rem;
+}
+
+span {
+    color: gold;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.image-container {
+    width: 42%;
+}
+
+.image {
+    /*image-resolution: inherit;*/
+    padding: 30px;
+    margin: 15px;
+}
+
+img {
+    width: 100%;
+}

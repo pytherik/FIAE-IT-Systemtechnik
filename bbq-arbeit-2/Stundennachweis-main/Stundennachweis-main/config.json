@@ -1,0 +1,16 @@
+{
+  "teilnehmer": "Erik Berndt",
+  "kundenNr": "12345",
+  "firma": "BBQ",
+  "stundeBeginn": 8,
+  "minuteBeginn": 0,
+  "stundeEnde": 16,
+  "minuteEnde": 0,
+
+  "_comment1": "Monat oder Jahr auf 0 setzen, dann wird heutiges Datum genommen",
+  "monat": 4,
+  "jahr": 2023,
+
+  "_comment2": "Bundesland: BB = Brandenburg oder BE = Berlin",
+  "bundesland": "BE"
+}

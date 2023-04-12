@@ -12,7 +12,7 @@ if (!isset($_SESSION['numPics'])) {
   <meta charset="UTF-8">
   <title>slideshow</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="public/images/icons/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="public/icons/favicon.ico">
   <link href="public/css/style.css" rel="stylesheet" type="text/css">
   <style>
       .container-pics,

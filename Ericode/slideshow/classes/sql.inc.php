@@ -1,6 +1,6 @@
 <?php exit; ?>
 
 host = 'localhost'
-user = 'erik'
-pass = '321null'
+user = 'root'
+pass = ''
 dbname = 'slideshow'

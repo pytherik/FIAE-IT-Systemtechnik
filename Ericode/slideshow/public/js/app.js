@@ -13,7 +13,7 @@ $.ajax({
   'type': "POST",
   'global': false,
   'dataType': 'html',
-  'url': "../ajax/getAllPics.php",
+  'url': "ajax/getAllPics.php",
   'data': {'request': "", 'target': 'arrange_url', 'method': 'method_target'},
   'success': function (data) {
     allPics = JSON.parse(data);
@@ -33,7 +33,7 @@ for (let j = 0; j < next.length; j++) {
 console.log(i)
 
 next.forEach((btn, index) => {
-  $(btn).click(() => {
+  btn.addEventListener('click', () => {
     if (i[index] < allPics.length) {
       i[index]++
     } else {
@@ -45,7 +45,7 @@ next.forEach((btn, index) => {
 })
 
 previous.forEach((btn, index) => {
-  $(btn).click(() => {
+  btn.addEventListener('click', () => {
     if (i[index] > 0) {
       i[index]--
     } else {
@@ -57,7 +57,7 @@ previous.forEach((btn, index) => {
 })
 
 random.forEach((btn, index) => {
-  $(btn).click(() => {
+  btn.addEventListener('click', () => {
     i[index] = getRandom()
     $("#image" + index).attr('src', allPics[i[index]])
     console.log(i)
@@ -65,13 +65,13 @@ random.forEach((btn, index) => {
 })
 
 mirrorH.forEach((btn, index) => {
-  $(btn).click(() => {
+  btn.addEventListener('click', () => {
     $('#image' + index).toggleClass('flippedX')
   })
 })
 
 mirrorV.forEach((btn, index) => {
-  $(btn).click(() => {
+  btn.addEventListener('click', () => {
     $('#image' + index).toggleClass('flippedY')
   })
 })

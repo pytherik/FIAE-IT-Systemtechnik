@@ -2,17 +2,17 @@
 require_once 'classes/Database.php';
 include 'templates/header.php';
 
-$collectFolders = scandir('./public/dirt');
+$collectFolders = scandir('./public/images/');
 
 foreach ($collectFolders as $folder) {
   if (!str_starts_with('..', $folder)) {
-    $pictureLocations[] = "./public/dirt/$folder/";
+    $pictureLocations[] = "./public/images/$folder/";
   }
 }
 
 $pdo = new Database();
 
-//$pdo->createDB($pictureLocations);
+$pdo->createDB($pictureLocations);
 
 $num = $_SESSION['numPics'];
 

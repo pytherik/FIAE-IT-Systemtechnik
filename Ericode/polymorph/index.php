@@ -1,10 +1,10 @@
 <?php
-//include 'classes/Orchestra.php';
-//include 'classes/Violins.php';
-//include 'classes/Woodwind.php';
-//include 'classes/Brass.php';
-//include 'classes/Drums.php';
 
+//include 'classes/Orchestra.php';
+include 'classes/Violins.php';
+include 'classes/Brass.php';
+include 'classes/Woodwind.php';
+include 'classes/Drums.php';
 
 $violin = new Violins();
 $wood = new Woodwind();

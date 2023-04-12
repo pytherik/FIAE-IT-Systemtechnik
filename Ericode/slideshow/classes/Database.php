@@ -35,28 +35,28 @@ class Database
     $this->dbname = $conf['dbname'];
   }
 
-  public function getRandomAll(): object
-  {
-    try {
-      return $this->dbConnection()->query("SELECT * FROM pics ORDER BY RAND()");
-    } catch (PDOException $e) {
-      echo "Nix da: " . $e->getMessage();
-      die;
-    }
-  }
+//  public function getRandomAll(): object
+//  {
+//    try {
+//      return $this->dbConnection()->query("SELECT * FROM pictures ORDER BY RAND()");
+//    } catch (PDOException $e) {
+//      echo "Nix da: " . $e->getMessage();
+//      die;
+//    }
+//  }
 
   public function createDB(array $pathList): void
   {
     $db = $this->dbConnection();
     try {
-      $db->query("DROP TABLE IF EXISTS fav2_pics2");
-      $db->query("DROP TABLE IF EXISTS pics2");
-      $db->query("DROP TABLE IF EXISTS favorites2");
-      $db->query("CREATE TABLE pics2 (id INT AUTO_INCREMENT PRIMARY KEY, pic_path VARCHAR(250))");
-      $db->query("CREATE TABLE favorites2 (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(25))");
-      $db->query("CREATE TABLE fav_pics2 (pic_id INT, fav_id INT, PRIMARY KEY (pic_id, fav_id), 
-    CONSTRAINT fk_fav_pics_pics FOREIGN KEY (pic_id) REFERENCES pics2 (id),
-    CONSTRAINT fk_fav_pics_favorites FOREIGN KEY (fav_id) REFERENCES favorites2 (id)
+      $db->query("DROP TABLE IF EXISTS favorites_pictures");
+      $db->query("DROP TABLE IF EXISTS pictures");
+      $db->query("DROP TABLE IF EXISTS favorites");
+      $db->query("CREATE TABLE pictures (id INT AUTO_INCREMENT PRIMARY KEY, pic_path VARCHAR(250))");
+      $db->query("CREATE TABLE favorites (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(25))");
+      $db->query("CREATE TABLE favorites_pictures (pic_id INT, fav_id INT, PRIMARY KEY (pic_id, fav_id), 
+    CONSTRAINT fk_favorites_pictures_pictures FOREIGN KEY (pic_id) REFERENCES pictures (id),
+    CONSTRAINT fk_favorites_pictures_favorites FOREIGN KEY (fav_id) REFERENCES favorites (id)
     )");
     } catch (PDOException $e) {
       echo "Geht nicht: " . $e->getMessage();
@@ -67,7 +67,7 @@ class Database
       foreach ($pictures as $picture)
         if (!str_starts_with('..', $picture)) {
           $image = trim($path . $picture);
-          $db->query("INSERT INTO pics VALUES(NULL, '$image')");
+          $db->query("INSERT INTO pictures VALUES(NULL, '$image')");
         }
     }
   }
@@ -77,9 +77,9 @@ class Database
     $db = $this->dbConnection();
     try {
       if ($num == 0) {
-        $randomPics = $db->query("SELECT * FROM pics");
+        $randomPics = $db->query("SELECT * FROM pictures");
       } else {
-        $randomPics = $db->query("SELECT * FROM pics ORDER BY RAND() LIMIT $num");
+        $randomPics = $db->query("SELECT * FROM pictures ORDER BY RAND() LIMIT $num");
       }
     } catch (PDOException $e) {
       echo "Kann ich nicht: " . $e->getMessage();
