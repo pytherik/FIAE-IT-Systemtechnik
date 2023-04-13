@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flexLayout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Bahnschrift, Arial sans-serif;
+        }
+
+        .main-container {
+            background-color: #444;
+            width: 100vw;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-container > div {
+            text-align: center;
+            height: 25vh;
+            background: url("img/world.jpg");
+            background-size: inherit;
+            color: #fff;
+        }
+
+        .row-container {
+            display: flex;
+            background-color: #222;
+            width: 100vw;
+            height: 70vh;
+        }
+
+        .nav-container {
+            background: #162955;
+            height: 75vh;
+            width: 15vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-container > div {
+            background: #804515;
+            font-size: 2rem;
+            width: 80%;
+            height: 10%;
+            line-height: 68px;
+            border-radius: .5rem;
+        }
+
+        .nav-container > div:hover {
+            filter: brightness(120%);
+        }
+
+        .img-container {
+            background-color: #4F628E;
+            width: 85vw;
+            height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header,
+        .header2 {
+            font-size: 4rem;
+        }
+
+        .header {
+            text-decoration: line-through;
+        }
+
+        .main-img {
+            width: 25%;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <div>
+        <h1 class="header">Scheiss CSS</h1>
+        <h1 class="header2">Super CSS</h1>
+    </div>
+    <div class="row-container">
+        <div class="nav-container">
+            <div>NAV 1</div>
+            <div>NAV 2</div>
+            <div>NAV 3</div>
+        </div>
+        <div class="img-container">
+            <img class="main-img" src="img/lighthouse.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

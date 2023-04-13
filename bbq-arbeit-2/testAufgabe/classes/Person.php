@@ -57,7 +57,7 @@ class Person
   }
 
   /**
-   * @param array $personen
+   * @param $personen[]
    * @return void
    */
   public function store(array $personen): void
