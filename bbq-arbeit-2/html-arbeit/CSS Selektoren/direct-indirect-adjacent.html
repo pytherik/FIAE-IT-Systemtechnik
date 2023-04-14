@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS-Selectors</title>
+  <style>
+      body {
+          background-color: #444;
+          color: #ddd;
+      }
+      /*alle img Elemente, die auf derselben Ebene
+      innerhalb eines Eltern Elements liegen (indirekter Nachbar) */
+      a ~ h2 {
+          border: 4px solid #ffddaa;
+      }
+      /*das img Element, das direkt auf a folgt (direkter Nachbar)*/
+      a + img {
+          border: 4px solid #aa33bb;
+      }
+
+      h2 {
+          background-color: #555;
+      }
+  </style>
+</head>
+<body>
+<div>
+  <h1>HTML-Elemente ansprechen mittels Hierarchie</h1>
+  <a href="#"><img src="../img/rauheSee.jpg" alt="Rauhe See" width="250">
+    <div>
+      <img src="../img/lighthouse_rauheSee.jpg" alt="" width="250">
+    </div></a>
+  <img src="../img/mandelbrod.jpg" alt="" width="250">
+  <h2>Wir sind indirekte Nachbarn von a ~~</h2>
+ <div>
+  <h2>ich bin eine Ebene Tiefer.</h2>
+ </div>
+  <h2>~~ auf derselben Ebene</h2>
+  <p>second paragraph</p>
+  <ul>
+    <li>list 1</li>
+    <li><p>list 2 as p</p></li>
+    <li>list 3</li>
+  </ul>
+  <p>second paragraph</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+        background-color: #444;
+        color:#ddd;
+        font-size: 2rem;
+    }
+    /*Klasse cs innerhalb von Element mit Klasse ab*/
+    .ab .cs {
+      color:gold;
+    }
+
+    /*Element mit beiden Klassen ab und cs*/
+    .ab.cs {
+        color: green;
+    }
+
+    /*indirekte Nachbarn können auch über Klassen kombiniert werden*/
+    .ab ~ .cs {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="ab">
+  <div class="cs">hallo</div>
+</div>
+<div class="ab cs">
+  göbel
+</div>
+<div class="cs">dödel</div>
+<ul class="ab">
+  <li class="ungerade">abc</li>
+  <li class="cs">def</li>
+  <li class="ab cs">ghi</li>
+  <li>jkl</li>
+</ul>
+</body>
+</html>
