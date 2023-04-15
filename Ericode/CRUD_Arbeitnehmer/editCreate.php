@@ -42,8 +42,8 @@ if (isset($_POST['save']) && isset($_POST['vorname']) &&
   $vorname = ucfirst($_POST['vorname']);
   $nachname = ucfirst($_POST['nachname']);
   $abteilungId = $_POST['abteilung'];
-  if ($dummy->validateInput($vorname, $nachname, $id) != "") {
-    $warning = $dummy->validateInput($vorname, $nachname, $id, $abteilungId);
+  if ($dummy->validateInput($vorname, $nachname, $id)) {
+    $warning = "&nbsp;Diesen Mitarbeiter gibt es schon!&nbsp;";
   } else {
     // edit Flag, gesetzt, wenn id mitgesendet wird
     if ($edit === true) {

@@ -157,7 +157,7 @@ class Employee
     }
   }
 
-  public function validateInput($vorname, $nachname, $id): string
+  public function validateInput($vorname, $nachname, $id): bool
   {
     if (file_exists(DATA_PATH)) {
       $emps = $this->read();
@@ -165,10 +165,10 @@ class Employee
         if ($emp->getVorname() == $vorname &&
           $emp->getNachname() == $nachname &&
           $emp->getId() != $id) {
-          return "&nbsp;Diesen Mitarbeiter gibt es schon!&nbsp;";
+          return true;
         }
       }
     }
-    return "";
+    return false;
   }
 }
