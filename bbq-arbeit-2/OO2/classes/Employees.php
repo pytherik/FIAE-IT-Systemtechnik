@@ -1,6 +1,6 @@
 <?php
 
-class Employee
+class Employees
 {
   private string $firstname;
   private string $lastname;
@@ -86,7 +86,7 @@ class Employee
   }
 
   /**
-   * @return Employee[]
+   * @return Employees[]
    */
   public function read(): array
   {
@@ -95,7 +95,7 @@ class Employee
       $fileContents = explode("\n", file_get_contents(PATH_DATA));
       foreach ($fileContents as $line) {
         $employeeArray = explode(',', $line);
-        $employees[] = new Employee($employeeArray[0], $employeeArray[1], $employeeArray[2]);
+        $employees[] = new Employees($employeeArray[0], $employeeArray[1], $employeeArray[2]);
       }
     }
     return $employees;

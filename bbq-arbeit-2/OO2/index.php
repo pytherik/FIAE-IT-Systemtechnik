@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-include './classes/Employee.php';
+include './classes/Employees.php';
 ?>
 <!doctype html>
 <html lang="de">
@@ -24,14 +24,14 @@ include './classes/Employee.php';
 if (file_exists(PATH_DATA)){
   unlink(PATH_DATA);
 }
-$employee1 = new Employee('Hansi', 'Pample', 1);
-$employee2 = new Employee('Hans', 'Wurst', 2);
-$employee3 = new Employee('Grobi', 'Bird', 3);
+$employee1 = new Employees('Hansi', 'Pample', 1);
+$employee2 = new Employees('Hans', 'Wurst', 2);
+$employee3 = new Employees('Grobi', 'Bird', 3);
 
 $employees = [$employee1, $employee2, $employee3];
 
 // Wie erzwinge ich, dass alle benötigten Parameter auch gesetzt werden?
-// Man schreibt einen Konstruktor in der Klasse Employee.
+// Man schreibt einen Konstruktor in der Klasse Employees.
 // Wir brauchen Persistenz, d.h. wir wollen die Daten so speichern können,
 // dass sie nicht verloren gehen, wenn das Programm stoppt//.
 
@@ -48,13 +48,13 @@ function output(array $newEmps):void
   }
 }
 
-$emp = new Employee();
+$emp = new Employees();
 $employees = $emp->read();
 echo "Vor der Änderung<br>";
 output($employees);
 
 
-// Um einen Employee ($newEmp[2]) zu löschen wird Methode delete aufgerufen
+// Um einen Employees ($newEmp[2]) zu löschen wird Methode delete aufgerufen
 //$employees = $newEmps[1]->delete();
 
 //$newEmps = $emp->read();
