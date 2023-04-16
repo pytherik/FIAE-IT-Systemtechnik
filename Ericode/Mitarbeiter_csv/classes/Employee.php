@@ -24,69 +24,6 @@ class Employee
     }
   }
 
-  /**
-   * @return int
-   */
-  public function getId(): int
-  {
-    return $this->id;
-  }
-
-  /**
-   * @param int $id
-   */
-  public function setId(int $id): void
-  {
-    $this->id = $id;
-  }
-
-  /**
-   * @return string
-   */
-  public function getVorname(): string
-  {
-    return $this->vorname;
-  }
-
-  /**
-   * @param string $vorname
-   */
-  public function setVorname(string $vorname): void
-  {
-    $this->vorname = $vorname;
-  }
-
-  /**
-   * @return string
-   */
-  public function getNachname(): string
-  {
-    return $this->nachname;
-  }
-
-  /**
-   * @param string $nachname
-   */
-  public function setNachname(string $nachname): void
-  {
-    $this->nachname = $nachname;
-  }
-
-  /**
-   * @return int
-   */
-  public function getAbteilungId(): int
-  {
-    return $this->abteilungId;
-  }
-
-  /**
-   * @param int $abteilungId
-   */
-  public function setAbteilungId(int $abteilungId): void
-  {
-    $this->abteilungId = $abteilungId;
-  }
 
   /**
    * @return array
@@ -102,7 +39,16 @@ class Employee
     return $employees;
   }
 
-  public function create(int $id, string $vorname, string $nachname, int $abteilungId, bool $addNew = false): void
+  /**
+   * @param int $id
+   * @param string $vorname
+   * @param string $nachname
+   * @param int $abteilungId
+   * @param bool $addNew
+   * @return void
+   */
+  public function create(int $id, string $vorname, string $nachname,
+                         int $abteilungId, bool $addNew = false): void
   {
     if (file_exists(DATA_PATH)) {
       $separator = "\n";
@@ -111,11 +57,17 @@ class Employee
     }
     $content = "$id,$vorname,$nachname,$abteilungId";
     file_put_contents(DATA_PATH, $separator . $content, FILE_APPEND);
+
+    // update der laufenden id nur wenn neu angelegt wird
+    // - nicht bei ändern und löschen!
     if ($addNew) {
       file_put_contents(PK_PATH, $id);
     }
   }
 
+  /**
+   * @return int
+   */
   public function getStaticId(): int
   {
     if (file_exists(PK_PATH)) {
@@ -127,48 +79,97 @@ class Employee
     return $id;
   }
 
+  /**
+   * @param $id
+   * @param $vorname
+   * @param $nachname
+   * @param $abteilungId
+   * @return void
+   */
   public function update($id, $vorname, $nachname, $abteilungId): void
   {
     $emps = $this->read();
     unlink(DATA_PATH);
     foreach ($emps as $emp) {
-      if ($emp->getId() == $id) {
-        $emp->setVorname($vorname);
-        $emp->setNachname($nachname);
-        $emp->setAbteilungId($abteilungId);
+      if ($emp->id == $id) {
+        $emp->vorname = $vorname;
+        $emp->nachname = $nachname;
+        $emp->abteilungId = $abteilungId;
         break;
       }
     }
     foreach ($emps as $emp) {
-      $this->create($emp->getId(), $emp->getVorname(),
-        $emp->getNachname(), $emp->getAbteilungId());
+      $this->create($emp->id, $emp->vorname, $emp->nachname, $emp->abteilungId);
     }
   }
 
+  /**
+   * @param $id
+   * @return void
+   */
   public function delete($id): void
   {
     $emps = $this->read();
     unlink(DATA_PATH);
     foreach ($emps as $emp) {
-      if (!($emp->getId() == $id)) {
-        $this->create($emp->getId(), $emp->getVorname(),
-          $emp->getNachname(), $emp->getAbteilungId());
+      if (!($emp->id == $id)) {
+        $this->create($emp->id, $emp->vorname, $emp->nachname, $emp->abteilungId);
       }
     }
   }
 
+  /**
+   * @param $vorname
+   * @param $nachname
+   * @param $id
+   * @return bool
+   */
   public function validateInput($vorname, $nachname, $id): bool
   {
     if (file_exists(DATA_PATH)) {
       $emps = $this->read();
       foreach ($emps as $emp) {
-        if ($emp->getVorname() == $vorname &&
-          $emp->getNachname() == $nachname &&
-          $emp->getId() != $id) {
+        if ($emp->vorname == $vorname &&
+          $emp->nachname == $nachname &&
+          $emp->id != $id) {
           return true;
         }
       }
     }
     return false;
   }
+
+  /**
+   * @return int
+   */
+  public function getId(): int
+  {
+    return $this->id;
+  }
+
+  /**
+   * @return string
+   */
+  public function getVorname(): string
+  {
+    return $this->vorname;
+  }
+
+  /**
+   * @return string
+   */
+  public function getNachname(): string
+  {
+    return $this->nachname;
+  }
+
+
+  /**
+   * @return int
+   */
+  public function getAbteilungId(): int
+  {
+    return $this->abteilungId;
+  }
+
 }

@@ -21,9 +21,9 @@ if (!file_exists(DATA_PATH)) {
 </head>
 <body>
 <div class="wrapper">
-    <h1>Arbeitnehmer Liste</h1>
+    <h1>Mitarbeiter Liste</h1>
     <a href="editCreate.php?action=hinzufügen">
-        <button class="btn">Neu</button>
+        <button class="btn">MA hinzufügen</button>
     </a>
     <div class="table">
         <div class="row header">
@@ -64,12 +64,12 @@ if (!file_exists(DATA_PATH)) {
             </div>
             <div class="cell">
                 <form action="editCreate.php?id=<?php echo $emp->getId()?>&action=kill" method="POST">
-                    <input class="delete" type="submit" name="kill" value="X">
+                    <input class="delete" type="submit" name="kill" value=&#10006;>
                 </form>
             </div>
             <div class="cell">
                 <form action="editCreate.php?id=<?php echo $emp->getId()?>&action=editieren" method="POST">
-                    <input type="submit" value="Ändern">
+                    <input type="submit" value=&#10000;>
                 </form>
             </div>
         </div>

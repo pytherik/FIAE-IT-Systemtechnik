@@ -7,6 +7,8 @@ class Lkw extends Kfz
   private int $ladevolumen;
 
   /**
+   * @param int $kfzscheinnummer
+   * @param float $leistung
    * @param int $ladevolumen
    */
   public function __construct(int $kfzscheinnummer, float $leistung, int $ladevolumen)

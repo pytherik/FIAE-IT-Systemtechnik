@@ -7,7 +7,7 @@ class Database
   private ?string $pass = null;
   private ?string $dbname = null;
 
-  public function dbConnection(): object
+  private function dbConnection(): object
   {
     $this->setupParams();
 //    $conn = null;
