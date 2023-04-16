@@ -6,11 +6,11 @@ $dummy = new Mitarbeiter();
 
 if(!($dummy->tableExists('employees'))) {
   $dummy->createTable('employees');
- header('Location:temp.html');
+ header('Location:editCreate.php');
 } else {
   $emps = $dummy->getAllEmployees();
   if($emps == []){
-    header('Location:temp.html');
+    header('Location:editCreate.php');
   }
 }
 

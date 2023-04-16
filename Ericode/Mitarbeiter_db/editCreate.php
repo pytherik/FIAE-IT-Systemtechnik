@@ -10,29 +10,25 @@ $warning = "";
 $vor = "";
 $nach = "";
 $abt = "";
-
+$id = $dummy->getCurrentId();
 // Buttons senden 'hinzufügen', 'kill' oder 'editieren'
 $action = $_GET['action'];
 
 // wenn id mitgesendet wird entweder editieren oder löschen
 if (isset($_GET['id'])) {
+  $id = $_GET['id'];
   if ($_GET['action'] == 'kill') {
-    $dummy->delete($_GET['id']);
+    $dummy->delete($id);
     header('Location:index.php');
   } else {
     $edit = true;
-    $emps = $dummy->getAllEmployees();
+    $emp = $dummy->getEmployee($id);
 
     // Daten zum Vorausfüllen des Formulars
-    foreach ($emps as $emp) {
-      if ($emp['id'] == $_GET['id']) {
-        $id = $emp['id'];
-        $vor = $emp['vorname'];
-        $nach = $emp['nachname'];
-        $abt = $emp['abteilungId'];
-        break;
-      }
-    }
+    $id = $emp['id'];
+    $vor = $emp['vorname'];
+    $nach = $emp['nachname'];
+    $abt = $emp['abteilungId'];
   }
 }
 
@@ -42,14 +38,15 @@ if (isset($_POST['save']) && isset($_POST['vorname']) &&
   $vorname = ucfirst($_POST['vorname']);
   $nachname = ucfirst($_POST['nachname']);
   $abteilungId = $_POST['abteilung'];
+
   if ($dummy->validateInput($vorname, $nachname, $id)) {
     $warning = "&nbsp;Diesen Mitarbeiter gibt es schon!&nbsp;";
   } else {
-    // edit Flag, gesetzt, wenn id mitgesendet wird
+//     edit Flag, gesetzt, wenn id mitgesendet wird
     if ($edit === true) {
       $dummy->update($id, $vorname, $nachname, $abteilungId);
     } else {
-      $dummy->create($id, $vorname, $nachname, $abteilungId, true);
+      $dummy->create($vorname, $nachname, $abteilungId);
     }
     header('Location:index.php');
   }
@@ -93,7 +90,7 @@ if (isset($_POST['save']) && isset($_POST['vorname']) &&
       </div>
       <div class="row">
         <div class="cell">
-          <?= $id ?>
+          <input type="text" name="id" value="<?= $id ?>" size="3" disabled>
         </div>
         <div class="cell">
           <input type="text" name="vorname" value="<?= $vor ?>"
