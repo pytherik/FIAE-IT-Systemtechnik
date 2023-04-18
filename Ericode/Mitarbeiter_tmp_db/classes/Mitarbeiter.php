@@ -86,7 +86,8 @@ class Mitarbeiter extends ConnectDB
   {
     $pdo = $this->connect();
     try {
-      $result = $pdo->query("SELECT * FROM employees WHERE vorname='$vorname' AND nachname='$nachname'");
+      $result = $pdo->query("SELECT * FROM employees WHERE vorname='$vorname'
+                          AND nachname='$nachname'");
       if($row = $result->fetch()){
         $exists = true;
       } else {
@@ -100,10 +101,10 @@ class Mitarbeiter extends ConnectDB
 
   public function update($id, $vorname, $nachname, $abteilungId): void
   {
-    file_put_contents('input.txt', "$id $vorname, $nachname, $abteilungId");
     $pdo = $this->connect();
     try {
-      $pdo->query("UPDATE employees SET vorname='$vorname', nachname='$nachname', abteilungId='$abteilungId' WHERE id='$id'");
+      $pdo->query("UPDATE employees SET vorname='$vorname',
+                     nachname='$nachname', abteilungId='$abteilungId' WHERE id='$id'");
     } catch (PDOException $e) {
       echo "Scheiss was: " . $e->getMessage();
     }
@@ -113,7 +114,8 @@ class Mitarbeiter extends ConnectDB
   {
     $pdo = $this->connect();
     try {
-      $pdo->query("INSERT INTO employees VALUES(NULL, '$vorname', '$nachname', '$abteilungId')");
+      $pdo->query("INSERT INTO employees VALUES(NULL, '$vorname',
+                             '$nachname', '$abteilungId')");
     } catch (PDOException $e) {
       echo "Scheiss was: " . $e->getMessage();
     }
