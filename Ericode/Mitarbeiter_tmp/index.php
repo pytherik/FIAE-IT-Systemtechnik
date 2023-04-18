@@ -52,7 +52,7 @@ if (isset($_POST['save']) && isset($_POST['vorname']) &&
   } else {
     // edit Flag, gesetzt, wenn id mitgesendet wird
     if ($edit === true) {
-      $admin->update($id, $vorname, $nachname, $abteilungId);
+      $admin->update($_GET['id'], $vorname, $nachname, $abteilungId);
     } else {
       $admin->create($id, $vorname, $nachname, $abteilungId, true);
     }
