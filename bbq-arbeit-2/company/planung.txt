@@ -21,7 +21,7 @@ Seite mit Liste
 Edit-Create-Seite
 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 
-- Formular erstellen
+- Formular erstellen: vorname, nachname, abteilungId (id vorausgefüllt)
 - Knöpfe 'Abbrechen' und 'Speichern' erstellen
 - Funktionsauswahl treffen (Metainformationen GET)
 	- create - leeres Formular

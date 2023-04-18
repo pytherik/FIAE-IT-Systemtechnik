@@ -85,6 +85,7 @@ input[type="submit"]:hover {
 }
 
 .row.green {
+    font-weight: 900;
     background: #27ae60;
 }
 

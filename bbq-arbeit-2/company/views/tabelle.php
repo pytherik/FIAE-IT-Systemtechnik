@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Responsive Table Layout</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Mitarbeiter Liste</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <div class="wrapper">
