@@ -26,18 +26,22 @@
       </div>
       <div class="row">
 <!--        <div class="cell">-->
-          <input type="hidden" name="id" value="<?= $employee->getId() ?>">
+          <input type="hidden" name="id"
+                 value="<?php if (isset($employee)) echo $employee->getId() ?>">
 <!--        </div>-->
         <div class="cell">
-          <input type="text" name="firstName" value="<?= $employee->getFirstname() ?>"
+          <input type="text" name="firstName"
+                 value="<?php if (isset($employee)) echo $employee->getFirstname() ?>"
                  size="18" autocomplete="off" autofocus required>
         </div>
         <div class="cell">
-          <input type="text" name="lastName" value="<?= $employee->getLastname() ?>"
+          <input type="text" name="lastName"
+                 value="<?php if (isset($employee)) echo $employee->getLastname() ?>"
                  size="18" autocomplete="off" required>
         </div>
         <div class="cell">
-          <input type="number" name="departmentId" value="<?= $employee->getDepartmentId() ?>"
+          <input type="number" name="departmentId"
+                 value="<?php if (isset($employee)) echo $employee->getDepartmentId() ?>"
                  min="1" max="100" autocomplete="off" required>
         </div>
         <div class="cell">

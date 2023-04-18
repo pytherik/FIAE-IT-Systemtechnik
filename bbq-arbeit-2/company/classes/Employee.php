@@ -25,7 +25,7 @@ class Employee
   }
 
   /**
-   * @return Employee[]
+   * @return Employee2[]
    */
   public function getSeedEmployees(): array
   {

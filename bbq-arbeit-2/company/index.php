@@ -12,21 +12,22 @@ $dummy = new Employee();
 // Koaleszenz: das Zusammenwachsen oder Verschmelzen von
 //             getrennt wahrnehmbaren Dingen oder Teilen
 
-$view = $_GET['action'] ?? 'showList';
+$action = $_GET['action'] ?? 'showList';
 $id = $_GET['id'] ?? '';
 
 switch ($action) {
   case 'showList':
     $emps = $dummy->getSeedEmployees();
+    $view = 'showList';
     break;
   case 'showCreate':
-    $employee = new Employee(0,"","",0);
     $activity = 'erstellen';
     $view = 'showUpdate';
     break;
   case 'showUpdate':
     $employee = $dummy->getEmployeeById($id);
     $activity = 'bearbeiten';
+    $view = 'showUpdate';
     break;
 }
 
