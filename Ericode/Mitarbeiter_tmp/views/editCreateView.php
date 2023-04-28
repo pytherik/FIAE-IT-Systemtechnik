@@ -11,6 +11,7 @@
         <div class="cell">Speichern</div>
       </div>
       <div class="row">
+<!--        TODO placeholder durch objekt ersetzen und abfrage isset-->
         <div class="cell"><?= $placeholders['id'] ?></div>
         <div class="cell">
           <input type="text" name="vorname" value="<?= $placeholders['vorname'] ?>"

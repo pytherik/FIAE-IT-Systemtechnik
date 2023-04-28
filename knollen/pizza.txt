@@ -1,0 +1,41 @@
+Pizzalieferung
+
+Pizzen und Getränke werden an Kunden ausgeliefert.
+Ein Kunde hat neben Vornamen und Nachnamen eine Lieferadresse: plz, ort, strasseNr.
+Eine Lieferung geht genau an einen Kunden.
+Jede Basispizza kann entweder groß (5.-) oder klein (4,-) sein.
+Jede Pizza besteht aus Basispizza und einer beliebigen Anzahl von toppings.
+Die toppings sind für kleine und große Pizzen gleich teuer.
+Die toppings sind Champignon (1,-), Salami (1,50), extraKäse (1,-) und Trüffel (4,-).
+Die toppings können auch auf einer Pizza doppelt vorkommen.
+Die Getränke sind entweder Bier (2,-) oder Wasser (1,50) oder mehrfache Kombinationen davon.
+Es ist auch möglich nur Pizzen oder nur Getränke sich liefern zu lassen.
+
+Aufg.: Erstelle ein schema lieferung mit BC-normalisierten Tabellen.
+Füge Beispieldaten ein und lasse 3 Lieferungen ausgeben.
+
+Zusatzaufgabe für diejenigen, die den "Tag der Arbeit" sehr wörtlich nehmen,
+oder einfach eine Herausforderung brauchen:
+Berechne jeweils den Preis der Gesamtlieferung. Brauch man dazu einen view?
+
+Viel Erfolg!
+ Kunde:
+ - vorname
+ - nachname
+ - plz
+ - ort
+ - strasseNr.
+
+ Pizza:
+ - klein 4.-
+ - groß  5.-
+
+ Toppings:
+ - Champignon 1.-
+ - Salami 1.50
+ - extraKäse 1.-
+ - Trüffel 4.-
+
+ Getränke:
+ - Bier 2.-
+ - Wasser 1.50

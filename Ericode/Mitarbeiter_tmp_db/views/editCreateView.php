@@ -1,8 +1,3 @@
-<?php
-//echo "<pre>";
-//print_r($employee->getVorname());
-//echo "</pre>";
-?>
   <a href="index.php">
     <button class="btn">Abbruch</button>
   </a>
