@@ -1,0 +1,22 @@
+ sed -i '/^[A-Z]$/d' turkishF.txt
+ sed -i '/(.*)/d' turkishF.txt
+ sed -i 's/[0-9]*$//' turkishF2.txt
+ sed -i 's/^[a-z]/\u&/' turkishF2.txt
+ sed -i 's/[0-9]*$//' turkishM2.txt
+ sed -i 's/^[a-z]/\u&/' turkishM2.txt
+ sed -i '/[^[:alpha:]]/d' turkishM.txt | less
+ sed -i '/^[A-Z]$/d' turkishM.txt | less
+ sed -i '/[^[:alpha:]]/d' turkishLn.txt
+ sed -i '/^[A-Z]$/d' turkishLn.txt
+ sed -i '/^[A-Z]$/d' turkishF.txt
+ sed -i '/[^[:alpha:]]/d' turkishF.txt
+ sed -i 's/\s.*$//' nachnamen.txt
+ sed -i 's/^[0-9]\{1,3\}//' berlin.txt
+ sed -i 's/^\s\{1\}//' berlin.txt
+ sed -i 's/^\s//' berlin.txt
+ sed -i 's/^\s//' berlin.txt
+ sed -i -Ee 's|[[:digit:]]+|,&,|g' berlin.txt
+ sed -i 's/^,.,//' berlin.txt
+ sed -i 's/^\s//' berlin.txt
+ sed -i 's/ ,/,/' berlin.txt
+ sed -i 's/, /,/' berlin.txt

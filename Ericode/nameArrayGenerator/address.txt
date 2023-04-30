@@ -1,0 +1,856 @@
+Aalemannufer	13587	Spandau
+Aalesunder Strasse	10439	Prenzlauer Berg
+Aalstieg	12589	Rahnsdorf
+Aarauer Strasse	12205	Lichterfelde
+Abajstrasse	13158	Rosenthal
+Abbestrasse	10587	Charlottenburg
+Abendfrieden	12437	Baumschulenweg
+Abendrotweg	12307	Lichtenrade
+Abram-Joffe-Strasse	12489	Adlershof
+Abramowitschallee	12487	Johannisthal
+Abschnitt 3	12435	Plänterwald
+Abschnitt 4	12435	Plänterwald
+Abschnitt 5	12435	Plänterwald
+Abschnitt 6	12435	Plänterwald
+Abschnitt 7	12435	Plänterwald
+Abschnitt 8	12435	Plänterwald
+Abschnitt An der Industriebahn	13509	Tegel
+Abschnitt Havelmüller	13509	Tegel
+Abschnitt Sportplatz	13509	Tegel
+Abtstrasse	12489	Adlershof
+Achardstrasse	12621	Kaulsdorf
+Achenbachstrasse	13585	Spandau
+Achenseeweg	12209	Lichterfelde
+Achillesstrasse	13125	Karow
+Achtermannstrasse	13187	Pankow
+Achtrutenberg	13125	Karow
+Ackerplanweg	13509	Tegel
+Ackerrain	13503	Heiligensee
+Ackerstrasse	10115	Mitte
+Ackerstrasse	13355	Wedding
+Ackerstrasse	13585	Spandau
+Baaber Steig	13503	Heiligensee
+Babelsberger Strasse	10715	Wilmersdorf
+Bacharacher Strasse	12099	Tempelhof
+Bachestrasse	12161	Friedenau
+Bachstelzenweg	12589	Wilhelmshagen
+Bachstelzenweg	13129	Blankenburg
+Bachstelzenweg	13159	Blankenfelde
+Bachstelzenweg	14195	Dahlem
+Bachstrasse	10555	Tiergarten
+Bachstrasse	12526	Bohnsdorf
+Bachstrasse	12555	Köpenick
+Bachstrasse	12623	Mahlsdorf
+Bachweg	13127	Buchholz
+Bachweg	13127	Buchholz
+Bachweg	13127	Buchholz
+Bachwitzer Strasse	12555	Köpenick
+Backbergstrasse	12359	Britz
+Backnanger Strasse	13467	Hermsdorf
+Bad-Steben-Strasse	13437	Wittenau
+Badenallee	14052	Charlottenburg
+Badener Ring	12101	Tempelhof
+Badener Strasse	12623	Mahlsdorf
+Badensche Strasse	10715	Wilmersdorf
+Badensche Strasse	10825	Schöneberg
+Baderseestrasse	12527	Grünau
+Badeweg	14129	Nikolassee
+Badewiese	14089	Gatow
+Badstrasse	13357	Wedding
+Bäckerstrasse	12355	Rudow
+Baedekerweg	13593	Spandau
+Bäkestrasse	12207	Lichterfelde
+Bäkestrasse	14109	Wannsee
+Bänschstrasse	10247	Friedrichshain
+Bärbelweg	13505	Konradshöhe
+Bärdorfer Zeile	12489	Adlershof
+Bärenhöhle	12589	Rahnsdorf
+Bärenlauchstrasse	12439	Niederschöneweide
+Bärensteinstrasse	12685	Marzahn
+Baerwaldstrasse	10961	Kreuzberg
+Bäumerplan	12101	Tempelhof
+Baggerseestrasse	12683	Biesdorf
+Bahnhäuser Altglienicke	12524	Altglienicke
+Bahnhäuser Rahnsdorf	12589	Rahnsdorf
+Bahnhof Zoologischer Garten	10623	Charlottenburg
+Bahnhofstrasse	12159	Schöneberg
+Bahnhofstrasse	12207	Lichterfelde
+Bahnhofstrasse	12305	Lichtenrade
+Bahnhofstrasse	12307	Lichtenrade
+Bahnhofstrasse	12555	Köpenick
+Bahnhofstrasse	13055	Hohenschönhausen
+Bahnhofstrasse	13125	Karow
+Bahnhofstrasse	13127	Französisch Buchholz
+Bahnhofstrasse	13129	Blankenburg
+Bahnhofstrasse	13159	Blankenfelde
+Bahnhofsweg	12439	Niederschöneweide
+Bahnstrasse	12277	Marienfelde
+Bahnstrasse	13089	Heinersdorf
+Bahnweg	12524	Altglienicke
+Bahnweg	12683	Biesdorf
+Bahnweg	13509	Wittenau
+Bahrendorfer Strasse	12555	Köpenick
+Bahrfeldtstrasse	10245	Friedrichshain
+Baikalstrasse	10319	Friedrichsfelde
+Balatonstrasse	10319	Friedrichsfelde
+Balbronner Strasse	14195	Dahlem
+Baldersheimer Weg	12349	Buckow
+Baldinsteg	12487	Johannisthal
+Baldurstrasse	12589	Hessenwinkel
+Ballenstedter Strasse	10709	Wilmersdorf
+Ballersdorfer Strasse	13583	Spandau
+Ballinstrasse	12359	Britz
+Ballonplatz	13125	Karow
+Balluscheckweg	13127	Buchholz
+Balsaminenweg	12623	Mahlsdorf
+Baltenstrasse	12524	Altglienicke
+Baltrumstrasse	13127	Französisch Buchholz
+Baluschekweg	13591	Spandau
+Balzerplatz	12683	Biesdorf
+Balzerstrasse	12683	Biesdorf
+Balzerweg	12683	Biesdorf
+Bambachstrasse	12051	Neukölln
+Bamberger Strasse	10777	Wilmersdorf
+Bamberger Strasse	10777	Schöneberg
+Bamberger Strasse	10779	Wilmersdorf
+Bamberger Strasse	10779	Schöneberg
+Bamberger Strasse	12309	Lichtenrade
+Bamihlstrasse	13587	Spandau
+Bananenweg	13129	Blankenburg
+Banater Strasse	12623	Mahlsdorf
+Bandelstrasse	10559	Tiergarten
+Bansiner Strasse	12619	Kaulsdorf
+Bansiner Weg	14167	Lichterfelde
+Barbara-McClintock-Strasse	12489	Adlershof
+Barbarastrasse	12249	Lankwitz
+Barbarossaplatz	10781	Schöneberg
+Barbarossastrasse	10779	Schöneberg
+Barbarossastrasse	10779	Wilmersdorf
+Barbarossastrasse	10781	Schöneberg
+Barbenweg	12557	Köpenick
+Bardelebenweg	14089	Gatow
+Bardeyweg	14089	Gatow
+Barfusstrasse	13349	Wedding
+Barkenhof	14163	Nikolassee
+Barlachweg	12277	Marienfelde
+Barmbeker Weg	13591	Spandau
+Barnabasstrasse	13509	Tegel
+Barnackufer	12207	Lichterfelde
+Barnetstrasse	12305	Lichtenrade
+Barnewitzer Weg	13585	Spandau
+Barnhelmstrasse	14129	Nikolassee
+Barnimstrasse	10249	Friedrichshain
+Barschelplatz	13505	Konradshöhe
+Barsekowstrasse	12167	Steglitz
+Barstrasse	10713	Wilmersdorf
+Bartastrasse	12055	Neukölln
+Bartelstrasse	10178	Mitte
+Barther Strasse	13051	Hohenschönhausen
+Barther Weg	13158	Französisch Buchholz
+Barthstrasse	13465	Frohnau
+Bartningallee	10557	Tiergarten
+Bartschiner Strasse	12355	Rudow
+Bartschweg	14089	Gatow
+Baruther Strasse	10961	Kreuzberg
+Basaltweg	12349	Buckow
+Basdorfer Strasse	12679	Marzahn
+Basdorfer Zeile	13509	Tegel
+Baseler Strasse	12205	Lichterfelde
+Baseler Strasse	13407	Reinickendorf
+Basiliusweg	13509	Tegel
+Bassermannweg	12207	Lichterfelde
+Bastianstrasse	13357	Wedding
+Bat-Yam-Platz	12353	Buckow
+Battenheimer Weg	12349	Buckow
+Bauernheideweg	12589	Rahnsdorf
+Bauernweg	12359	Britz
+Bauersfeldzeile	13593	Spandau
+Bauerwitzer Weg	12621	Kaulsdorf
+Bauführerweg	12351	Britz
+Bauhofstrasse	10117	Mitte
+Bauhüttenweg	12351	Britz
+Baumbachstrasse	13189	Pankow
+Baumberge	13503	Heiligensee
+Baumeisterstrasse	12159	Schöneberg
+Baumertweg	13595	Spandau
+Baumgartensteg	13597	Spandau
+Baumläuferweg	12351	Buckow
+Baummardersteig	13505	Konradshöhe
+Baumschulenstrasse	12437	Baumschulenweg
+Baumwerder	13599	Tegel
+Bausdorfstrasse	12621	Kaulsdorf
+Baulsdorfstrasse	12623	Mahlsdorf
+Bausemerweg	12487	Johannisthal
+Baußnerweg	12279	Marienfelde
+Bautzener Platz	10829	Schöneberg
+Bautzener Strasse	10829	Schöneberg
+Bayerische Strasse	10707	Wilmersdorf
+Bayerischer Platz	10779	Schöneberg
+Bayernallee	14052	Charlottenburg
+Bayernring	12101	Tempelhof
+Bayreuther Strasse	10787	Schöneberg
+Bayreuther Strasse	10789	Schöneberg
+Cäsarstrasse	10318	Karlshorst
+Cafe L u. B	12559	Müggelheim
+Cafeastrasse	12347	Britz
+Calandrellistrasse	12247	Lankwitz
+Caligariplatz	13086	Weißensee
+Calvinstrasse	10557	Tiergarten
+Calvinstrasse	13467	Hermsdorf
+Cambridger Strasse	13349	Wedding
+Campestrasse	13507	Tegel
+Camphausenstrasse	14165	Zehlendorf
+Campingplatz Zeuthener See I	12527	Schmöckwitz
+Campingplatz Zeuthener See II	12527	Schmöckwitz
+Canovastrasse	12157	Schöneberg
+Cantianstrasse	10437	Prenzlauer Berg
+Cantorsteig	12105	Mariendorf
+Cardinalplatz	12555	Köpenick
+Cardinalstrasse	12555	Köpenick
+Carionweg	10709	Wilmersdorf
+Carl-Heinrich-Becker-Weg	12165	Steglitz
+Carl-Herz-Ufer	10961	Kreuzberg
+Carl-Julius-Vogel-Strasse	12489	Adlershof
+Carl-Langbecker-Strasse	10315	Friedrichsfelde
+Carl-Scheele-Strasse	12489	Adlershof
+Carl-Schurz-Strasse	13597	Spandau
+Carl-Steffeck-Strasse	12309	Lichtenrade
+Carmerstrasse	10623	Charlottenburg
+Carnotstrasse	10587	Charlottenburg
+Carola-Neher-Strasse	12619	Kaulsdorf
+Caroline-Herschel-Platz	10245	Friedrichshain
+Caroline-Michaelis-Strasse	10115	Mitte
+Caroline-von-Humboldt-Weg	10117	Mitte
+Carossastrasse	13587	Spandau
+Carstennstrasse	12205	Lichterfelde
+Caseler Strasse	13088	Weißensee
+Caspar-Theyß-Strasse	14193	Grunewald
+Catostrasse	12109	Mariendorf
+Cauerstrasse	10587	Charlottenburg
+Cautiusstrasse	13587	Spandau
+Cecilienallee	13467	Hermsdorf
+Ceciliengärten	12159	Schöneberg
+Cecilienplatz	12619	Hellersdorf
+Cecilienplatz	13467	Hermsdorf
+Cecilienstrasse	12247	Lankwitz
+Cecilienstrasse	12307	Lichtenrade
+Cecilienstrasse	12619	Kaulsdorf
+Cecilienstrasse	12683	Biesdorf
+Cedernstrasse	12559	Köpenick
+Cedernweg	13351	Wedding
+Cedernweg	13469	Lübars
+Celsiusstrasse	12207	Lichterfelde
+Centweg	13158	Rosenthal
+Ceresbogen	12557	Köpenick
+Cesar-Franck-Strasse	13158	Rosenthal
+Cevennenstrasse	13127	Französisch Buchholz
+Chamierstrasse	13053	Hohenschönhausen
+Chamissoplatz	10965	Kreuzberg
+Chamissostrasse	13127	Französisch Buchholz
+Chamissostrasse	13587	Spandau
+Champignonstrasse	12526	Bohnsdorf
+Chantieweg	13127	Französisch Buchholz
+Chariteplatz	10117	Mitte
+Charitestrasse	10117	Mitte
+Charles-Boutard-Strasse	12487	Johannisthal
+Charles-Corcelle-Ring	13405	Wedding
+Charles-H.-King-Strasse	14163	Nikolassee
+Charles-Lindbergh-Strasse	14089	Gatow
+Charlotte-E.-Pauly-Strasse	12587	Friedrichshagen
+Charlotte-Salomon-Hain	10317	Rummelsburg
+Charlottenbrunner Strasse	14193	Schmargendorf
+Charlottenburger Chaussee	13597	Charlottenburg
+Charlottenburger Chaussee	13597	Spandau
+Charlottenburger Strasse	13086	Weißensee
+Charlottenburger Strasse	14169	Zehlendorf
+Charlottenburger Ufer	10587	Charlottenburg
+Charlottenstrasse	10117	Mitte
+Charlottenstrasse	10315	Friedrichsfelde
+Charlottenstrasse	10969	Kreuzberg
+Charlottenstrasse	12247	Lankwitz
+Charlottenstrasse	12307	Lichtenrade
+Charlottenstrasse	12557	Köpenick
+Charlottenstrasse	12683	Biesdorf
+Charlottenstrasse	13156	Niederschönhausen
+Charlottenstrasse	13597	Spandau
+Charlottenstrasse	14109	Wannsee
+Chartronstrasse	13127	Französisch Buchholz
+Chausseestrasse	10115	Mitte
+Chausseestrasse	13353	Wedding
+Chausseestrasse	14109	Wannsee
+Chemnitzer Strasse	12621	Kaulsdorf
+Cheruskerstrasse	10829	Schöneberg
+Chiemseestrasse	12527	Grünau
+Chlodwigstrasse	12105	Tempelhof
+Chlumer Strasse	12203	Lichterfelde
+Chodowieckistrasse	10405	Prenzlauer Berg
+Chopinstrasse	13088	Weißensee
+Choriner Strasse	10119	Mitte
+Choriner Strasse	10435	Prenzlauer Berg
+Chorweilerstrasse	12524	Altglienicke
+Christburger Strasse	10405	Prenzlauer Berg
+Christelweg	12683	Biesdorf
+Christian-Henkel-Strasse	12349	Buckow
+Christianstrasse	13053	Hohenschönhausen
+Christinenstrasse	10119	Mitte
+Christoph-Ruden-Strasse	12349	Buckow
+Christophstrasse	13053	Hohenschönhausen
+Christrosensteig	13591	Spandau
+Christstrasse	14059	Charlottenburg
+Chrysanthemenstrasse	10407	Prenzlauer Berg
+Chrysanthemenweg	13089	Heinersdorf
+Churer Zeile	12205	Lichterfelde
+Cicerostrasse	10709	Wilmersdorf
+Cimbernstrasse	12524	Altglienicke
+Cimbernstrasse	14129	Nikolassee
+Cite Berthezene	13405	Reinickendorf
+Cite Foch / Nord	13469	Wittenau
+Cite Foch / Süd	13469	Wittenau
+Cite Guynemer	13405	Reinickendorf
+Cite Joffre	13405	Wedding
+Cite Pasteur	13405	Reinickendorf
+Claire-Waldoff-Promenade	10557	Tiergarten
+Claire-Waldoff-Strasse	10117	Mitte
+Claire-Waldoff-Weg	14199	Schmargendorf
+Clara-Grunwald-Strasse	10317	Rummelsburg
+Clara-Jaschke-Strasse	10557	Tiergarten
+Clara-von-Simson-Strasse	10587	Charlottenburg
+Clara-Wieck-Strasse	10785	Tiergarten
+Clara-Zetkin-Platz	12619	Hellersdorf
+Clara-Zetkin-Weg	12619	Kaulsdorf
+Claszeile	14165	Zehlendorf
+Claudiusstrasse	10557	Tiergarten
+Clauertstrasse	14163	Zehlendorf
+Clausewitzstrasse	10629	Charlottenburg
+Clayallee	14169	Zehlendorf
+Clayallee	14195	Dahlem
+Clematisweg	13089	Heinersdorf
+Clementweg	13127	Französisch Buchholz
+Coesfelder Weg	13507	Tegel
+Cohnstrasse	10409	Prenzlauer Berg
+Colbestrasse	10247	Friedrichshain
+Colditzstrasse	12099	Tempelhof
+Colmarer Weg	14169	Zehlendorf
+Colomierstrasse	14109	Wannsee
+Coloniaallee	12524	Altglienicke
+Columbiadamm	10965	Neukölln
+Columbiadamm	10965	Tempelhof
+Columbiadamm	12101	Tempelhof
+Conrad-Blenkle-Strasse	10407	Prenzlauer Berg
+Conradstrasse	13509	Wittenau
+Conradstrasse	14109	Wannsee
+Contessaweg	14089	Gatow
+Coppistrasse	10365	Lichtenberg
+Cora-Berliner-Strasse	10117	Mitte
+Cordesstrasse	14055	Charlottenburg
+Corinthstrasse	10245	Friedrichshain
+Corker Strasse	13349	Wedding
+Corneliusstrasse	10787	Tiergarten
+Corneliusstrasse	12247	Lankwitz
+Corrensplatz	14195	Dahlem
+Cosimaplatz	12159	Friedenau
+Cosmarweg	13591	Spandau
+Coswiger Strasse	12681	Marzahn
+Cotheniusstrasse	10407	Prenzlauer Berg
+Cottastrasse	13156	Niederschönhausen
+Cottbusser Platz	12627	Hellersdorf
+Cottbusser Strasse	12627	Hellersdorf
+Coubertinplatz	14053	Charlottenburg
+Courbierestrasse	10787	Schöneberg
+Crailsheimer Strasse	12247	Steglitz
+Cranachstrasse	12157	Schöneberg
+Creienfelder Weg	13469	Lübars
+Crellestrasse	10827	Schöneberg
+Criegernweg	10319	Friedrichsfelde
+Criolloweg	13465	Frohnau
+Crivitzer Strasse	13059	Hohenschönhausen
+Crusemarkstrasse	13187	Pankow
+Crusiusstrasse	14059	Charlottenburg
+Culemeyerstrasse	12277	Marienfelde
+Cunistrasse	13127	Französisch Buchholz
+Cunostrasse	14193	Schmargendorf
+Cunostrasse	14199	Schmargendorf
+Curtiusstrasse	12205	Lichterfelde
+Cuvrystrasse	10997	Kreuzberg
+Cuxhavener Strasse	10555	Tiergarten
+Cyanenstrasse	10407	Prenzlauer Berg
+Cyclopstrasse	13437	Wittenau
+Cyclopstrasse	13469	Wittenau
+Czarnikauer Strasse	10439	Prenzlauer Berg
+Czeminskistrasse	10829	Schöneberg
+Dabelowseestrasse	13599	Spandau
+Daberkowstrasse	13593	Spandau
+Dachdeckerweg	12351	Britz
+Dachdeckerweg	12351	Buckow
+Dacheroedenstrasse	13507	Tegel
+Dachsberg	14193	Grunewald
+Dachsteinweg	12107	Mariendorf
+Dachsweg	13351	Wedding
+Dädaluspfad	14089	Gatow (Kladow)
+Dämeritzstrasse	12589	Hessenwinkel
+Dänenstrasse	10439	Prenzlauer Berg
+Däumlingsweg	12555	Köpenick
+Däumlingsweg	13088	Malchow
+Daffinger Weg	12623	Mahlsdorf
+Daheimstrasse	12555	Köpenick
+Dahlemer Weg	14167	Lichterfelde
+Dahlemer Weg	14167	Zehlendorf
+Dahlemer Weg	14169	Lichterfelde
+Dahlemer Weg	14169	Zehlendorf
+Dahliensteg	12347	Britz
+Dahlienstrasse	12559	Köpenick
+Dahlienweg	12057	Neukölln
+Dahlienweg	12109	Mariendorf
+Dahlienweg	12359	Britz
+Dahlienweg	12437	Baumschulenweg
+Dahlienweg	12439	Niederschöneweide
+Dahlienweg	12489	Adlershof
+Dahlienweg	13086	Weißensee
+Dahlienweg	13089	Heinersdorf
+Dahlienweg	13127	Buchholz
+Dahlienweg	13129	Blankenburg
+Dahlienweg	13158	Rosenthal
+Dahlienweg	13351	Wedding
+Dahlienweg	13403	Reinickendorf
+Dahlienweg	13437	Wittenau
+Dahlienweg	13587	Hakenfelde
+Dahlienweg	13627	Charlottenburg
+Dahlienweg	13629	Tegel
+Dahlienweg	14167	Lichterfelde
+Dahlienweg	14199	Schmargendorf
+Dahlienweg	13159	Blankenfelde
+Dahlmannstrasse	10629	Charlottenburg
+Dahlwitzer Landstraße	12587	Friedrichshagen
+Dahlwitzer Strasse	12623	Mahlsdorf
+Dahmestraße	12526	Bohnsdorf
+Dahmestraße	12527	Grünau
+Dahnstrasse	13403	Reinickendorf
+Dahrendorfzeile	13627	Charlottenburg
+Daimlerstrasse	12277	Marienfelde
+Dalandweg	12167	Steglitz
+Dallgower Strasse	13583	Spandau
+Dallwitzstrasse	14165	Zehlendorf
+Damaschkestrasse	10711	Charlottenburg (Halensee)
+Damaschkestrasse	10711	Wilmersdorf
+Damaschkeweg	13407	Reinickendorf
+Dambecker-See-Weg	13599	Spandau
+Dambockstrasse	13503	Heiligensee
+Damerauer Allee	12621	Kaulsdorf
+Damirowstrasse	13187	Pankow
+Damkitzstrasse	13503	Heiligensee
+Dammheidestrasse	12555	Köpenick
+Dammsmühler Strasse	13158	Rosenthal
+Dammweg	12057	Neukölln
+Dammweg	12435	Plänterwald
+Dammweg	12437	Plänterwald
+Dammweg	13593	Spandau
+Damsdorfer Weg	14109	Wannsee
+Damwildsteig	13503	Heiligensee
+Danckelmannstrasse	14059	Charlottenburg
+Dankmarsteig	12355	Rudow
+Dankmarsteig	12524	Altglienicke
+Dankratstrasse	12683	Biesdorf
+Dankratweg	12683	Biesdorf
+Dankwartstrasse	10365	Lichtenberg
+Danneckerstrasse	10245	Friedrichshain
+Dannenreicher Pfad	12589	Rahnsdorf
+Dannenwalder Weg	13439	Wittenau
+Danziger Strasse	10405	Prenzlauer Berg
+Danziger Strasse	10407	Prenzlauer Berg
+Danziger Strasse	10435	Prenzlauer Berg
+Darbystrasse	13589	Spandau
+Dardanellenweg	12109	Mariendorf
+Darmstädter Strasse	10707	Wilmersdorf
+Darser Strasse	14167	Lichterfelde
+Darsiner Weg	13503	Heiligensee
+Darsteiner Weg	12559	Müggelheim
+Darwinstrasse	10589	Charlottenburg
+Darßer Bogen	13088	Malchow
+Darßer Strasse	13051	Hohenschönhausen
+Darßer Strasse	13088	Malchow
+Dasburger Weg	13051	Hohenschönhausen
+Dathepromenade	10319	Friedrichsfelde
+Dattelner Weg	13507	Tegel
+Dauergartenstrasse	12683	Biesdorf
+Dauerwaldweg	14055	Charlottenburg (Westend)
+Daumstrasse	13599	Spandau
+David-Francke-Strasse	13587	Spandau
+Davoser Strasse	14199	Schmargendorf
+Ebelallee	12527	Schmöckwitz
+Ebelingstrasse	10249	Friedrichshain
+Ebenrotsteig	13125	Karow
+Eberbacher Strasse	14197	Wilmersdorf
+Ebereschenallee	12623	Mahlsdorf
+Ebereschenallee	14050	Charlottenburg (Westend)
+Eberhard-Roters-Platz	10965	Kreuzberg
+Eberhardstrasse	10367	Lichtenberg
+Eberleinstrasse	12623	Mahlsdorf
+Ebersdorfer Platz	13581	Spandau
+Ebersdorfer Strasse	13581	Spandau
+Ebersstrasse	10827	Schöneberg
+Ebersteinweg	14165	Zehlendorf
+Eberswalder Strasse	10437	Prenzlauer Berg
+Ebertstrasse	10117	Mitte
+Ebertystrasse	10249	Friedrichshain
+Echtermeyerstrasse	14167	Zehlendorf
+Eckenerweg	13591	Spandau
+Eckermannstrasse	12683	Biesdorf
+Eckertstrasse	10249	Friedrichshain
+Eckschanze	13585	Spandau
+Ecksteinweg	12487	Johannisthal
+Fabeckstrasse	14195	Dahlem
+Fabriciusstrasse	10589	Charlottenburg
+Fachinger Strasse	13591	Spandau
+Fählmannweg	14089	Gatow (Kladow)
+Fährallee	12527	Schmöckwitz
+Fährstrasse	13503	Heiligensee
+Fährweg	13587	Hakenfelde
+Färberstrasse	12555	Köpenick
+Fäustelweg	13437	Wittenau
+Fafnerstrasse	13089	Heinersdorf
+Fagottstrasse	13127	Französisch Buchholz
+Fahlandgasse	13409	Reinickendorf
+Fahlenbergstrasse	12589	Hessenwinkel
+Fahremundstrasse	13593	Spandau
+Fahrenheitstrasse	12207	Lichterfelde
+Fahrlander Weg	13591	Spandau
+Falckensteinstrasse	10997	Kreuzberg
+Falckensteinstrasse	12307	Lichtenrade
+Falkenberger Chaussee	13051	Hohenschönhausen
+Falkenberger Chaussee	13053	Hohenschönhausen
+Falkenberger Chaussee	13057	Hohenschönhausen
+Falkenberger Chaussee	13059	Hohenschönhausen
+Falkenberger Strasse	13088	Weißensee
+Falkenbrunnstrasse	12524	Altglienicke
+Falkendamm	12557	Köpenick
+Falkenhagener Strasse	13585	Spandau
+Falkenhausenweg	12249	Lankwitz
+Falkenhorst	13159	Blankenfelde
+Falkenhorststrasse	13505	Konradshöhe
+Falkenplatz	13505	Konradshöhe
+Falkenried	14195	Dahlem
+Falkenseer Chaussee	13583	Spandau
+Falkenseer Chaussee	13589	Spandau
+Falkenseer Damm	13585	Spandau
+Falkensteg	13129	Blankenburg
+Falkensteiner Strasse	14199	Wilmersdorf
+Falkenstrasse	12526	Bohnsdorf
+Falkentaler Steig	13465	Hermsdorf
+Falkentaler Steig	13467	Hermsdorf
+Falkenweg	13089	Heinersdorf
+Falkenweg	13351	Wedding
+Falkenweg	13589	Spandau
+Falkenweg	14050	Charlottenburg
+Falkoniergasse	10117	Mitte
+Falkstätter Strasse	12621	Kaulsdorf
+Falkstrasse	12053	Neukölln
+Falstaffweg	13593	Spandau
+Falterweg	14055	Charlottenburg (Westend)
+Fangschleuser Weg	12589	Rahnsdorf
+Fanningerstrasse	10365	Lichtenberg
+Fanny-Zobel-Strasse	12435	Alt-Treptow
+Faradayweg	14195	Dahlem
+Farmergasse	12689	Marzahn
+Farnstrasse	12439	Niederschöneweide
+Fasanenplan	13159	Blankenfelde
+Fasanenplatz	10719	Wilmersdorf
+Fasanenstrasse	10623	Charlottenburg
+Fasanenstrasse	10719	Charlottenburg
+Fasanenstrasse	10719	Wilmersdorf
+Fasanenstrasse	12526	Bohnsdorf
+Fasanenweg	13129	Blankenburg
+Fasanenweg	13403	Reinickendorf
+Fasanenweg	13589	Spandau
+Fasanerie	13469	Lübars
+Fasoltstrasse	13089	Heinersdorf
+Faucherweg	13599	Spandau
+Faulhornweg	12107	Mariendorf
+Fauststrasse	12623	Mahlsdorf
+Favierweg	13127	Französisch Buchholz
+Haackweg	13597	Spandau
+Haackzeile	13589	Spandau
+Haagstrasse	14129	Nikolassee
+Haakonweg	13088	Malchow
+Haarlemer Strasse	12359	Britz
+Haarmannweg	13591	Spandau
+Haasestrasse	10245	Friedrichshain
+Habelschwerdter Allee	14195	Dahlem
+Haberechtstrasse	12099	Tempelhof
+Haberlandstrasse	10779	Schöneberg
+Haberlandweg	13591	Spandau
+Habermannzeile	13627	Charlottenburg
+Habersaathstrasse	10115	Mitte
+Haberstrasse	12057	Neukölln
+Habichtsgrund	14089	Gatow (Kladow)
+Habichtshorst	12683	Biesdorf
+Habichtstrasse	12526	Bohnsdorf
+Habichtstrasse	13505	Konradshöhe
+Habichtswald	14089	Gatow (Kladow)
+Habichtsweg	10318	Karlshorst
+Habichtsweg	13129	Blankenburg
+Habichtweg	13629	Tegel
+Habsburgerstrasse	10781	Schöneberg
+Habsheimer Strasse	12621	Kaulsdorf
+Hackbuschstrasse	13591	Spandau
+Hackenbergstrasse	12489	Adlershof
+Hackerstrasse	12161	Friedenau
+Hackerstrasse	12163	Steglitz
+Hackescher Markt	10178	Mitte
+Hackländerweg	14089	Gatow (Kladow)
+Hademarscher Weg	13503	Heiligensee
+Haderslebener Strasse	12163	Steglitz
+Hadlichstrasse	13187	Pankow
+Hadubrandstrasse	12683	Biesdorf
+Hadubrandweg	12683	Biesdorf
+Haduweg	13125	Karow
+Haeckelstrasse	12487	Johannisthal
+Haeftenzeile	13627	Charlottenburg
+Hähnelstrasse	12159	Friedenau
+Hämmerlingstrasse	12555	Köpenick
+Händelallee	10557	Tiergarten (Hansaviertel)
+Händelplatz	12203	Lichterfelde
+Händelstrasse	12623	Mahlsdorf
+Hänflingsteig	12685	Marzahn
+Hänselstrasse	12057	Neukölln
+Hänselstrasse	12437	Baumschulenweg
+Haeselerstrasse	12307	Lichtenrade
+Haeselerstrasse	14050	Charlottenburg (Westend)
+Haewererweg	12349	Buckow
+Hafeldweg	14089	Gatow
+Hafenplatz	10963	Kreuzberg
+Hafenstrasse	12357	Rudow
+Hafersteig	12683	Biesdorf
+Haflingerpfad	13465	Frohnau
+Hagebuttenhecke	12685	Marzahn
+Hagebuttenweg	12359	Britz
+Hagedornstrasse	12487	Johannisthal
+Hagelberger Strasse	10965	Kreuzberg
+Hagenauer Strasse	10435	Prenzlauer Berg
+Hagenower Ring	13059	Hohenschönhausen
+Hagenplatz	14193	Grunewald
+Hagenstrasse	14193	Grunewald
+Hagenstrasse	13125	Karow
+Hagenstrasse	10365	Lichtenberg
+Hahnebergweg	13593	Staaken
+Hahenfußpfad	13591	Spandau
+Hahns Mühle	12587	Friedrichshagen
+Hainbuchenstrasse	13465	Frohnau
+Hainbuchenweg	14089	Gatow (Kladow)
+Hainbuchenweg	12355	Rudow
+Hainleiteweg	13589	Spandau
+Hainstrasse	12439	Niederschöneweide
+Hakenfelder Strasse	13587	Spandau
+Halalistrasse	13469	Waidmannslust
+Halbauer Weg	12247	Lankwitz
+Halbauer Weg	12249	Lankwitz
+Halbe-Hufen-Weg	13125	Karow
+Halberstädter Strasse	10711	Wilmersdorf
+Halemweg	13627	Charlottenburg
+Halenseestrasse	10711	Grunewald
+Halenseestrasse	14055	Charlottenburg
+Halker Zeile	12305	Lichtenrade
+Hallandstrasse	13189	Pankow
+Hallberger Zeile	12437	Baumschulenweg
+Hallerstrasse	10587	Charlottenburg
+Hallesche Strasse	10963	Kreuzberg
+Hallesches Ufer	10963	Kreuzberg
+Hallgarter Steig	12559	Müggelheim
+Hallichpromenade	13437	Wittenau
+Halligweg	13599	Tegel
+Halmstrasse	14050	Charlottenburg (Westend)
+Halskesteig	13629	Siemensstadt
+Halskestrasse	12167	Steglitz
+Haltoner Strasse	12683	Biesdorf
+Haltrichweg	14089	Gatow (Kladow)
+Hamannweg	12621	Kaulsdorf
+Hambacher Weg	13465	Frohnau
+Hamburger Platz	13086	Weißensee
+Hamburger Strasse	12623	Mahlsdorf
+Hamburger Strasse	13591	Spandau
+Hamerlingweg	14167	Zehlendorf
+Hammarskjöldplatz	14055	Charlottenburg (Westend)
+Hammersteinstrasse	14199	Schmargendorf
+Hammerstrasse	14167	Zehlendorf
+Hampsteadstrasse	14167	Zehlendorf
+Hamsterstrasse	12621	Kaulsdorf
+Hamsterstrasse	12623	Mahlsdorf
+Hanauer Strasse	14197	Wilmersdorf
+Handjerystrasse	12159	Friedenau
+Handjerystrasse	12161	Friedenau
+Handjerystrasse	12489	Adlershof
+Hanffs Ruh	12527	Grünau
+Hangelsberger Gang	12589	Rahnsdorf
+Hangweg	13465	Frohnau
+Hanielweg	12277	Marienfelde
+Hannah-Arendt-Strasse	10117	Mitte
+Hannah-Karminski-Strasse	10587	Charlottenburg
+Hannaweg	12683	Biesdorf
+Hanne Nüte	12359	Britz
+Hannemannstrasse	12347	Britz
+Hannoversche Strasse	10115	Mitte
+Hanns-Braun-Strasse	14053	Charlottenburg (Westend)
+Hanns-Eisler-Strasse	10409	Prenzlauer Berg
+Hannsdorfer Strasse	12621	Kaulsdorf
+Hanowsteig	12309	Lichtenrade
+Hans-Böhm-Zeile	14165	Zehlendorf
+Hans-Fallada-Strasse	12683	Biesdorf
+Hans-Grade-Ring	 14089	Gatow (Kladow)
+Hans-Jürgen-Strasse	13127	Französisch Buchholz
+Hans-Otto-Strasse	10407	Prenzlauer Berg
+Hans-Poelzig-Strasse	13587	Spandau
+Hans-Rosenthal-Platz	10825	Schöneberg
+Hans-Sachs-Strasse	12487	Johannisthal
+Hans-Sachs-Strasse	12205	Lichterfelde
+Hans-Schmidt-Strasse	12489	Adlershof
+Hans-Schumacher-Strasse	13127	Buchholz
+Hans-Thoma-Strasse	12435	Alt-Treptow
+Hansa-Ufer	10555	Tiergarten (Moabit)
+Hansaplatz	10557	Tiergarten (Hansaviertel)
+Hansastrasse	13051	Hohenschönhausen
+Hansastrasse	13053	Hohenschönhausen
+Hansastrasse	13088	Weißensee
+Hansastrasse	13409	Wedding
+Hanseatenweg	10557	Tiergarten (Hansaviertel)
+Hanstedter Weg	12169	Steglitz
+Hanuschkestrasse	12487	Johannisthal
+Happestrasse	12305	Lichtenrade
+Harbertssteg	12685	Marzahn
+Harbigstrasse	14055	Charlottenburg (Westend)
+Harburger Weg	13581	Spandau
+Hardangerstrasse	13189	Pankow
+Hardenbergplatz	10623	Charlottenburg
+Hardenbergplatz	10787	Tiergarten
+Hardenbergstrasse	10623	Charlottenburg
+Hardyweg	14055	Charlottenburg (Westend)
+Harfenweg	13127	Französisch Buchholz
+Harkortstrasse	12105	Schöneberg
+Harlinger Strasse	14199	Wilmersdorf
+Harlingeroder Weg	10589	Charlottenburg
+Harnackstrasse	14195	Dahlem
+Harnackstrasse	10365	Lichtenberg
+Harnischweg	12555	Köpenick
+Harriesstrasse	13629	Siemensstadt
+Harrosteig	12524	Altglienicke
+Harry-S.-Truman-Allee	14167	Lichterfelde
+Harsdörferweg	14089	Gatow (Kladow)
+Hartlebenstrasse	12587	Friedrichshagen
+Hartmannstrasse	12207	Lichterfelde
+Hartmannsweilerweg	14163	Zehlendorf
+Hartmutstrasse	13129	Blankenburg
+Hartriegelstrasse	12439	Niederschöneweide
+Hartwichzeile	13591	Spandau
+Harzburger Strasse	13129	Blankenburg
+Harzburger Strasse	13187	Pankow
+Harzer Strasse	12059	Neukölln
+Harzer Strasse	12435	Alt-Treptow
+Harzgeroder Strasse	13187	Pankow
+Haselhorster Damm	13599	Spandau
+Haselhorster Weg	13629	Siemensstadt
+Haselhuhnweg	13503	Heiligensee
+Haselnußweg	12349	Buckow
+Haselsteig	12347	Britz
+Hasenhegerweg	12353	Buckow
+Hasenheide	10967	Kreuzberg
+Hasenheide	10967	Neukölln
+Hasenholzer Allee	12685	Marzahn
+Hasenlauf	12527	Grünau
+Hasenmark	13585	Spandau
+Hasenpfad	14050	Charlottenburg (Westend)
+Hasensprung	14193	Grunewald
+Hasensprung	10318	Karlshorst
+Hasensteg	12487	Johannisthal
+Hasenweg	13627	Charlottenburg
+Hasenweg	13581	Spandau
+Hasenweg	13351	Wedding
+Hasselfelder Weg	12209	Lichterfelde
+Hasselwerder	13505	Tegel
+Hasselwerder Strasse	12439	Niederschöneweide
+Hasseroder Strasse	13187	Pankow
+Hassoweg	12524	Altglienicke
+Haßfurter Weg	13189	Pankow
+Haßlingerweg	13409	Reinickendorf
+Hattenheimer Strasse	12099	Tempelhof
+Hattenheimer Strasse	13465	Frohnau
+Hattinger Weg	13507	Tegel
+Hatzenporter Weg	12681	Marzahn
+Hatzfeldtallee	13509	Tegel
+Haubachstrasse	10585	Charlottenburg
+Hauffallee	13088	Malchow
+Hauffstrasse	10317	Lichtenberg
+Hauffweg	13127	Buchholz
+Hauffweg	12349	Britz
+Hauptstrasse	10827	Schöneberg
+Hauptstrasse	10827	Friedenau
+Hauptstrasse	12159	Friedenau
+Hauptstrasse	13159	Blankenfelde
+Hauptstrasse	13127	Französisch Buchholz
+Hauptstrasse	13055	Hohenschönhausen
+Hauptstrasse	13089	Heinersdorf
+Hauptstrasse	12437	Baumschulenweg
+Hauptstrasse	10317	Lichtenberg
+Hauptstrasse	10369	Lichtenberg
+Hauptstrasse	10407	Prenzlauer Berg
+Hauptstrasse	13088	Weißensee
+Hauptstrasse	12109	Mariendorf
+Hauptstrasse	13158	Rosenthal
+Hauptstrasse	12459	Oberschöneweide
+Hauptstrasse	13591	Spandau
+Hauptweg	12621	Kaulsdorf
+Hauptweg	13156	Niederschönhausen
+Hauptweg	12683	Biesdorf
+Hauptweg	13129	Blankenburg
+Hauptweg	13089	Heinersdorf
+Hauptweg	12587	Friedrichshagen
+Hauptweg	13059	Wartenberg
+Hauptweg	10407	Prenzlauer Berg
+Hauptweg	13127	Buchholz
+Hauptweg	10318	Karlshorst
+Hauptweg	12437	Baumschulenweg
+Hauptweg	12489	Adlershof
+Hauptweg	12439	Niederschöneweide
+Hauptweg	13627	Charlottenburg
+Hauptweg	14050	Charlottenburg
+Hauptweg	13509	Wittenau
+Hauptweg	13437	Wittenau
+Hauptweg	13591	Staaken
+Hauptweg	12353	Buckow
+Hauptweg	13593	Spandau
+Hauptweg	12057	Neukölln
+Hauptweg	12109	Mariendorf
+Hauptweg	13359	Wedding
+Hauptweg	13597	Pichelsdorf
+Hauptweg	13599	Haselhorst
+Hauptweg	13407	Reinickendorf
+Hauptweg	13503	Tegel
+Hauptweg	13587	Hakenfelde
+Hauptweg	13159	Blankenfelde
+Hauptweg I	12057	Neukölln
+Hauptweg II	12057	Neukölln
+Hausburgstrasse	10249	Friedrichshain
+Haushoferstrasse	12487	Johannisthal
+Hauskavelweg	13589	Spandau
+Hausotterplatz	13409	Reinickendorf
+Hausotterstrasse	13409	Reinickendorf
+Hausstockweg	12107	Mariendorf
+Hausvaterweg	13057	Falkenberg
+Hausvogteiplatz	10117	Mitte
+Havelberger Strasse	10559	Tiergarten (Moabit)
+Havelchaussee	13597	Spandau (Wilhelmstadt)
+Havelchaussee	14055	Grunewald
+Havelchaussee	14193	Grunewald
+Havelchaussee	14055	Charlottenburg (Westend)
+Havelländer Ring	12629	Hellersdorf
+Havelmatensteig	14089	Gatow
+Havelmüllerweg	13509	Tegel
+Havelschanze	13587	Spandau
+Havelstrasse	13597	Spandau
+Havelweg	12459	Oberschöneweide
+Havelweg	13597	Spandau
+Havemannstrasse	12689	Marzahn
+Havermannstrasse	12359	Britz
+Havensteinstrasse	12249	Lankwitz
+Havestadt-Platz	12489	Adlershof
+Haydnstrasse	12167	Steglitz
+Haydnstrasse	12203	Lichterfelde
+Haydnstrasse	12683	Biesdorf
+Haynauer Strasse	12249	Lankwitz

@@ -110,17 +110,14 @@ WHERE vorgesetzterId = (SELECT id
 # Gib alle Mitarbeiter mit ihren direkten Vorgesetzten aus
 # Tipp benutze 2 verschiedene Aliase für die Tabelle mitarbeiter
 
-SELECT m.vorname, m.nachname, v.name, v.nachname
-FROM mitarbeiter m
-WHERE vorgesetzterId
 
 SELECT v.vorname 'Chef Vorname', v.nachname 'Chef Nachname', m.vorname 'MA Vorname', m.nachname 'MA Nachname'
 FROM mitarbeiter m
          JOIN mitarbeiter v
 WHERE m.vorgesetzterId = v.id;
 
-SELECT concat(m.vorname,' ', m.nachname) 'Mitarbeiter', concat(v.vorname ,' ', v.nachname) Chef
+SELECT concat(m.vorname, ' ', m.nachname) 'Mitarbeiter', concat(v.vorname, ' ', v.nachname) Chef
 FROM mitarbeiter m
          LEFT JOIN mitarbeiter v
-ON m.vorgesetzterId = v.id;
+                   ON m.vorgesetzterId = v.id;
 
