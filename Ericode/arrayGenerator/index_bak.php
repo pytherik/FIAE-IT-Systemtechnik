@@ -17,10 +17,10 @@
 <body>
 <?php
 
-$addressData = explode("\n", file_get_contents('berlin.txt', 'r'));
-$prenameDataM = explode("\n", file_get_contents('names/vornamenM.txt'));
-$prenameDataW = explode("\n", file_get_contents('names/vornamenW.txt'));
-$surnameData = explode("\n", file_get_contents('names/nachnamen.txt'));
+$addressData = explode("\n", file_get_contents('tableData/addresses_berlin.txt', 'r'));
+$prenameDataM = explode("\n", file_get_contents('tableData/female_firstnames.txt'));
+$prenameDataW = explode("\n", file_get_contents('tableData/male_firstnames.txt'));
+$surnameData = explode("\n", file_get_contents('tableData/surnames.txt'));
 $prenameDataMW = [];
 
 $max = 10;
@@ -45,8 +45,8 @@ sort($districts);
 
 echo "INSERT INTO ort VALUES <br>";
 foreach ($districts as $line => $district) {
-  $line + 1 < count($districts) ? $lastChar = "')," : $lastChar = "');";
-  echo "(NULL, '$district$lastChar<br/>";
+  $endOfLine = ($line + 1 < count($districts)) ?  "')," :  "');";
+  echo "(NULL, '$district$endOfLine<br/>";
 }
 
 echo "<br/><br>";
@@ -61,10 +61,10 @@ for ($i = 0; $i < $max; $i++) {
       break;
     }
   }
-  ($i < $max - 1) ? $lastChar = "),<br/>" : $lastChar = ");<br/>";
+  $endOfLine = ($i < $max - 1) ?  "),<br/>" :  ");<br/>";
   echo "(NULL, '" . $allData[$prename][rand(0, count($allData[$prename]))] . "', '" .
     $allData[2][rand(0, count($allData[2]))] . "', '" .
-    $address[0] . "', '" . $address[1] . "', ".$ortId.  $lastChar;
+    $address[0] . "', '" . $address[1] . "', ".$ortId.  $endOfLine;
 
 }
 
