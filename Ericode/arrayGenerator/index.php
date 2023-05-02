@@ -4,7 +4,7 @@ include 'classes/ConnectDB2.php';
 include 'classes/CreateDB2.php';
 include 'classes/Delivery.php';
 
-
+//(new CreateDB2())->createDBwithTables();
 $numDatasets = $_POST['numDatasets'] ?? '';
 $numDatasets = ($numDatasets == '') ? 5 : (int)$numDatasets;
 
@@ -13,7 +13,8 @@ if (isset($_POST['addressArray'])) {
   foreach($_POST['addressArray'] as $item) {
     $items[] = $item;
   }
-  $addressData = (new Delivery())->getAddressData($items, $numDatasets);
+  $houseNum = $_POST['houseNum'] ?? false;
+  $addressData = (new Delivery())->getAddressData($items, $houseNum, $numDatasets);
   $arrayData[] = $addressData;
   echo "<pre>";
   print_r($addressData);
@@ -21,7 +22,8 @@ if (isset($_POST['addressArray'])) {
 }
 
 if (isset($_POST['firstnames'])) {
-  $firstNamesData = (new Delivery())->getMixedFirstnamesData($_POST['firstnames'], $numDatasets);
+  $genders = explode(',',$_POST['firstnames']);
+  $firstNamesData = (new Delivery())->getFirstnamesData($genders, $numDatasets);
   echo "<pre>";
   print_r($firstNamesData);
   echo "</pre>";

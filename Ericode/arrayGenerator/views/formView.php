@@ -18,12 +18,14 @@
   <label for="maleFirstnames">Vornamen nur m</label>
   <input type="radio" name="firstnames" id="maleFirstnames" value="male_firstnames"><br>
   <label for="maleFirstnames">Vornamen m + w</label>
-  <input type="radio" name="firstnames" id="maleFirstnames" value="[male_firstnames, female_firstnames]"><br>
+  <input type="radio" name="firstnames" id="maleFirstnames" value="male_firstnames, female_firstnames"><br>
   <label for="surnames">Nachnamen</label>
   <input type="checkbox" name="surnames" id="surnames" value="surnames"><br>
   <h3>Adresse</h3>
   <label for="strasse">Strasse</label>
   <input type="checkbox" name="addressArray[]" id="strasse" value="strasse"><br>
+  <label for="houseNum">Hausnummer</label>
+  <input type="checkbox" name="houseNum" id="houseNum" value="true"><br>
   <label for="plz">Postleitzahl</label>
   <input type="checkbox" name="addressArray[]" id="plz" value="plz"><br>
   <label for="ort">Ort</label>

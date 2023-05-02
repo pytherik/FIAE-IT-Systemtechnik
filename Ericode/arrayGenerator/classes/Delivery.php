@@ -2,14 +2,19 @@
 
 class Delivery extends ConnectDB2
 {
-  public function getAddressData(array $items, int $numDatasets): array
+  public function getAddressData(array $addressItems, bool $houseNum, int $numDatasets): array
   {
-    $tables = implode(',', $items);
+    $tables = implode(',', $addressItems);
     try {
       $pdo = $this->connect();
       $result = $pdo->query("SELECT $tables FROM addresses_berlin ORDER BY RAND() LIMIT $numDatasets");
       while ($row = $result->fetch()) {
-        $addresssArray[] = $row;
+        $address = [];
+        foreach ($addressItems as $item) {
+          $address[] = $row[$item];
+        }
+        if ($houseNum) array_splice($address, 1, 0,  rand(1, 200));
+        $addresssArray[] = $address;
       }
     } catch (PDOException $e) {
       echo $e->getMessage();
@@ -17,35 +22,39 @@ class Delivery extends ConnectDB2
     return $addresssArray;
   }
 
-  public function getFirstamesData(string $gender, int $numDatasets): array
+  function getFirstnamesData(array $genders, int $numDatasets): array
   {
+    $firstnames = [];
     try {
       $pdo = $this->connect();
-      $result = $pdo->query("SELECT * FROM $gender ORDER BY RAND() LIMIT $numDatasets");
-      while ($row = $result->fetch()) {
-        $firstnames[] = $row;
+      foreach ($genders as $gender) {
+        $result = $pdo->query("SELECT name FROM $gender ORDER BY RAND() LIMIT $numDatasets");
+        while ($row = $result->fetch()) {
+          $firstnames[] = $row['name'];
+        }
       }
     } catch (PDOException $e) {
       echo $e->getMessage();
     }
-    return $firstnames;
-  }
-
-  function getMixedFirstnamesData(array $genders, int $numDatasets): array
-  {
-    try {
-      $pdo = $this->connect();
-      $result = $pdo->query(
-        "SELECT 
-    (SELECT name FROM $genders[0] ORDER BY RAND()), 
-       (SELECT name FROM $genders[1] ORDER BY RAND()) LIMIT $numDatasets");
-      while ($row = $result->fetch()) {
-        $firstnames[] = $row;
-      }
-    } catch (PDOException $e) {
-      echo $e->getMessage();
-    }
-    return $firstnames;
+    shuffle($firstnames);
+    return array_slice($firstnames, 0, $numDatasets);
   }
 }
+
+
+
+//  public function getFirstamesData(string $gender, int $numDatasets): array
+//  {
+//    try {
+//      $pdo = $this->connect();
+//      $result = $pdo->query("SELECT * FROM $gender ORDER BY RAND() LIMIT $numDatasets");
+//      while ($row = $result->fetch()) {
+//        $firstnames[] = $row;
+//      }
+//    } catch (PDOException $e) {
+//      echo $e->getMessage();
+//    }
+//    return $firstnames;
+//  }
+
 

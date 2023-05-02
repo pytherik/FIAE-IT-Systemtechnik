@@ -18,8 +18,8 @@
 <?php
 
 $addressData = explode("\n", file_get_contents('tableData/addresses_berlin.txt', 'r'));
-$prenameDataM = explode("\n", file_get_contents('tableData/female_firstnames.txt'));
-$prenameDataW = explode("\n", file_get_contents('tableData/male_firstnames.txt'));
+$prenameDataM = explode("\n", file_get_contents('tableData/male_firstnames.txt'));
+$prenameDataW = explode("\n", file_get_contents('tableData/female_firstnames.txt'));
 $surnameData = explode("\n", file_get_contents('tableData/surnames.txt'));
 $prenameDataMW = [];
 
