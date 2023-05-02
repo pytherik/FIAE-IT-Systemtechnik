@@ -3,7 +3,8 @@ include 'config.php';
 include 'classes/ConnectDB2.php';
 include 'classes/CreateDB2.php';
 include 'classes/Delivery.php';
-//if (isset($_POST['namesArray']) || isset($_POST['addressArray'])) {
+
+
 $numDatasets = $_POST['numDatasets'] ?? '';
 $numDatasets = ($numDatasets == '') ? 5 : (int)$numDatasets;
 
@@ -20,7 +21,7 @@ if (isset($_POST['addressArray'])) {
 }
 
 if (isset($_POST['firstnames'])) {
-  $firstNamesData = (new Delivery())->getFirstamesData($_POST['firstnames'], $numDatasets);
+  $firstNamesData = (new Delivery())->getMixedFirstnamesData($_POST['firstnames'], $numDatasets);
   echo "<pre>";
   print_r($firstNamesData);
   echo "</pre>";
