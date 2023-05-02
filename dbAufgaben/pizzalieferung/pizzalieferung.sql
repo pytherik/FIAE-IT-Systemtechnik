@@ -68,7 +68,12 @@ VALUES (NULL, 'klein', 4),
        (NULL, 'gross', 5);
 
 INSERT INTO pizza
-VALUES (NULL, 1);
+VALUES
+    (NULL, 1),
+    (NULL, 2),
+    (NULL, 1),
+    (NULL, 2),
+    (NULL, 2);
 
 
 CREATE TABLE toppings
@@ -86,6 +91,7 @@ VALUES (NULL, 'Champignons', 1),
 
 CREATE TABLE pizza_toppings
 (
+    id INT AUTO_INCREMENT PRIMARY KEY ,
     pizza_Id    INT,
     toppings_Id INT
 );
@@ -109,7 +115,9 @@ CREATE TABLE bestellung
 );
 
 INSERT INTO bestellung
-VALUES (NULL, 6, '2023-04-29 11:00');
+VALUES (NULL, 6, '2023-04-29 11:00'),
+       (NULL, 3, '2023-05-02 13:00'),
+       (NULL, 5, '2023-05-02 14:00');
 
 
 CREATE TABLE position
@@ -121,12 +129,27 @@ CREATE TABLE position
 );
 
 INSERT INTO position
-VALUES (NULL, 1, 1, 2);
+VALUES
+    (NULL, 1, 1, 2),
+    (NULL, 2, 2, 2),
+    (NULL, 2, 3, 2),
+    (NULL, 3, 4, 1),
+    (NULL, 3, 5, 1),
+    (NULL, 3, null, 2);
 
 INSERT INTO pizza_toppings
-VALUES (1, 2),
-       (1, 3),
-       (1, 3);
+VALUES (NULL, 1, 2),
+       (NULL, 1, 3),
+       (NULL, 1, 3),
+       (NULL, 2, 2),
+       (NULL, 2, 3),
+       (NULL, 2, 4),
+       (NULL, 3, 1),
+       (NULL, 3, 4),
+       (NULL, 4, 1),
+       (NULL, 4, 2),
+       (NULL, 5, 2),
+       (NULL, 5, 3);
 
 ALTER TABLE kunde
     ADD FOREIGN KEY (ortId) REFERENCES ort (id);
@@ -198,7 +221,7 @@ SELECT concat(vorname, ' ', nachname, ' ', strNr, ' ', plz, ' ', ort) Kunde,
        (SELECT SUM(t2.preis)
         FROM toppings t2
         JOIN pizza_toppings pt2 ON pt2.toppings_Id=t2.id
-        WHERE pt2.pizza_Id=1) "Gesamt Toppings"
+        WHERE b.id=3) "Gesamt Toppings"
 
 FROM ort
          JOIN kunde k ON ortId = ort.id
@@ -209,5 +232,5 @@ FROM ort
          JOIN pizza_toppings pt ON pt.pizza_Id = p.id
          JOIN toppings t on pt.toppings_Id = t.id
          JOIN getraenke g on getraenkeId = g.id
-WHERE b.id = 1;
+WHERE b.id = 3;
 

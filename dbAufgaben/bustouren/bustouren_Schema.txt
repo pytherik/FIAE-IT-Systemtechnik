@@ -1,0 +1,33 @@
+fahrer
+
+- id        PK
+- vorname
+- nachname
+
+
+bus
+
+- id        PK
+- kennzeichen
+
+
+gast
+
+- id        PK
+- vorname
+- nachname
+
+
+bustour
+
+- id         PK
+- fahrer1Id  FK
+- fahrer2Id  FK
+- starttermin
+- busId      FK
+
+
+bustour_gast
+
+- bustourId  FK, PK
+- gastId     FK, PK
