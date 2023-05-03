@@ -1,0 +1,8 @@
+Fastzusammenstöße in der Luftfahrt
+
+Jedes Flugzeug wird von 2 Piloten gflogen.
+Die Flüge mit diesen Piloten sollen in einer db festgehalten werden.
+Die Flüge haben einen Starttermin, starten von einem Flughafen und landen
+an einem Flughafen.
+Die db soll die Daten liefern, welcher Flug von wo nach wo, mit welchen Piloten
+an einem bestimmten Tag zur entsprechenden Uhrzeit unterwegs war.

@@ -42,7 +42,7 @@ CREATE TABLE lieferung
 CREATE TABLE pizza
 (
     id           INT AUTO_INCREMENT PRIMARY KEY,
-    pizzaBasisId INT,
+    pizzaBasisId INT NOT NULL,
     lieferungId  INT
 );
 
@@ -158,6 +158,7 @@ FROM lieferung l
          JOIN pizzaBasis pb ON pizzaBasisId = pb.id
          JOIN pizza_topping pt ON pizzaId = p.id
          JOIN topping t ON t.id = toppingId
-         JOIN getraenk_lieferung gl ON l.id = gl.lieferungId
+         JOIN getraenk_l
+ieferung gl ON l.id = gl.lieferungId
          JOIN getraenk g ON g.id = getraenkId
 WHERE l.id = 1;
