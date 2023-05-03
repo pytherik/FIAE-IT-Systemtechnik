@@ -20,7 +20,7 @@
   <label for="maleFirstnames">Vornamen m + w</label>
   <input type="radio" name="firstnames" id="maleFirstnames" value="male_firstnames, female_firstnames"><br>
   <label for="surnames">Nachnamen</label>
-  <input type="checkbox" name="surnames" id="surnames" value="surnames"><br>
+  <input type="checkbox" name="lastnames" id="lastnames" value="lastnames"><br>
   <h3>Adresse</h3>
   <label for="strasse">Strasse</label>
   <input type="checkbox" name="addressArray[]" id="strasse" value="strasse"><br>

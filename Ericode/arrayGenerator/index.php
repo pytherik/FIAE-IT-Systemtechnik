@@ -8,25 +8,30 @@ include 'classes/Delivery.php';
 $numDatasets = $_POST['numDatasets'] ?? '';
 $numDatasets = ($numDatasets == '') ? 5 : (int)$numDatasets;
 
+$addressData = [];
 
 if (isset($_POST['addressArray'])) {
-  foreach($_POST['addressArray'] as $item) {
+  foreach ($_POST['addressArray'] as $item) {
     $items[] = $item;
   }
   $houseNum = $_POST['houseNum'] ?? false;
   $addressData = (new Delivery())->getAddressData($items, $houseNum, $numDatasets);
-  $arrayData[] = $addressData;
-  echo "<pre>";
-  print_r($addressData);
-  echo "</pre>";
+}
+
+if (isset($_POST['lastnames'])) {
+  $lastnamesData = (new Delivery())->getLastnamesData($numDatasets);
+  $addressData = array_merge([$lastnamesData], $addressData);
 }
 
 if (isset($_POST['firstnames'])) {
-  $genders = explode(',',$_POST['firstnames']);
-  $firstNamesData = (new Delivery())->getFirstnamesData($genders, $numDatasets);
-  echo "<pre>";
-  print_r($firstNamesData);
-  echo "</pre>";
+  $genders = explode(',', $_POST['firstnames']);
+  $firstnamesData = (new Delivery())->getFirstnamesData($genders, $numDatasets);
+  $addressData = array_merge([$firstnamesData], $addressData);
+}
+
+
+if(isset($_POST['addressArray']) || isset($_POST['firstnames']) || isset($_POST['lastnames'])){
+echo (new Delivery())->createQueryTemplate($addressData);
 }
 
 

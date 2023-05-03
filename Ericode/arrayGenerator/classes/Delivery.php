@@ -4,25 +4,27 @@ class Delivery extends ConnectDB2
 {
   public function getAddressData(array $addressItems, bool $houseNum, int $numDatasets): array
   {
-    $tables = implode(',', $addressItems);
     try {
       $pdo = $this->connect();
-      $result = $pdo->query("SELECT $tables FROM addresses_berlin ORDER BY RAND() LIMIT $numDatasets");
-      while ($row = $result->fetch()) {
-        $address = [];
-        foreach ($addressItems as $item) {
-          $address[] = $row[$item];
+      foreach ($addressItems as $item) {
+        $result = $pdo->query("SELECT $item FROM addresses_berlin ORDER BY RAND() LIMIT $numDatasets");
+        $part = [];
+        while ($row = $result->fetch()) {
+          if ($item == 'strasse' && $houseNum) {
+            $part[] = $row[$item] . ' ' . (rand(1, 100));
+          } else {
+            $part[] = $row[$item];
+          }
         }
-        if ($houseNum) array_splice($address, 1, 0,  rand(1, 200));
-        $addresssArray[] = $address;
+        $address[] = $part;
       }
     } catch (PDOException $e) {
       echo $e->getMessage();
     }
-    return $addresssArray;
+    return $address;
   }
 
-  function getFirstnamesData(array $genders, int $numDatasets): array
+  public function getFirstnamesData(array $genders, int $numDatasets): array
   {
     $firstnames = [];
     try {
@@ -39,22 +41,36 @@ class Delivery extends ConnectDB2
     shuffle($firstnames);
     return array_slice($firstnames, 0, $numDatasets);
   }
+
+  public function getLastnamesData(int $numDatasets): array
+  {
+    $lastnames = [];
+    try {
+      $pdo = $this->connect();
+      $result = $pdo->query("SELECT name FROM surnames ORDER BY RAND() LIMIT $numDatasets");
+      while ($row = $result->fetch()) {
+        $lastnames[] = $row['name'];
+      }
+    } catch (PDOException $e) {
+      echo $e->getMessage();
+    }
+    return $lastnames;
+  }
+
+  public function createQueryTemplate(array $addressArray): string
+  {
+    $inner = count($addressArray);
+    $outer = count($addressArray[0]);
+    $html = "INSERT INTO kunde VALUES <br><blockquote>";
+    for ($j = 0; $j < $outer; $j++) {
+      $html .= "(";
+      for ($i = 0; $i < $inner; $i++) {
+        $endOfLine = ($i < $inner - 1) ? "', " : "'),<br/>";
+        if (($i == $inner - 1) && $j == ($outer - 1)) $endOfLine = "');</blockquote>";
+        $html .= "'" . $addressArray[$i][$j] . $endOfLine;
+      }
+      $i = 0;
+    }
+    return $html;
+  }
 }
-
-
-
-//  public function getFirstamesData(string $gender, int $numDatasets): array
-//  {
-//    try {
-//      $pdo = $this->connect();
-//      $result = $pdo->query("SELECT * FROM $gender ORDER BY RAND() LIMIT $numDatasets");
-//      while ($row = $result->fetch()) {
-//        $firstnames[] = $row;
-//      }
-//    } catch (PDOException $e) {
-//      echo $e->getMessage();
-//    }
-//    return $firstnames;
-//  }
-
-
