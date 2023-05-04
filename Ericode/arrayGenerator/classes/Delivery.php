@@ -61,15 +61,15 @@ class Delivery extends ConnectDB2
   {
     $inner = count($addressArray);
     $outer = count($addressArray[0]);
-    $html = "INSERT INTO $tablename VALUES <br><blockquote>";
+    $html = "INSERT INTO $tablename VALUES \n";
     for ($j = 0; $j < $outer; $j++) {
-      $html .= "(";
+      $html .= "\t(";
       for ($i = 0; $i < $inner; $i++) {
-        $endOfLine = ($i < $inner - 1) ? "', " : "'),<br/>";
-        if (($i == $inner - 1) && $j == ($outer - 1)) $endOfLine = "');</blockquote>";
+        $endOfLine = ($i < $inner - 1) ? "', " : "'),\n";
+        if (($i == $inner - 1) && $j == ($outer - 1)) $endOfLine = "');";
         $html .= "'" . $addressArray[$i][$j] . $endOfLine;
       }
-      $i = 0;
+//      $i = 0;
     }
     return $html;
   }

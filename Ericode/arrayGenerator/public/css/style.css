@@ -11,3 +11,21 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-sizel: 1.3rem;
 }
+
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.form-container{
+    flex-grow: 1;
+}
+
+.code-container {
+    flex-grow: 3;
+}
+
+.code {
+    margin-top: 10%;
+    width: 80%;
+}

@@ -5,6 +5,7 @@ include 'classes/CreateDB2.php';
 include 'classes/Delivery.php';
 
 #(new CreateDB2())->createDBwithTables();
+
 $numDatasets = $_POST['numDatasets'] ?? '';
 $numDatasets = ($numDatasets == '') ? 10 : (int)$numDatasets;
 
@@ -13,11 +14,8 @@ $tablename = $_POST['tablename'] ?? '';
 $tablename = ($tablename == '') ? 'table' : $tablename;
 
 if (isset($_POST['addressArray'])) {
-  foreach ($_POST['addressArray'] as $item) {
-    $items[] = $item;
-  }
   $houseNum = $_POST['houseNum'] ?? false;
-  $addressData = (new Delivery())->getAddressData($items, $houseNum, $numDatasets);
+  $addressData = (new Delivery())->getAddressData($_POST['addressArray'], $houseNum, $numDatasets);
 }
 
 if (isset($_POST['lastnames'])) {
@@ -33,8 +31,3 @@ if (isset($_POST['firstnames'])) {
 
 include './views/formView.php';
 
-if(isset($_POST['addressArray']) || isset($_POST['firstnames']) || isset($_POST['lastnames'])){
-  echo "<br/><hr><br>";
-echo"<pre class='line-numbers'><code class='language-css'>" . (new Delivery())->createQueryTemplate($addressData, $tablename) . "</code></pre>";
-echo (new Delivery())->createQueryTemplate($addressData, $tablename);
-}
