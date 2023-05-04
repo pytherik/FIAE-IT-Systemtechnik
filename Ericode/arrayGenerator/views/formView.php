@@ -6,6 +6,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
+  <link href="prism.css" rel="stylesheet" />
   <title>Document</title>
 </head>
 <body>
@@ -35,6 +36,7 @@
   <input type="checkbox" name="addressArray[]" id="ort" value="ort"><br>
   <button type="submit">mach das Array</button>
 </form>
+  <script src="prism.js"></script>
 </body>
 </html>
 <?php
