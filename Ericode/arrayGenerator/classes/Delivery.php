@@ -57,11 +57,11 @@ class Delivery extends ConnectDB2
     return $lastnames;
   }
 
-  public function createQueryTemplate(array $addressArray): string
+  public function createQueryTemplate(array $addressArray, string $tablename = 'table'): string
   {
     $inner = count($addressArray);
     $outer = count($addressArray[0]);
-    $html = "INSERT INTO kunde VALUES <br><blockquote>";
+    $html = "INSERT INTO $tablename VALUES <br><blockquote>";
     for ($j = 0; $j < $outer; $j++) {
       $html .= "(";
       for ($i = 0; $i < $inner; $i++) {

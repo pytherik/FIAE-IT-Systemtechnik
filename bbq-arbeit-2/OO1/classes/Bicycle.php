@@ -3,7 +3,7 @@
 class Bicycle
 {
   // Zugriffsmodifikatoren (access specifier):
-  // protected, private, public
+  // protected, private, css
   private int $cadence = 0;
   private int $speed = 0;
   protected int $gear = 1;

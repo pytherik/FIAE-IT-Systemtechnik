@@ -5,13 +5,16 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 <body>
 <form method="POST">
   <h3>Anzahl</h3>
-  <label for="numDatasets">Anzahl der Datensätze</label>
-  <input type="number" name="numDatasets" id="numDatasets" size="3">
+  <label for="tablename">Tabellen- Arrayname</label><br>
+  <input type="text" name="tablename" id="tablename"><br>
+  <label for="numDatasets">Anzahl der Datensätze</label><br>
+  <input type="number" name="numDatasets" id="numDatasets" maxlength="3" min="1" max="99">
   <h3>Namen</h3>
   <label for="femaleFirstnames">Vornamen nur w</label>
   <input type="radio" name="firstnames" id="femaleFirstnames" value="female_firstnames"><br>

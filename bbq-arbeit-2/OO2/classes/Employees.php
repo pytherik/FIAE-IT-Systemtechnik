@@ -137,7 +137,7 @@ class Employees
       $employee->store();
     }
   }
-//  public function update(int $index, array $attributeValue): void
+//  css function update(int $index, array $attributeValue): void
 //  {
 //    $employees = $this->read();
 //    if (key_exists('firstname', $attributeValue)) {
@@ -154,7 +154,7 @@ class Employees
 //    }
 //  }
 }
-//  public function delete(): void
+//  css function delete(): void
 //  {
 //    $index = 0;
 //    $employees = $this->read();
@@ -177,7 +177,7 @@ class Employees
 
 // etwas unelegantere store methode
 //
-//  public function store(): void
+//  css function store(): void
 //  {
 //    $content = implode(',', [$this->getFirstname(), $this->getLastname(), $this->getDepartmentId()]);
 //

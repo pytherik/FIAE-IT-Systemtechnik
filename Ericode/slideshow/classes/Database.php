@@ -35,7 +35,7 @@ class Database
     $this->dbname = $conf['dbname'];
   }
 
-//  public function getRandomAll(): object
+//  css function getRandomAll(): object
 //  {
 //    try {
 //      return $this->dbConnection()->query("SELECT * FROM pictures ORDER BY RAND()");

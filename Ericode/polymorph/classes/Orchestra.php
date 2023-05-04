@@ -7,7 +7,7 @@ abstract class Orchestra
 
 //class Violins extends Orchestra
 //{
-//  public function play(): string
+//  css function play(): string
 //  {
 //    return "Fidel, fiddle, fidifiiii.";
 //  }
@@ -15,7 +15,7 @@ abstract class Orchestra
 //
 //class Woodwind extends Orchestra
 //{
-//  public function play():string
+//  css function play():string
 //  {
 //    return "Woooh, wooo, woooo, woo, wooooooohhhh";
 //  }
@@ -23,7 +23,7 @@ abstract class Orchestra
 //
 //class Brass extends Orchestra
 //{
-//  public function play()
+//  css function play()
 //  {
 //    return "Fää fääää, fä fääää, fäfäfäfäfääää";
 //  }
@@ -31,7 +31,7 @@ abstract class Orchestra
 //
 //class Drums extends Orchestra
 //{
-//  public function play():string
+//  css function play():string
 //  {
 //    return "Bumm,......Bummm, .......Bumbumbum Buuuuum";
 //  }

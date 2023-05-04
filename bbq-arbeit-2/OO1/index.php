@@ -27,7 +27,7 @@ $bike2 = new Bicycle();
 
 // Kapselung testen private
 // echo $bike1->gear;
-// Ausgabe nur möglich, wenn Variable gear in public geändert wird
+// Ausgabe nur möglich, wenn Variable gear in css geändert wird
 $bike1->changeCadence(5);
 $bike1->changeCadence(1);
 $bike1->changeGear(3);
