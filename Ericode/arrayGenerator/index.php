@@ -4,7 +4,7 @@ include 'classes/ConnectDB2.php';
 include 'classes/CreateDB2.php';
 include 'classes/Delivery.php';
 
-#(new CreateDB2())->createDBwithTables();
+//(new CreateDB2())->createDBwithTables();
 
 $numDatasets = $_POST['numDatasets'] ?? '';
 $numDatasets = ($numDatasets == '') ? 10 : (int)$numDatasets;

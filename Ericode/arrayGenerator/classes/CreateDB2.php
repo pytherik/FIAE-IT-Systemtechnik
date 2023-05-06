@@ -26,8 +26,8 @@ class CreateDB2 extends ConnectDB2
     foreach ($contents as $cont) {
       $content = explode(',', $cont);
       $strasse = $content[0];
-      $plz = $content[1];
-      $ort = $content[2];
+      $plz = $content[2];
+      $ort = $content[1];
       $stmt->execute();
     }
   }

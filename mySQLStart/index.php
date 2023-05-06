@@ -8,7 +8,8 @@ echo $name . "<br/>" . $password . "<br/>";
 $mysql = new mysqli("localhost", "erik", "321null", "test");
 
 $sql = $mysql->prepare("SELECT id, name FROM pwuser WHERE name=? AND password=?");
-$sql->bind_param()
+echo $sql."<br/>";
+//$sql->bind_param();
 $result = $mysql->query($sql);
 $userExists = false;
 while ($row = $result->fetch_assoc()){
