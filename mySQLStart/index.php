@@ -6,11 +6,15 @@ $password = $_POST['password'];
 echo $name . "<br/>" . $password . "<br/>";
 
 $mysql = new mysqli("localhost", "erik", "321null", "test");
+$stmt = "SELECT id, name FROM pwuser WHERE name = '$name' AND password = '$password'";
 
-$sql = $mysql->prepare("SELECT id, name FROM pwuser WHERE name=? AND password=?");
-echo $sql."<br/>";
-//$sql->bind_param();
-$result = $mysql->query($sql);
+$result = $mysql->query($stmt);
+//$mysql = new mysqli("localhost", "erik", "321null", "test");
+//$stmt = $mysql->prepare("SELECT id, name FROM pwuser WHERE name = ? AND password = ?");
+//$stmt->bind_param("ss", $name, $password);
+//$stmt->execute();
+//
+//$result = $stmt->get_result();
 $userExists = false;
 while ($row = $result->fetch_assoc()){
     echo $row['id'].' '. $row['name']."<br/>";
