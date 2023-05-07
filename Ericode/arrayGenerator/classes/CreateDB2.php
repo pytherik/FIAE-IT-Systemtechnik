@@ -5,12 +5,19 @@ class CreateDB2 extends ConnectDB2
   private function getDataPath(): array
   {
     $dataPaths = [];
-    $paths = scandir(TABLE_DATA_PATH);
-    foreach ($paths as $path) {
+    $path1 = scandir(TABLE_DATA_PATH);
+    $path2 = scandir(ADDRESS_DATA_PATH);
+    foreach ($path1 as $path) {
       if (!str_starts_with($path, '.')) {
         $dataPaths[] = TABLE_DATA_PATH . '/' . $path;
       }
     }
+    foreach ($path2 as $path) {
+      if (!str_starts_with($path, '.')) {
+        $dataPaths[] = ADDRESS_DATA_PATH . '/' . $path;
+      }
+    }
+
     return $dataPaths;
   }
 
