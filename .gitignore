@@ -1,6 +1,6 @@
 .idea
-bbq-arbeit-2/OO2/employeeData.csv
-Ericode/slideshow/classes/sql.inc.php
-Ericode/slideshow/public/images
-Ericode/Mitarbeiter_csv/staticPk.txt
-Ericode/Mitarbeiter_csv/angestellte.csv
+bbq-arbeit-2/Classes Employee/employeeData.csv
+XtraCode/slideshow/classes/sql.inc.php
+XtraCode/slideshow/public/images
+XtraCode/Mitarbeiter_csv/staticPk.txt
+XtraCode/Mitarbeiter_csv/angestellte.csv
