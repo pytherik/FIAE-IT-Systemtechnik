@@ -4,17 +4,18 @@ include 'classes/ConnectDB2.php';
 include 'classes/CreateDB2.php';
 include 'classes/Delivery.php';
 
+// fixme create method 'refresh db'
 //(new CreateDB2())->createDBwithTables();
 
 $numDatasets = $_POST['numDatasets'] ?? '';
 $numDatasets = ($numDatasets == '') ? 10 : (int)$numDatasets;
-
+//nice preset
 $addressData = [];
 $tablename = $_POST['tablename'] ?? '';
 $tablename = ($tablename == '') ? 'table' : $tablename;
 $style = $_POST['arrayStyle'] ?? '';
 
-
+// show hier passiert was
 if (isset($_POST['addressArray']) && !in_array('null', $_POST['addressArray'])) {
   $houseNum = in_array('houseNum', $_POST['addressArray']);
   if ($houseNum) unset($_POST['addressArray'][array_search('houseNum', $_POST['addressArray'])]);
