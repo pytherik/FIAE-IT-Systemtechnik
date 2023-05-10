@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="public/css/style.css">
   <link href="public/prismTomorrowNight/prism.css" rel="stylesheet"/>
-  <title>Document</title>
+  <title>arrayGenerator</title>
 </head>
 <body>
 <div class="container">
