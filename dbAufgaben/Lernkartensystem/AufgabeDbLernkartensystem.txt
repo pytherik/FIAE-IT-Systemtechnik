@@ -1,0 +1,13 @@
+Aufgabe Lernkartensystem
+
+Erstelle eine BC-normalisierte Datenbank für folgende Anforderungen:
+Ein Lernkartensystem besteht aus Lernkarten, die einen Pool bilden aus denen ein Lerner (L) eine Auswahl aussuchen kann.
+Die Auswahl geschieht nach Themengebieten und Anzahl der Fragen.
+Der L bekommt die ausgesuchten Fragen mit den möglichen Antworten (multiple choice) kartenweise angezeigt und muss die
+richtige Antwort(en) anklicken.
+Er kann die Fragenkarten vor und zurück blättern.
+Die richtigen Antworten kann er zu diesem Zeitpunkt noch nicht einsehen.
+Ist er fertig, klickt er den zugehörigen Knopf, der Tag und die Uhrzeit wird erfasst.
+Die gegebenen Antworten werden automatisch ausgewertet.
+Jetzt kann er L. seine Antorten und die richtigen Lösungen sehen.
+In einer weiteren Tabelle soll ein Dozent sehen können, wieviel Prozent der Fragen der L. zu welchem Zeitpunkt richtig beantwortet hat.
