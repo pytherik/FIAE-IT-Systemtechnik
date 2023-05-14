@@ -1,7 +1,5 @@
 <?php
 
-include 'Orchestra.php';
-
 class Woodwind extends Orchestra
 {
   public function play():string

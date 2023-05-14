@@ -1,10 +1,9 @@
 <?php
 
-//include 'classes/Orchestra.php';
-include 'classes/Violins.php';
-include 'classes/Brass.php';
-include 'classes/Woodwind.php';
-include 'classes/Drums.php';
+spl_autoload_register(function ($class) {
+  include sprintf('classes/%s.php', $class);
+});
+
 
 $violin = new Violins();
 $wood = new Woodwind();

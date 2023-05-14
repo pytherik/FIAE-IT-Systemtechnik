@@ -1,7 +1,5 @@
 <?php
 
-include 'Orchestra.php';
-
 class Brass extends Orchestra
 {
   public function play()
