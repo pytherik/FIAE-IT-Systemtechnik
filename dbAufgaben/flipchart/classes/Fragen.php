@@ -5,6 +5,10 @@ class Fragen
   private int $id;
   private string $question;
   private int $thema_id;
+  /**
+   * @var array
+   */
+  private array $answers;
 
   public function __construct(?int $id = null, ?string $question = null, ?int $thema_id = null)
   {
@@ -13,6 +17,37 @@ class Fragen
       $this->question = $question;
       $this->thema_id = $thema_id;
     }
+  }
+
+  /**
+   * @return array|null
+   * @throws Exception
+   */
+  public function getAllAsObjects(): array|null
+  {
+    try {
+      $dbh = new PDO(DB_DNS, DB_USER, DB_PASSWD);
+      $sql = "SELECT * FROM frage";
+      $result = $dbh->query($sql);
+      $fragen = [];
+      while ($frage = $result->fetchObject(__CLASS__)){
+        $answers = $frage->buildAnswers();
+        $fragen[] = $frage;
+      }
+    } catch (PDOException $e) {
+      throw new Exception($e->getMessage());
+    }
+    return $fragen;
+
+  }
+
+  /**
+   * @return void
+   * @throws Exception
+   */
+  public function buildAnswers(): void
+  {
+    $this->answers = (new Antworten())->getAnswersByQuestion($this);
   }
 
   public function getRandQuestionsAsObjects(array $subjects, int $numQuestions): array

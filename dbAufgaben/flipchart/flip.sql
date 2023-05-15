@@ -222,7 +222,7 @@ INSERT INTO antwort VALUES
                         (124, 'Henry Miller'),
                         (131, 'Sir Arthur Conan Doyle'),
                         (132, 'Edgar Allen Poe'),
-                        (133, 'William Shakespear'),
+                        (133, 'William Shakespeare'),
                         (134, 'Mary Shelley'),
                         (141, 'Georges Orwell'),
                         (142, 'Aldous Huxley'),
