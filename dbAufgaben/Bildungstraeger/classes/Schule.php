@@ -20,12 +20,12 @@ class Schule
     }
   }
 
-    /**
-     * @param int $id
-     * @return Schule
-     * @throws Exception
-     */
-    public function getObjectById(int $id): Schule
+  /**
+   * @param int $id
+   * @return Schule
+   * @throws Exception
+   */
+  public function getObjectById(int $id): Schule
   {
     try {
       $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
@@ -37,7 +37,7 @@ class Schule
       $schule = $stmt->fetchObject(__CLASS__);
       $schule->builSchulklassen();
     } catch (PDOException $e) {
-      throw new Exception('Datenbank sagt nein: '. $e->getMessage());
+      throw new Exception('Datenbank sagt nein: ' . $e->getMessage());
     }
     return $schule;
   }
@@ -60,7 +60,7 @@ class Schule
         $id = $bildungstraeger->getId();
         $stmt->bindParam('bildungstraeger_id', $id);
         $stmt->execute();
-        $result = $stmt; //info technisch zum Abfragen der while-Schleife
+        $result = $stmt;
       }
       $schulen = [];
       while ($schule = $result->fetchObject(__CLASS__)) {
@@ -79,7 +79,7 @@ class Schule
    * @return void
    * @throws Exception
    */
-    public function buildSchulklassen(): void
+  public function buildSchulklassen(): void
   {
     $this->schulklassen = (new Schulklasse())->getAllSchulklassenBySchule($this);
   }
@@ -95,14 +95,14 @@ class Schule
   }
 
   /**
-     * @return array
-     */
-    public function getSchulklassen(): array
+   * @return array
+   */
+  public function getSchulklassen(): array
   {
     return $this->schulklassen;
   }
 
-    /**
+  /**
    * @return int
    */
   public function getId(): int

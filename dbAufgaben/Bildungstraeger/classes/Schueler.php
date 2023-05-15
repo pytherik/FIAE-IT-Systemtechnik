@@ -15,7 +15,7 @@ class Schueler
    */
   public function __construct(?int $id = null, ?string $vorname = null, ?int $nachname = null, ?int $schulklasse_id = null)
   {
-    if(isset($id) && isset($vorname) && isset($nachname) && isset($schulklasse_id)){
+    if (isset($id) && isset($vorname) && isset($nachname) && isset($schulklasse_id)) {
       $this->id = $id;
       $this->vorname = $vorname;
       $this->nachname = $nachname;
@@ -38,7 +38,7 @@ class Schueler
       //info $employees füllen
       $schueler = $stmt->fetchObject(__CLASS__);
     } catch (PDOException $e) {
-      throw new Exception('Datenbank sagt nein: '. $e->getMessage());
+      throw new Exception('Datenbank sagt nein: ' . $e->getMessage());
     }
     return $schueler;
   }
@@ -61,7 +61,7 @@ class Schueler
         $id = $schulklasse->getId();
         $stmt->bindParam('schulklasse_id', $id);
         $stmt->execute();
-        $result = $stmt; //info technisch zum Abfragen der while-Schleife
+        $result = $stmt;
       }
       $schuelers = [];
       while ($row = $result->fetchObject(__CLASS__)) {
@@ -69,7 +69,7 @@ class Schueler
       }
       $dbh = null;
     } catch (PDOException $e) {
-      throw new Exception($e->getMessage() . ' ' . implode('-', $e->getTrace()) . ' ' . $e->getCode() . ' ' . $e->getLine());
+      throw new Exception($e->getMessage());
     }
     return $schuelers;
   }
@@ -79,7 +79,7 @@ class Schueler
    * @return array|null
    * @throws Exception
    */
-   public function getAllSchuelerBySchulklasse(Schulklasse $schulklasse): array|null
+  public function getAllSchuelerBySchulklasse(Schulklasse $schulklasse): array|null
   {
     return $this->getAllAsObjects($schulklasse);
   }

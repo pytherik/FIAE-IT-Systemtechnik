@@ -12,7 +12,7 @@ class Bildungstraeger
    */
   public function __construct(?int $id = null, ?string $name = null)
   {
-    if(isset($id) && isset($name)){
+    if (isset($id) && isset($name)) {
       $this->id = $id;
       $this->name = $name;
     }
@@ -35,7 +35,7 @@ class Bildungstraeger
       $bildungstraeger = $stmt->fetchObject(__CLASS__);
       $bildungstraeger->buildSchulen();
     } catch (PDOException $e) {
-      throw new Exception('Datenbank sagt nein: '. $e->getMessage());
+      throw new Exception('Datenbank sagt nein: ' . $e->getMessage());
     }
     return $bildungstraeger;
   }
