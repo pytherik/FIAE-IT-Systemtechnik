@@ -19,8 +19,6 @@ CREATE TABLE spiel
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
     lerner_id INT,
-    anzahl_fragen INT,
-    richtig_count INT,
     datum DATETIME
 );
 
@@ -79,7 +77,7 @@ INSERT INTO lerner VALUES
                        (NULL, 'Samson', 3);
 
 INSERT INTO spiel VALUES
-    (NULL, 1, 10, 3, '2023-05-13 12:00');
+    (NULL, 1, '2023-05-13 12:00');
 
 INSERT INTO spiel_frage VALUES
                             (NULL, 1, 7, 1),
