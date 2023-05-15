@@ -21,7 +21,10 @@ class Fragen
       $dbh = new PDO(DB_DNS, DB_USER, DB_PASSWD);
       foreach ($subjects as $subject) {
         for ($i = 0; $i < $numQuestions ; $i++) {
-        $sql = "SELECT id, question, thema_id FROM frage WHERE thema_id = $subject ORDER BY RAND() LIMIT 1";
+        $sql = "SELECT f.id, question, thema_id FROM frage f 
+                              JOIN frage_thema ft on f.id = ft.frage_id
+                              JOIN thema t on ft.thema_id = t.id
+                              WHERE thema_id = $subject ORDER BY RAND() LIMIT 1";
         $stmt = $dbh->query($sql);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 //          $answers = (new Fragen())->getAnswers($row['id'], $dbh);

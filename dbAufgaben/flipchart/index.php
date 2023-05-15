@@ -15,11 +15,9 @@ $action = $_REQUEST['action'] ?? 'settingsView';
 $nxt = $_REQUEST['next'] ?? '';
 
 if ($nxt === 'nx') {
-  $_SESSION['numPage']++;
-  if ($_SESSION['numPage'] > 4) $_SESSION['numPage'] = 0;
+  ($_SESSION['numPage'] > 3) ? $_SESSION['numPage'] = 0 : $_SESSION['numPage']++;
 } else if ($nxt === 'pr') {
-  $_SESSION['numPage']--;
-  if ($_SESSION['numPage'] < 0) $_SESSION['numPage'] = 4;
+  ($_SESSION['numPage'] < 1) ? $_SESSION['numPage'] = 4 : $_SESSION['numPage']--;
 }
 
 $numQuestions = $_POST['numQuestions'] ?? '';
