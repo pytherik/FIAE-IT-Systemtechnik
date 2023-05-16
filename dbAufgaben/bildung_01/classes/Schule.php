@@ -41,7 +41,6 @@ class Schule
       $stmt->execute();
       $schule = $stmt->fetchObject(__CLASS__);
       $schule->schulklassen = (new Schulklasse())->getAllAsObjects($id);
-      $dbh = null;
     } catch (PDOException $e) {
       throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
     }
@@ -61,7 +60,6 @@ class Schule
         $schule->schulklassen = (new Schulklasse())->getAllAsObjects($schule->id);
         $schulen[] = $schule;
       }
-      $dbh = null;
     } catch (PDOException $e) {
       throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
     }

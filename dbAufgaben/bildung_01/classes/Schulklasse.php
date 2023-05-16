@@ -5,9 +5,7 @@ class Schulklasse
     private int $id;
     private string $name;
     private int $schule_id;
-    /**
-     * @var SchuelerArr[]
-     */
+
     private array $schuelerArr = [];
 
   /**
@@ -41,7 +39,6 @@ class Schulklasse
             $stmt->execute();
             $schulklasse = $stmt->fetchObject(__CLASS__);
             $schulklasse->schuelerArr = (new Schueler())->getAllAsObjects($id);
-            $dbh = null;
         } catch (PDOException $e) {
             throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
         }
@@ -61,7 +58,6 @@ class Schulklasse
         $schulklasse->schuelerArr = (new Schueler())->getAllAsObjects($schulklasse->id);
         $schulklassen[] = $schulklasse;
       }
-      $dbh = null;
     } catch (PDOException $e) {
       throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
     }

@@ -36,8 +36,6 @@ class Schueler
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
             $schueler = $stmt->fetchObject(__CLASS__);
-
-            $dbh = null;
         } catch (PDOException $e) {
             throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
         }
@@ -57,7 +55,6 @@ class Schueler
             while ($schueler = $stmt->fetchObject(__CLASS__)) {
                 $schuelerArr[] = $schueler;
             }
-            $dbh = null;
         } catch (PDOException $e) {
             throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
         }
