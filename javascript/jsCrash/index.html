@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>firstJs</title>
+  <style>
+      body {
+          background-color: #444;
+          color: #ddd;
+      }
+  </style>
+</head>
+<body>
+<script>
+  console.log('Was braucht eine Programmiersprache?');
+  //info Variablen werden mit let erstellt
+  let a = 42;
+  console.log(a);
+  const b = 23;
+  console.log(b);
+  a = 2 * a;
+  //info b = 21; b ist Konstante, darf nicht geändert werden.
+  console.log(a, b);
+  //info Schleifen
+  let i = 0;
+  for (let i = 0; i < 10; i++) {
+    console.log(i * i);
+  }
+  for (let j = 0; j < 2; j++) {
+    console.log(a);
+    a = 10;
+    console.log(a);
+  }
+  console.log(a);
+  while (a < 199) {
+    a++;
+    console.log(a);
+  }
+  do {
+    a++;
+    console.log(a)
+  } while (a < 202);
+  //info Arrays (numerisch) werden mit const erstellt,
+  //info sind aber veränderbar
+  const zahlen = [1, 2, 3, 4];
+  zahlen[3] = 5;
+  console.log(zahlen);
+  for (let j = 0; j < zahlen.length; j++) {
+    console.log(zahlen[j]);
+  }
+  //todo Erstelle ein Array mit den Zahlen 10 einschl. bis 20 enschl. Schrittweite 1
+  const numbers = [];
+  for (let j = 10; j <= 20 ; j++) {
+    numbers.push(j);
+  }
+  console.log(numbers);
+  for (let j = 0; j < 10 ; j++) {
+    numbers[j] = j + 10;
+  }
+  console.log(numbers);
+ </script>
+</body>
+</html>
