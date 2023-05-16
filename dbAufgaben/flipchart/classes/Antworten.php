@@ -25,7 +25,7 @@ class Antworten
    * @return array|null
    * @throws Exception
    */
-  public function getAnswersByQuestion($frage): array|null
+  public function getAnswersByQuestion($id): array|null
   {
     try {
       $dbh = new PDO(DB_DNS, DB_USER, DB_PASSWD);
@@ -34,7 +34,6 @@ class Antworten
                             JOIN frage f on fa.frage_id = f.id
               WHERE f.id = :frage_id";
       $stmt = $dbh->prepare($sql);
-      $id = $frage->getId();
       $stmt->bindParam('frage_id', $id);
       $stmt->execute();
       $answers = [];

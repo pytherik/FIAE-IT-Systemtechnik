@@ -33,7 +33,6 @@ class Bildungstraeger
       $stmt->execute();
       $bildungstraeger = $stmt->fetchObject(__CLASS__);
       $bildungstraeger->schulen = (new Schule())->getAllAsObjects($id);
-//      $bildungstraeger->schulen = (new Schule())->getAllAsObjects($id);
       $dbh = null;
     } catch (PDOException $e) {
       throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());

@@ -58,6 +58,7 @@ class Schulklasse
       $stmt->execute();
       $schulklassen = [];
       while ($schulklasse = $stmt->fetchObject(__CLASS__)) {
+        $schulklasse->schuelerArr = (new Schueler())->getAllAsObjects($schulklasse->id);
         $schulklassen[] = $schulklasse;
       }
       $dbh = null;

@@ -16,6 +16,7 @@ class Fragen
       $this->id = $id;
       $this->question = $question;
       $this->thema_id = $thema_id;
+      $this->answers = (new Antworten())->getAnswersByQuestion($id);
     }
   }
 
@@ -31,7 +32,7 @@ class Fragen
       $result = $dbh->query($sql);
       $fragen = [];
       while ($frage = $result->fetchObject(__CLASS__)){
-        $answers = $frage->buildAnswers();
+        $frage->answers = (new Antworten())->getAnswersByQuestion($frage->id);
         $fragen[] = $frage;
       }
     } catch (PDOException $e) {
@@ -39,15 +40,6 @@ class Fragen
     }
     return $fragen;
 
-  }
-
-  /**
-   * @return void
-   * @throws Exception
-   */
-  public function buildAnswers(): void
-  {
-    $this->answers = (new Antworten())->getAnswersByQuestion($this);
   }
 
   public function getRandQuestionsAsObjects(array $subjects, int $numQuestions): array
@@ -61,10 +53,9 @@ class Fragen
                               JOIN thema t on ft.thema_id = t.id
                               WHERE thema_id = $subject ORDER BY RAND() LIMIT 1";
         $stmt = $dbh->query($sql);
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-//          $answers = (new Fragen())->getAnswers($row['id'], $dbh);
-//          $questions[] = [$row, $answers];
-          $questions[] = $row;
+        while ($frage = $stmt->fetchObject(__CLASS__)) {
+          $frage->answers = (new Antworten())->getAnswersByQuestion($frage->id);
+          $questions[] = $frage;
         }
         }
       }
