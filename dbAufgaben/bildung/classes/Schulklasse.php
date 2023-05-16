@@ -4,104 +4,63 @@ class Schulklasse
 {
     private int $id;
     private string $name;
-    private int $schuleId;
-    /**
-     * @var SchuelerArr[]
-     */
+    private int $schule_id;
+
     private array $schuelerArr = [];
 
-    /**
-     * @param int $id
-     * @param string $name
-     * @param int $schuleId
-     */
-    public function __construct(int $id = null, string $name = null, int $schuleId = null)
+  /**
+   * @param int|null $id
+   * @param string|null $name
+   * @param int|null $schule_id
+   * @throws Exception
+   */
+    public function __construct(int $id = null, string $name = null, int $schule_id = null)
     {
-        if (isset($id) && isset($name) && isset($schuleId)) { echo 'mit Konstruktor<br>';
+        if (isset($id) && isset($name) && isset($schule_id)) {
             $this->id = $id;
             $this->name = $name;
-            $this->schuleId = $schuleId;
+            $this->schule_id = $schule_id;
             $this->schuelerArr = (new Schueler())->getAllAsObjects($id);
-        } else {
-            // bei $stmt->fetchObject(__CLASS__) wird die Zuweisung
-            // $this->schuelerArr = (new Schueler())->getAllAsObjects($id);
-            // nicht aufgerufen, deshalb dieses workaround
-            if (isset($this->id)){
-                $this->schuelerArr = (new Schueler())->getAllAsObjects($this->id);
-            }
         }
-
     }
 
+  /**
+   * @param int $id
+   * @return Schulklasse
+   * @throws Exception
+   */
     public function getObjectById(int $id): Schulklasse
     {
         try {
-            $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
+            $dbh = Db::connect();
             $sql = "SELECT * FROM schulklasse WHERE id=:id";
             $stmt = $dbh->prepare($sql);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
             $schulklasse = $stmt->fetchObject(__CLASS__);
             $schulklasse->schuelerArr = (new Schueler())->getAllAsObjects($id);
-            $dbh = null;
         } catch (PDOException $e) {
             throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
         }
         return $schulklasse;
     }
 
-    function getAllAsObjects(int $schuleId = null): array
-    {
-        try {
-            $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
-            if (isset($schuleId)) {
-                $sql = "SELECT * FROM schulklasse WHERE schuleId=:schuleId ";
-                $stmt = $dbh->prepare($sql);
-                $stmt->bindParam(':schuleId', $schuleId);
-                $stmt->execute();
-            } else {
-                $sql = "SELECT * FROM schulklasse";
-                $stmt = $dbh->query($sql);
-            }
-            $schulklassen = [];
-            while ($schulklasse = $stmt->fetchObject(__CLASS__)) {
-                $schulklassen[] = $schulklasse;
-            }
-            $dbh = null;
-        } catch (PDOException $e) {
-            throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
-        }
-        return $schulklassen;
+  function getAllAsObjects(int $schule_id): array
+  {
+    try {
+      $dbh = Db::connect();
+      $sql = "SELECT * FROM schulklasse WHERE schule_id=:schule_id ";
+      $stmt = $dbh->prepare($sql);
+      $stmt->bindParam(':schule_id', $schule_id);
+      $stmt->execute();
+      $schulklassen = [];
+      while ($schulklasse = $stmt->fetchObject(__CLASS__)) {
+        $schulklasse->schuelerArr = (new Schueler())->getAllAsObjects($schulklasse->id);
+        $schulklassen[] = $schulklasse;
+      }
+    } catch (PDOException $e) {
+      throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
     }
-    /**
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    /**
-     * @return int
-     */
-    public function getSchuleId(): int
-    {
-        return $this->schuleId;
-    }
-
-    /**
-     * @return array
-     */
-    public function getSchuelerArr(): array
-    {
-        return $this->schuelerArr;
-    }
+    return $schulklassen;
+  }
 }
