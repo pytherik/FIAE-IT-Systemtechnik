@@ -4,27 +4,33 @@ class Schulklasse
 {
     private int $id;
     private string $name;
-    private int $schuleId;
+    private int $schule_id;
     /**
      * @var SchuelerArr[]
      */
     private array $schuelerArr = [];
 
-    /**
-     * @param int $id
-     * @param string $name
-     * @param int $schuleId
-     */
-    public function __construct(int $id = null, string $name = null, int $schuleId = null)
+  /**
+   * @param int|null $id
+   * @param string|null $name
+   * @param int|null $schule_id
+   * @throws Exception
+   */
+    public function __construct(int $id = null, string $name = null, int $schule_id = null)
     {
-        if (isset($id) && isset($name) && isset($schuleId)) {
+        if (isset($id) && isset($name) && isset($schule_id)) {
             $this->id = $id;
             $this->name = $name;
-            $this->schuleId = $schuleId;
+            $this->schule_id = $schule_id;
             $this->schuelerArr = (new Schueler())->getAllAsObjects($id);
         }
     }
 
+  /**
+   * @param int $id
+   * @return Schulklasse
+   * @throws Exception
+   */
     public function getObjectById(int $id): Schulklasse
     {
         try {
@@ -41,4 +47,23 @@ class Schulklasse
         }
         return $schulklasse;
     }
+
+  function getAllAsObjects(int $schule_id): array
+  {
+    try {
+      $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
+      $sql = "SELECT * FROM schulklasse WHERE schule_id=:schule_id ";
+      $stmt = $dbh->prepare($sql);
+      $stmt->bindParam(':schule_id', $schule_id);
+      $stmt->execute();
+      $schulklassen = [];
+      while ($schulklasse = $stmt->fetchObject(__CLASS__)) {
+        $schulklassen[] = $schulklasse;
+      }
+      $dbh = null;
+    } catch (PDOException $e) {
+      throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
+    }
+    return $schulklassen;
+  }
 }
