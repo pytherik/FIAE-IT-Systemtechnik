@@ -1,5 +1,6 @@
 <?php
-
+//info Es wird maximal ein Objekt (Datenbankverbindung) erstellt
+// Design Pattern: Singleton
 class Db
 {
   private static object $dbh;
