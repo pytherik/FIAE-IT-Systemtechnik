@@ -34,7 +34,7 @@ class Schulklasse
     public function getObjectById(int $id): Schulklasse
     {
         try {
-            $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
+            $dbh = Db::connect();
             $sql = "SELECT * FROM schulklasse WHERE id=:id";
             $stmt = $dbh->prepare($sql);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -51,7 +51,7 @@ class Schulklasse
   function getAllAsObjects(int $schule_id): array
   {
     try {
-      $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
+      $dbh = Db::connect();
       $sql = "SELECT * FROM schulklasse WHERE schule_id=:schule_id ";
       $stmt = $dbh->prepare($sql);
       $stmt->bindParam(':schule_id', $schule_id);

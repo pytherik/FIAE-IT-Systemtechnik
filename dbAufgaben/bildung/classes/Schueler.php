@@ -1,5 +1,7 @@
 <?php
 
+use classes\Db;
+
 class Schueler
 {
     private int $id;
@@ -30,7 +32,7 @@ class Schueler
     public function getObjectById(int $id): Schueler
     {
         try {
-            $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
+            $dbh = Db::connect();
             $sql = "SELECT * FROM schueler WHERE id=:id";
             $stmt = $dbh->prepare($sql);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);

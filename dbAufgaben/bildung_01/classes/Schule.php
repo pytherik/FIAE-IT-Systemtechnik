@@ -34,7 +34,7 @@ class Schule
   public function getObjectById(int $id): Schule
   {
     try {
-      $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
+      $dbh = Db::connect();
       $sql = "SELECT * FROM schule WHERE id=:id";
       $stmt = $dbh->prepare($sql);
       $stmt->bindParam(':id', $id, PDO::PARAM_INT);

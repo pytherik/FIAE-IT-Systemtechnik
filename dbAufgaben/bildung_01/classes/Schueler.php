@@ -19,7 +19,7 @@ class Schueler
             $this->id = $id;
             $this->vorname = $vorname;
             $this->nachname = $nachname;
-            $this->schukKlasse_id = $schulklasse_id;
+            $this->schulklasse_id = $schulklasse_id;
         }
         //return $this;
     }
@@ -30,7 +30,7 @@ class Schueler
      */
     public function getObjectById(int $id):Schueler{
         try {
-            $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
+            $dbh = Db::connect();
             $sql = "SELECT * FROM schueler WHERE id=:id";
             $stmt = $dbh->prepare($sql);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -48,7 +48,7 @@ class Schueler
     function getAllAsObjects(int $schulklasse_id): array
     {
         try {
-            $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
+            $dbh = Db::connect();
             $sql = "SELECT * FROM schueler WHERE schulklasse_id=:schulklasseId ";
             $stmt = $dbh->prepare($sql);
             $stmt->bindParam(':schulklasseId', $schulklasse_id);

@@ -2,5 +2,5 @@
 
 const DB_DSN = 'mysql:host=localhost;dbname=bildung';
 
-const DB_USER = 'root';
-const DB_PASSWD = '';
+const DB_USER = 'erik';
+const DB_PASSWD = '321null';
