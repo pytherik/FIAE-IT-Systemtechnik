@@ -4,8 +4,9 @@ class Schule
 {
   private int $id;
   private string $name;
-  private array $schulklassen;
   private int $bildungstraeger_id;
+
+  private array $schulklassen;
 
   /**
    * @param int|null $id
@@ -17,6 +18,7 @@ class Schule
     if (isset($id) && isset($name)) {
       $this->id = $id;
       $this->name = $name;
+      $this->bildungstraeger_id = $bildungstraeger_id;
     }
   }
 
