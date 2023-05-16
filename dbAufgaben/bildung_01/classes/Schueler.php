@@ -5,30 +5,30 @@ class Schueler
     private int $id;
     private string $vorname;
     private string $nachname;
-    private int $schulKlasseId;
+    private int $schulklasse_id;
 
-    /**
-     * @param int $id
-     * @param string $vorname
-     * @param string $nachname
-     * @param int $schulKlasseId
-     */
-    public function __construct(int $id = null, string $vorname = null, string $nachname = null, int $schulKlasseId = null)
+  /**
+   * @param int|null $id
+   * @param string|null $vorname
+   * @param string|null $nachname
+   * @param int|null $schulklasse_id
+   */
+    public function __construct(int $id = null, string $vorname = null, string $nachname = null, int $schulklasse_id = null)
     {
-        if (isset($id) && isset($vorname) && isset($nachname) && isset($schulKlasseId)) {
+        if (isset($id) && isset($vorname) && isset($nachname) && isset($schulklasse_id)) {
             $this->id = $id;
             $this->vorname = $vorname;
             $this->nachname = $nachname;
-            $this->schulKlasseId = $schulKlasseId;
+            $this->schukKlasse_id = $schulklasse_id;
         }
+        //return $this;
     }
 
     /**
      * @param int $id
      * @return Schueler
      */
-    public function getObjectById(int $id): Schueler
-    {
+    public function getObjectById(int $id):Schueler{
         try {
             $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
             $sql = "SELECT * FROM schueler WHERE id=:id";
@@ -45,19 +45,14 @@ class Schueler
     }
 
 
-    function getAllAsObjects(int $schulklasseId = null): array
+    function getAllAsObjects(int $schulklasse_id): array
     {
         try {
             $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWD);
-            if (isset($schulklasseId)) {
-                $sql = "SELECT * FROM schueler WHERE schulklasseId=:schulklasseId ";
-                $stmt = $dbh->prepare($sql);
-                $stmt->bindParam(':schulklasseId', $schulklasseId);
-                $stmt->execute();
-            } else {
-                $sql = "SELECT * FROM schueler";
-                $stmt = $dbh->query($sql);
-            }
+            $sql = "SELECT * FROM schueler WHERE schulklasse_id=:schulklasseId ";
+            $stmt = $dbh->prepare($sql);
+            $stmt->bindParam(':schulklasseId', $schulklasse_id);
+            $stmt->execute();
             $schuelerArr = [];
             while ($schueler = $stmt->fetchObject(__CLASS__)) {
                 $schuelerArr[] = $schueler;
@@ -67,13 +62,5 @@ class Schueler
             throw new PDOException('Datenbank sagt nein: ' . $e->getMessage());
         }
         return $schuelerArr;
-    }
-
-    /**
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
     }
 }
