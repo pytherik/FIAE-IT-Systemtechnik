@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Taschenrechner</title>
+  <script defer src="js/taschenrechner.js"></script>
+  <style>
+    body {
+        background-color: #444;
+        color: #ddd;
+    }
+    #output {
+        margin: 2rem 0 0 2rem;
+        padding: 10px;
+        border-radius: 5px;
+        width: 150px;
+        height: 50px;
+        background-color: #7ec699;
+        color: #121212;
+        font-size: 2.4rem;
+    }
+  </style>
+</head>
+<!--todo Erstelle 2 Eingabefelder und ein Ausgabefeld: input type = text -->
+<!--todo Erstelle 5 Knöpfe mit folgenden Funktionen:-->
+<!--todo plus, minus, mal, geteilt und modulo-->
+<!--todo das Ergebnis der jeweiligen Berechnung soll inm Ausgabefeld erscheinen-->
+<body>
+<label for="zahl1">Zahl 1</label><br>
+<input type="text"  id="zahl1"><br>
+<label for="zahl2">Zahl 1</label><br>
+<input type="text"  id="zahl2"><br><br>
+<button onclick="calc('add')">+</button>
+<button onclick="calc('sub')">-</button>
+<button onclick="calc('mul')">*</button>
+<button onclick="calc('div')">/</button>
+<button onclick="calc('mod')">%</button>
+<div id="output"></div>
+</body>
+</html>
