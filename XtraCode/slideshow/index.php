@@ -2,11 +2,11 @@
 require_once 'classes/Database.php';
 include 'templates/header.php';
 
-$collectFolders = scandir('./css/images/');
+$collectFolders = scandir('./public/images/');
 
 foreach ($collectFolders as $folder) {
   if (!str_starts_with('..', $folder)) {
-    $pictureLocations[] = "./css/images/$folder/";
+    $pictureLocations[] = "./public/images/$folder/";
   }
 }
 
