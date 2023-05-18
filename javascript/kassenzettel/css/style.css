@@ -88,6 +88,10 @@ input[type="text"] {
     text-align: right;
 }
 
+.input-left {
+    text-align: left;
+}
+
 button {
     cursor: pointer;
 }
