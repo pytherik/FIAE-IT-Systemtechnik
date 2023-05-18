@@ -25,13 +25,13 @@ body {
 .result-wrapper {
     display: flex;
     justify-content: end;
-    width: 71.2rem;
+    width: 48.8rem;
 }
 
 .container,
 .result-container {
     margin-top: 3rem;
-    width: 71rem;
+    width: 48.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@ body {
     display: flex;
     flex-direction: column;
     border: none;
-    width: 17rem;
+    width: 10rem;
     /*justify-content: right;*/
     align-items: end;
     margin-top: .5rem;
@@ -101,9 +101,8 @@ button:hover {
 }
 #calc {
     font-size: 1.2rem;
-    width: 15.6rem;
+    width: 8.5rem;
     height: 1.8rem;
-    color: #fff;
     margin-top: .8rem;
     margin-right: .3rem;
     border: none;
@@ -119,16 +118,17 @@ button:hover {
     padding-right: .3rem;
     text-align: right;
     font-size: 1.4rem;
-    width: 15.5rem;
-    height: 1.8rem;
+    width: 8.5rem;
+    height: 1.6rem;
     background-color: #C6E8F8;
     color: #121212;
     font-weight: bolder;
     margin-left: .3rem;
     border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .totals {
-    font-size: 1.4rem;
-    margin-bottom: .8rem;
+    font-size: 1rem;
+    margin-bottom: 1.1rem;
 }

@@ -2,7 +2,7 @@ const container = document.querySelector('.container');
 const calc = document.querySelector('#calc');
 
 const head = ['Name', 'Anzahl', 'Einzelpreis', 'MwSt', 'Total'];
-const idTags = ['name', 'anz', 'price', 'total'];
+const idTags = ['name', 'anz', 'price', 'mwst', 'total'];
 
 //info Tabellenheadings aus head-Array aufbauen
 head.forEach((tableHead, i) => {
@@ -10,6 +10,7 @@ head.forEach((tableHead, i) => {
   let ability = '';
   //info                und für text-align in Name-Spalte
   let align = '';
+  let size = 10;
   container.innerHTML += `<div id="col${i}" class="column">`;
   document.getElementById(`col${i}`).innerHTML += `
                 <div class="input-container">
@@ -31,13 +32,16 @@ head.forEach((tableHead, i) => {
     //info Sonderfall deaktiviertes Input Feld
     if (tableHead === 'Total') ability = 'disabled';
     //info Sonderfall Spalte Name mit text-align: left
-    if (tableHead === 'Name') align = 'style="text-align:left"';
+    if (tableHead === 'Name') {
+      align = 'style="text-align:left"';
+      size = 18;
+    }
 
     //info Aufbau aller Input Felder
     for (let j = 0; j < 4; j++) {
       document.getElementById(`col${i}`).innerHTML += `
       <div class="input-container">
-        <input ${align} id="${idTags[i]}${j}"type="text" ${ability}/>
+        <input ${align} size="${size}" id="${idTags[i]}${j}"type="text" ${ability}/>
       </div>`;
     }
     container.innerHTML += '</div>';
