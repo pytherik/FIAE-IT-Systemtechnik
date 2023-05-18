@@ -1,5 +1,6 @@
+//info Elemente für spätere Verwendung als Konstanten definieren
 const container = document.querySelector('.container');
-const calc = document.querySelector('#calc');
+const calcButton = document.querySelector('#calc');
 
 const head = ['Name', 'Anzahl', 'Einzelpreis', 'MwSt', 'Total'];
 const idTags = ['name', 'anz', 'price', 'mwst', 'total'];
@@ -8,14 +9,14 @@ const idTags = ['name', 'anz', 'price', 'mwst', 'total'];
 head.forEach((tableHead, i) => {
   //info Hilfsvariablen zum deaktivieren der Total-Spalte
   let ability = '';
-  //info                und für text-align in Name-Spalte
+  //info für text-align und Größenänderung in Name-Spalte
   let align = '';
   let size = 10;
   container.innerHTML += `<div id="col${i}" class="column">`;
   document.getElementById(`col${i}`).innerHTML += `
-                <div class="input-container">
-                  <span class="table-head">${tableHead}</span>
-                </div>`;
+      <div class="input-container">
+        <span class="table-head">${tableHead}</span>
+      </div>`;
   //info Sonderfall MwSt: Radiobuttons
   if (tableHead === 'MwSt') {
     for (let j = 0; j < 4; j++) {
@@ -31,7 +32,7 @@ head.forEach((tableHead, i) => {
   } else {
     //info Sonderfall deaktiviertes Input Feld
     if (tableHead === 'Total') ability = 'disabled';
-    //info Sonderfall Spalte Name mit text-align: left
+    //info Sonderfall größere Spalte Name mit text-align: left
     if (tableHead === 'Name') {
       align = 'style="text-align:left"';
       size = 18;
@@ -49,7 +50,7 @@ head.forEach((tableHead, i) => {
 });
 
 //info Funktionalitäten für Event: Button wird geklickt
-calc.addEventListener('click', () => {
+calcButton.addEventListener('click', () => {
   //info Numerisches Array wird mit assoziativen Arrays gefüllt
   const totalsArr = [];
   //info Initialisieren der benötigten Variablen
