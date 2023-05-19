@@ -18,6 +18,8 @@ fetch(url)
   .then(res => res.json())
   .then(data => {
     users = data.map((user) => {
+      const card1 = userCardTemplate.content.cloneNode(true).children[0];
+      console.log(card1);
       const card = userCardTemplate.content.cloneNode(true).children[0];
       const header = card.querySelector('[data-header]');
       const body = card.querySelector('[data-body]');
