@@ -1,17 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Lernkarten</title>
-</head>
-<body>
-<div class="container">
-  <h1>Frage: <?= $_SESSION['numPage'] + 1 ?></h1>
-  <form action="index.php?action=getQuestions" method="post">
+
+<h1>Triff deine Wahl!</h1>
+<form action="index.php?action=questionsView" method="post">
     <div class="form-container">
       <div class="input-container">
         <label for="numQuestions">Anzahl der Fragen</label><br>
@@ -30,12 +19,6 @@
       </div>
     </div>
   </form>
-  <a href="index.php?next=pr">
-    <button type="submit">vorherige</button>
-  </a>
-  <a href="index.php?next=nx">
-    <button type="submit">nächste</button>
-  </a>
 </div>
 </body>
 </html>
