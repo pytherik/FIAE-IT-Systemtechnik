@@ -1,11 +1,11 @@
-// Elemente für spätere Verwendung als Konstanten definieren
+//info Elemente für spätere Verwendung als Konstanten definieren
 const container = document.querySelector('.container');
 const calcButton = document.querySelector('#calc');
 
 const head = ['Name', 'Anzahl', 'Einzelpreis', 'MwSt', 'Total'];
 const idTags = ['name', 'anz', 'price', 'mwst', 'total'];
 
-// Erstelle Tabellenüberschriften
+//info Erstelle Tabellenüberschriften
 function createTableHeadings() {
   head.forEach((tableHead, i) => {
     const column = document.createElement('div');
@@ -56,12 +56,12 @@ function createTableHeadings() {
         column.appendChild(radioContainer);
       }
     } else {
-      let ability = '';
+      let isDisabled = false;
       let align = '';
       let size = 10;
 
       if (tableHead === 'Total') {
-        ability = 'disabled';
+        isDisabled = true;
       }
       if (tableHead === 'Name') {
         align = 'left';
@@ -77,7 +77,7 @@ function createTableHeadings() {
         input.id = `${idTags[i]}${j}`;
         input.style.textAlign = align;
         input.size = size;
-        input.disabled = ability;
+        input.disabled = isDisabled;
 
         inputContainer.appendChild(input);
         column.appendChild(inputContainer);
@@ -88,7 +88,7 @@ function createTableHeadings() {
   });
 }
 
-// Berechne die Summen
+//info Berechne die Summen
 function calculateTotals() {
   let sumTotal = 0;
   let mwst7Total = 0;
@@ -117,8 +117,8 @@ function calculateTotals() {
   document.getElementById('result19').innerHTML = `${mwst19Total.toFixed(2)}€`;
 }
 
-// Event: Button wird geklickt
+//info Event: Button wird geklickt
 calcButton.addEventListener('click', calculateTotals);
 
-// Erstelle die Tabelle
+//info Erstelle die Tabelle
 createTableHeadings();
