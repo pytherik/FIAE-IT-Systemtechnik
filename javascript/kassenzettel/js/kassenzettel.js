@@ -9,7 +9,7 @@ const idTags = ['name', 'anz', 'price', 'mwst', 'total'];
 head.forEach((tableHead, i) => {
 
   //info Deaktivieren der Total-Spalte text-align,Größenänderung Name-Spalte
-  let ability = '';
+  let ability;
   let align = '';
   let size = 10;
   container.innerHTML += `<div id="col${i}" class="column">`;
@@ -33,7 +33,8 @@ head.forEach((tableHead, i) => {
   } else {
 
     //info deaktiviertes Input Feld, größere Spalte Name text-align: left
-    if (tableHead === 'Total') ability = 'disabled';
+    ability = tableHead === 'Total' ? 'disabled': '';
+
     if (tableHead === 'Name') {
       align = 'style="text-align:left"';
       size = 18;
@@ -77,7 +78,7 @@ calcButton.addEventListener('click', () => {
   }
 
   //info Ausgabe der berechneten Werte in den Summenfeldern
-  document.getElementById('resultTotal').innerHTML = `${sumTotal.toFixed(2)}€`;
-  document.getElementById('result7').innerHTML = `${mwst7Total.toFixed(2)}€`;
-  document.getElementById('result19').innerHTML = `${mwst19Total.toFixed(2)}€`;
+  document.getElementById('resultTotal').textContent = `${sumTotal.toFixed(2)}€`;
+  document.getElementById('result7').textContent = `${mwst7Total.toFixed(2)}€`;
+  document.getElementById('result19').textContent = `${mwst19Total.toFixed(2)}€`;
 });

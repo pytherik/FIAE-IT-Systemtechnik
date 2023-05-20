@@ -112,9 +112,9 @@ function calculateTotals() {
     mwst19Total += mwst === 19 ? mwstForPos : 0;
   }
 
-  document.getElementById('resultTotal').innerHTML = `${sumTotal.toFixed(2)}€`;
-  document.getElementById('result7').innerHTML = `${mwst7Total.toFixed(2)}€`;
-  document.getElementById('result19').innerHTML = `${mwst19Total.toFixed(2)}€`;
+  document.getElementById('resultTotal').textContent = `${sumTotal.toFixed(2)}€`;
+  document.getElementById('result7').textContent = `${mwst7Total.toFixed(2)}€`;
+  document.getElementById('result19').textContent = `${mwst19Total.toFixed(2)}€`;
 }
 
 //info Event: Button wird geklickt
