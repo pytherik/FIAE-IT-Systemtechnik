@@ -1,15 +1,14 @@
-//info Elemente für spätere Verwendung als Konstanten definieren
+// Elemente für spätere Verwendung als Konstanten definieren
 const container = document.querySelector('.container');
 const calcButton = document.querySelector('#calc');
 
 const head = ['Name', 'Anzahl', 'Einzelpreis', 'MwSt', 'Total'];
 const idTags = ['name', 'anz', 'price', 'mwst', 'total'];
 
-//info Tabellenheadings aus head-Array aufbauen
+// Tabellenheadings aus head-Array aufbauen
 head.forEach((tableHead, i) => {
-  //info Hilfsvariablen zum deaktivieren der Total-Spalte
+  // Deaktivieren der Total-Spalte text-align,Größenänderung Name-Spalte
   let ability = '';
-  //info für text-align und Größenänderung in Name-Spalte
   let align = '';
   let size = 10;
   container.innerHTML += `<div id="col${i}" class="column">`;
@@ -17,7 +16,7 @@ head.forEach((tableHead, i) => {
       <div class="input-container">
         <span class="table-head">${tableHead}</span>
       </div>`;
-  //info Sonderfall MwSt: Radiobuttons
+  // Radiobuttons Mwst
   if (tableHead === 'MwSt') {
     for (let j = 0; j < 4; j++) {
       document.getElementById(`col${i}`).innerHTML += `
@@ -30,15 +29,14 @@ head.forEach((tableHead, i) => {
     }
     container.innerHTML += '</div>';
   } else {
-    //info Sonderfall deaktiviertes Input Feld
+    // deaktiviertes Input Feld, größere Spalte Name text-align: left
     if (tableHead === 'Total') ability = 'disabled';
-    //info Sonderfall größere Spalte Name mit text-align: left
     if (tableHead === 'Name') {
       align = 'style="text-align:left"';
       size = 18;
     }
 
-    //info Aufbau aller Input Felder
+    // Aufbau aller Input Felder
     for (let j = 0; j < 4; j++) {
       document.getElementById(`col${i}`).innerHTML += `
       <div class="input-container">
@@ -49,39 +47,30 @@ head.forEach((tableHead, i) => {
   }
 });
 
-//info Funktionalitäten für Event: Button wird geklickt
+// Funktionalitäten für Event: Button wird geklickt
 calcButton.addEventListener('click', () => {
-  //info Numerisches Array wird mit assoziativen Arrays gefüllt
-  const totalsArr = [];
-  //info Initialisieren der benötigten Variablen
+  // Initialisieren der benötigten Variablen
   let sumTotal = 0;
   let mwst7Total = 0;
   let mwst19Total = 0;
   for (let i = 0; i < 4; i++) {
-    //info Holen der Werte aus den Input Feldern
+    // Holen der Werte aus den Input Feldern
     const anz = Number(document.getElementById(`${idTags[1]}${i}`).value);
     const price = Number(document.getElementById(`${idTags[2]}${i}`).value);
     const mwst = Number(document.querySelector(`input[name="mwst${i}"]:checked`).value);
-    //info Berechnung der Positionen
+    // Berechnung der Positionen
     const total = anz * price;
     const mwstForPos = total * mwst / 100;
-    //info Füllen der Total Spalte
+    // Füllen der Total Spalte
     document.getElementById(`${idTags[4]}${i}`).value = `${total.toFixed(2)}€`;
-    //info Aufbau totalsArr
-    if (mwst === 7) {
-      totalsArr.push({'total': total, 'mwst7': mwstForPos, 'mwst19': 0});
-    } else {
-      totalsArr.push({'total': total, 'mwst7': 0, 'mwst19': mwstForPos});
-    }
+
+    sumTotal += total;
+    mwst7Total += mwst === 7 ? mwstForPos : 0;
+    mwst19Total += mwst === 19 ? mwstForPos : 0;
   }
-  //info Finale Berechnungen durchführen
-  totalsArr.forEach((pos) => {
-    sumTotal += pos.total;
-    mwst7Total += pos.mwst7;
-    mwst19Total += pos.mwst19;
-  })
-  //info Ausgabe der berechneten Werte in den Summenfeldern
+
+  // Ausgabe der berechneten Werte in den Summenfeldern
   document.getElementById('resultTotal').innerHTML = `${sumTotal.toFixed(2)}€`;
   document.getElementById('result7').innerHTML = `${mwst7Total.toFixed(2)}€`;
   document.getElementById('result19').innerHTML = `${mwst19Total.toFixed(2)}€`;
-});
+})

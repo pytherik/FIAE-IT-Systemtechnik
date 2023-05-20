@@ -93,7 +93,8 @@ function calculateTotals() {
   let sumTotal = 0;
   let mwst7Total = 0;
   let mwst19Total = 0;
-  let totalsArr = [];
+
+
   for (let i = 0; i < 4; i++) {
     const anz = Number(document.getElementById(`${idTags[1]}${i}`).value);
     const price = Number(document.getElementById(`${idTags[2]}${i}`).value);
@@ -105,12 +106,6 @@ function calculateTotals() {
     const mwstForPos = total * mwst / 100;
 
     document.getElementById(`${idTags[4]}${i}`).value = `${total.toFixed(2)}€`;
-
-    if (mwst === 7) {
-      totalsArr.push({ total, mwst7: mwstForPos, mwst19: 0 });
-    } else {
-      totalsArr.push({ total, mwst7: 0, mwst19: mwstForPos });
-    }
 
     sumTotal += total;
     mwst7Total += mwst === 7 ? mwstForPos : 0;
