@@ -124,4 +124,7 @@ const time = setInterval(()=>{
   displayTime.innerHTML = `${h}:${m}:${s}`;
 }, 1000);
 
-// clearInterval(time);
+setTimeout(() => {
+  clearInterval(time);
+}, 10000);
+
