@@ -2,44 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Taschenrechner</title>
+  <link rel="stylesheet" href="css/style.css">
   <script defer src="js/taschenrechner.js"></script>
-  <style>
-    body {
-        background-color: #444;
-        color: #ddd;
-    }
-    #output {
-        margin: 2rem 0 0 2rem;
-        padding: 10px;
-        border-radius: 5px;
-        width: 150px;
-        height: 50px;
-        background-color: #7ec699;
-        color: #121212;
-        font-size: 2.4rem;
-    }
-  </style>
+  <title>Taschenrechner</title>
 </head>
 <!--todo Erstelle 2 Eingabefelder und ein Ausgabefeld: input type = text -->
 <!--todo Erstelle 5 Knöpfe mit folgenden Funktionen:-->
 <!--todo plus, minus, mal, geteilt und modulo-->
 <!--todo das Ergebnis der jeweiligen Berechnung soll inm Ausgabefeld erscheinen-->
 <body>
-<label for="zahl1">Zahl 1</label><br>
-<input type="text"  id="zahl1"><br>
-<label for="zahl2">Zahl 1</label><br>
-<input type="text"  id="zahl2"><br><br>
-<!--<button class="operator">+</button>-->
-<!--<button class="operator">-</button>-->
-<!--<button class="operator">*</button>-->
-<!--<button class="operator">/</button>-->
-<!--<button class="operator">%</button>-->
-<button class="operator" onclick="calc('+')">+</button>
-<button class="operator" onclick="calc('-')">-</button>
-<button class="operator" onclick="calc('*')">*</button>
-<button class="operator" onclick="calc('/')">/</button>
-<button class="operator" onclick="calc('%')">%</button>
-<div id="output"></div>
+<div class="container">
+  <div class="input-container">
+    <label for="zahl1">Zahl 1</label><br>
+    <input type="text" id="zahl1" size="5"><br>
+  </div>
+  <div class="input-container">
+    <label for="zahl2">Zahl 1</label><br>
+    <input type="text" id="zahl2" size="5"><br><br>
+  </div>
+  <div class="operators">
+    <button class="operator" onclick="calc('+')">+</button>
+    <button class="operator" onclick="calc('-')">-</button>
+    <button class="operator" onclick="calc('*')">*</button>
+    <button class="operator" onclick="calc('/')">/</button>
+    <button class="operator" onclick="calc('%')">%</button>
+  </div>
+  <div id="output"></div>
+</div>
 </body>
 </html>
