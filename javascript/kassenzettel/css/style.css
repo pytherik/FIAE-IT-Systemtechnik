@@ -25,13 +25,13 @@ body {
 .result-wrapper {
     display: flex;
     justify-content: end;
-    width: 48.8rem;
+    width: 48rem;
 }
 
 .container,
 .result-container {
     margin-top: 3rem;
-    width: 48.9rem;
+    width: 48rem;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -67,7 +67,7 @@ calcButton.addEventListener('click', () => {
 
     //info Berechnung der Positionen
     const total = anz * price;
-    const mwstForPos = total * mwst / 100;
+    const mwstForPos = total - (total / (100 + mwst) * 100);
 
     //info Füllen der Total Spalte
     document.getElementById(`${idTags[4]}${i}`).value = `${total.toFixed(2)}€`;
