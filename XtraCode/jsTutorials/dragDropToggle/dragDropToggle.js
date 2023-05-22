@@ -18,7 +18,6 @@ imageContainers.forEach(imageContainer => {
 function dragStart(e) {
   draggedImage = e.target;
   e.dataTransfer.setData('text/plain', e.target.parentNode.id);
-
   // Verringern der Deckkraft des gezogenen Bildes
   e.target.style.opacity = '0.5';
 }

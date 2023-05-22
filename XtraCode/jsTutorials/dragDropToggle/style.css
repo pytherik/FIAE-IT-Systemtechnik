@@ -19,9 +19,9 @@ body {
 .image-container {
     width: 200px;
     height: 200px;
-    border: 2px solid #C98474;
+    border: 2px solid #a3a3a3;
     margin: 10px;
-    padding: 10px;
+    padding: 3px;
 }
 
 img {

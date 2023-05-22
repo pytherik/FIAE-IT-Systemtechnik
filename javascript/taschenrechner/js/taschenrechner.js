@@ -10,8 +10,8 @@ const calc = (op) => {
     add() {return `${this.z1 + this.z2}`;},
     sub() {return `${this.z1 - this.z2}`;},
     mul() {return `${this.z1 * this.z2}`;},
-    div() {return `${(this.z1 / this.z2).toFixed(3)}`;},
-    mod() {return `${(this.z1 % this.z2).toFixed(3)}`;},
+    div() {return `${(this.z1 / this.z2).toFixed(2)}`;},
+    mod() {return `${(this.z1 % this.z2).toFixed(2)}`;},
   }
   switch(op) {
     case '+': output.innerHTML = clc.add();
