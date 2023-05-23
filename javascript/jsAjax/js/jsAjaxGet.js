@@ -15,6 +15,6 @@ function loadDoc() {
         this.responseText;
     }
   };
-  xhttp.open("GET", `ajaxGet.php?answer=${answer}`);
+  xhttp.open("GET", `ajaxGet.php?isLang=${answer}`);
   xhttp.send();
 }
