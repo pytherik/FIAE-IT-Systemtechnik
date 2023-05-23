@@ -1,7 +1,6 @@
 <?php
 
 $answer = $_POST['answer'] ?? '';
-
 $programmiersprachen = [
   'python',
   'ruby',
@@ -12,7 +11,7 @@ $programmiersprachen = [
 ];
 
 if(in_array($answer, $programmiersprachen)) {
-  echo "Ja, $answer ist eine Programmiersprache.";
+  echo "Ja, '$answer' ist eine Programmiersprache.";
 } else {
-  echo "Also $answer ist zumindest keine mir bekannte Programmiersprache.";
+  echo "Also '$answer' ist zumindest keine mir bekannte Programmiersprache.";
 }
