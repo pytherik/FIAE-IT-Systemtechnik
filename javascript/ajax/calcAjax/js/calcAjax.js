@@ -3,6 +3,10 @@ const zahl2 = document.getElementById('zahl2');
 const operators = document.querySelectorAll('.operator');
 const output = document.getElementById('output');
 
+//info wenn man operanden als Symbole schicken möchte,
+// muss man das '+' Zeichen mit encodeURIcomponent Umwandeln,
+// da sonst ein leerer Char ankommt. Hier wurde das Problem
+// durch die Benutzung von dataset umschifft.
 function loadDoc(op) {
   const z1 = zahl1.value;
   const z2 = zahl2.value;

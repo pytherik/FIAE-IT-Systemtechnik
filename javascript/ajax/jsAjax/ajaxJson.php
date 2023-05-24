@@ -3,8 +3,8 @@
 header('Conten-Type: application/json, charset=UTF-8');
 
 $retrieve = file_get_contents('php://input');
-$answer = json_decode($retrieve, true);
-
+$arr = json_decode($retrieve, true);
+$answer = $arr['answer'];
 $programmiersprachen = [
   'python',
   'ruby',
