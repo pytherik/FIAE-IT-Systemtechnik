@@ -1,10 +1,9 @@
-const demo = document.getElementById('demo');
+const songRow = document.getElementById('songRow');
 const getSongs = document.getElementById('getSongs');
 
 const loadSongs = () => {
   const xhr = new XMLHttpRequest();
   xhr.onload = function() {
-    console.log(this.responseText)
     const songData = JSON.parse(this.responseText);
     songData.forEach(song => {
       const row = document.createElement('div');
@@ -21,7 +20,7 @@ const loadSongs = () => {
       row.appendChild(id);
       row.appendChild(title);
       row.appendChild(name);
-      demo.appendChild(row);
+      songRow.appendChild(row);
     })
   }
   xhr.open('POST', 'getSongsAjax.php');
@@ -29,9 +28,7 @@ const loadSongs = () => {
   xhr.send();
 }
 
-
-
 getSongs.addEventListener('click', () => {
-  demo.innerHTML = '';
+  songRow.innerHTML = '';
   loadSongs();
 })

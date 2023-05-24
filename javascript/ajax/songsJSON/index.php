@@ -19,7 +19,7 @@
    <div class="cell head">Titel</div>
    <div class="cell head">Interpret</div>
   </div>
-<div id="demo"></div>
+<div id="songRow"></div>
 <button id="getSongs">Lieder anzeigen</button>
 </div>
 </body>
