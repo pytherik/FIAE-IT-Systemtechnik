@@ -24,7 +24,7 @@ const loadSongs = () => {
       demo.appendChild(row);
     })
   }
-  xhr.open('POST', 'getSongs.php');
+  xhr.open('POST', 'getSongsAjax.php');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send();
 }
