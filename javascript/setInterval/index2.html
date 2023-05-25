@@ -39,30 +39,26 @@
     const elem = document.getElementById("animate");
     clearInterval(id);
     id = setInterval(frame, 2);
+
     function frame() {
       if (!down) {
-        if (dir) {
-          posX++;
-        } else {
-          posX--;
-        }
+        dir ? posX++ : posX--;
         if (posX === 0 || posX === 350) {
           down = !down;
         }
       } else {
-          posY++;
-          if (posY > 350) {
-            clearInterval(id);
-          } else if (posY % 50 === 0) {
-            dir = !dir;
-            down = !down;
-          }
+        posY++;
+        if (posY > 350) {
+          clearInterval(id);
+        } else if (posY % 50 === 0) {
+          dir = !dir;
+          down = !down;
         }
-        elem.style.top = `${posY}px`;
-        elem.style.left = `${posX}px`;
       }
+      elem.style.top = `${posY}px`;
+      elem.style.left = `${posX}px`;
     }
+  }
 </script>
-
 </body>
 </html>
