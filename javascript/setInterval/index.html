@@ -19,7 +19,7 @@
 </style>
 <body>
 
-<p><button onclick="myMove()">Click Me</button></p>
+<p><button onclick="myMove2()">Click Me</button></p>
 
 <div id ="container">
   <div id ="animate"></div>
@@ -33,10 +33,10 @@
     clearInterval(id);
     id = setInterval(frame, 5);
     function frame() {
-      if (pos == 350) {
+      if (pos === 350) {
         clearInterval(id);
         pos = 0;
-        setInterval(frame2, 5);
+        id = setInterval(frame2, 5);
       } else {
         pos++;
         elem.style.top = "0px";
@@ -44,12 +44,60 @@
       }
     }
     function frame2() {
-      if (pos == 350) {
+      if (pos === 350) {
         clearInterval(id);
       } else {
         pos++;
         elem.style.top = pos + "px";
         elem.style.left = "350px";
+      }
+    }
+  }
+
+  function myMove2() {
+    let id = null;
+    let posX = 0;
+    let posY = 0;
+    let posChange = 0;
+    const elem = document.getElementById("animate");
+    let pos = 0;
+    clearInterval(id);
+    id = setInterval(frameL, 5);
+    function frameL() {
+      if (pos === 350) {
+        clearInterval(id);
+        posY = posChange;
+        posX = pos;
+        pos = 0
+        id = setInterval(frameD, 5);
+      } else {
+        pos++;
+        elem.style.top = `${posY}px`;
+        elem.style.left = pos + "px";
+      }
+    }
+    function frameD() {
+      if (pos === 100) {
+        clearInterval(id);
+        posChange += pos;
+        posY = posChange;
+        pos = 350;
+        id = setInterval(frameR, 5)
+      } else {
+        pos++;
+        elem.style.top = posY + "px";
+        elem.style.left = `${posX}px`;
+      }
+    }
+    function frameR() {
+      if(pos === 0) {
+        clearInterval(id);
+      posX = pos;
+      posY = posChange;
+      } else {
+        pos--;
+        elem.style.top = `${posY}px`;
+        elem.style.left = pos;
       }
     }
   }
