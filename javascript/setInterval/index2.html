@@ -38,7 +38,7 @@
     let down = false;
     const elem = document.getElementById("animate");
     clearInterval(id);
-    id = setInterval(frame, 5);
+    id = setInterval(frame, 2);
     function frame() {
       if (!down) {
         if (dir) {
@@ -51,9 +51,9 @@
         }
       } else {
           posY++;
-          if (posY === 350) {
+          if (posY > 350) {
             clearInterval(id);
-          } else if (posY % 30 === 0) {
+          } else if (posY % 50 === 0) {
             dir = !dir;
             down = !down;
           }
