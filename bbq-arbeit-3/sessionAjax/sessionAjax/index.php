@@ -1,13 +1,4 @@
 <?php
-session_start();
-//todo beim ersten Aufruf geibt user seinen Namen ein,
-// beim zweiten oder weitern Aufruf wird der user mit seinem Namen befgrüßt
-
-//todo neue Aufgabe:
-// wie 1.Aufgabe, aber nicht Daten per Form, sondern per ajax übergeben
-if (isset ($_POST['username'])){
-$_SESSION['username'] = $_POST['username'];
-}
 $username = $_SESSION['username'] ?? '';
 ?>
 
@@ -20,17 +11,18 @@ $username = $_SESSION['username'] ?? '';
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Session</title>
 </head>
-<script>let username='<?php echo "$username" ?>'</script>
+<script>let username="<?= $username ?>"</script>
 <script src="app.js" defer></script>
 <body>
-<?php if ($username == '') { ?>
+<?php //if ($username == ''){ ?>
+<div class="form">
     <label for="username">Bitte verrat' uns deinen Namen!</label><br>
     <input type="text" name="username" id="username">
     <button type="submit" id="submit">bestätigen</button>
-<?php } else { ?>
-  <h1>Hallo, ich kenne dich! Du heisst <?= $username ?>!</h1>
-  <button type="submit">Nochmal</button>
-  <?php
-} ?>
+</div>
+<?php //} else { ?>
+  <h1 class="heading"></h1>
+  <button type="submit" id="submit2" hidden>Nochmal</button>
+<?php //}  ?>
 </body>
 </html>
