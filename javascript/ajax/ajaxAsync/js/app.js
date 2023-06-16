@@ -7,7 +7,7 @@ const sendFormData = async () => {
     const formData = new FormData();
     formData.append('fName', fName.value)
     formData.append('lName', lName.value)
-    const response = await fetch('http://localhost/FIAE-IT-Systemtechnik/javascript/ajax/ajaxAsync/ajax.php',
+    const response = await fetch('//localhost:63342/FIAE-IT-Systemtechnik/javascript/ajax/ajaxAsync/ajax.php',
       {
         body: formData,
         method: 'POST'

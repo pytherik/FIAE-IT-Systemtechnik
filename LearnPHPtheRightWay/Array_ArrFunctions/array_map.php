@@ -2,10 +2,9 @@
 
 require '../helpers.php';
 
-/* Syntax:
-
-array_map(callable|null $callback, array $array, array ...$arrays): array
-
+/*wiki
+   Syntax:
+    array_map(callable|null $callback, array $array, array ...$arrays): array
 */
 
 $array = [1, 2, 3, 4, 5, 6];

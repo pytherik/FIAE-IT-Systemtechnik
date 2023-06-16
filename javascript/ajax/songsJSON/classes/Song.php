@@ -18,7 +18,7 @@ class Song implements JsonSerializable
     $this->name = $name;
   }
 
-  public function jsonSerialize(): mixed
+  public function jsonSerialize(): array
   {
     return [
       'id' => $this->id,
