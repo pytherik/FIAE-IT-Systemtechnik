@@ -1,0 +1,32 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #444;
+    color: #dedede;
+}
+
+.top {
+    margin-top: 3%;
+    text-align: center;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    margin-top: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
