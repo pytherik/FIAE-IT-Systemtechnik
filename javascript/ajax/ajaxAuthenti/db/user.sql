@@ -1,4 +1,4 @@
-USE test;
+USE zweiterTest;
 DROP TABLE IF EXISTS user;
 CREATE TABLE user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(45), password VARCHAR(100));
 INSERT INTO user VALUES(NULL, 'admin', 'geheim');

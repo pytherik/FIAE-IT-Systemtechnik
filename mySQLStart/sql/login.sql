@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS test;
-CREATE DATABASE test;
-use test;
+DROP DATABASE IF EXISTS zweiterTest;
+CREATE DATABASE zweiterTest;
+use zweiterTest;
 
 CREATE TABLE pwuser
 (
