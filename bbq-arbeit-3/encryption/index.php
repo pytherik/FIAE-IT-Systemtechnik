@@ -33,23 +33,54 @@
 if (isset($_POST['name']) && isset($_POST['pwd'])){
   $name = $_POST['name'];
   $password =  $_POST['pwd'];
+  // Generiere ein zufälliges Salt
+  $salt = random_bytes(16); // Du kannst die Länge des Salts anpassen
 
-  $options = [
-    'salt' => random_bytes(16), // Zufälliger Salt-Wert generieren
-    'memory_cost' => PASSWORD_ARGON2_DEFAULT_MEMORY_COST,
-    'time_cost' => PASSWORD_ARGON2_DEFAULT_TIME_COST,
-    'threads' => PASSWORD_ARGON2_DEFAULT_THREADS
-  ];
+// Kombiniere das Salt mit dem Passwort
 
-  $hashedPassword = password_hash($password, PASSWORD_ARGON2ID, $options);
+  $combined = $salt . $password;
 
+// Verschlüssele das Passwort
+  $hashedPassword = password_hash($combined, PASSWORD_DEFAULT);
+
+// Speichere den Salt und den verschlüsselten Hash in der Datenbank
+
+// Überprüfung des Passworts
+  $enteredPassword = $password; // Das eingegebene Passwort
+
+// Hole den Salt aus der Datenbank
+// Nehmen wir an, dass $storedSalt den in der Datenbank gespeicherten Salt enthält
+
+// Kombiniere den Salt mit dem eingegebenen Passwort
+  $combinedEntered = $salt . $enteredPassword;
 
   echo "<h1>$name</h1><br>";
   echo "<h3>Passwort: $password = $hashedPassword</h3>";
 
-  if (password_verify($password, $hashedPassword)) {
-    echo "Passwort ist korrekt!";
+// Überprüfe das Passwort
+  if (password_verify($combinedEntered, $hashedPassword)) {
+    echo 'Das eingegebene Passwort ist korrekt!';
   } else {
-    echo "Passwort ist falsch!";
+    echo 'Das eingegebene Passwort ist falsch.';
   }
+
+//
+//  $options = [
+//    'salt' => random_bytes(16), // Zufälliger Salt-Wert generieren
+//    'memory_cost' => PASSWORD_ARGON2_DEFAULT_MEMORY_COST,
+//    'time_cost' => PASSWORD_ARGON2_DEFAULT_TIME_COST,
+//    'threads' => PASSWORD_ARGON2_DEFAULT_THREADS
+//  ];
+//
+//  $hashedPassword = password_hash($password, PASSWORD_ARGON2ID, $options);
+//
+//
+//  echo "<h1>$name</h1><br>";
+//  echo "<h3>Passwort: $password = $hashedPassword</h3>";
+//
+//  if (password_verify($password, $hashedPassword)) {
+//    echo "Passwort ist korrekt!";
+//  } else {
+//    echo "Passwort ist falsch!";
+//  }
 }
