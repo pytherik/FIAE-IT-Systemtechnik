@@ -1,14 +1,14 @@
 {
   "teilnehmer": "Erik Berndt",
-  "kundenNr": "12345",
-  "firma": "BBQ",
+  "kundenNr": "",
+  "firma": "biga GmbH",
   "stundeBeginn": 8,
   "minuteBeginn": 0,
   "stundeEnde": 16,
   "minuteEnde": 0,
 
   "_comment1": "Monat oder Jahr auf 0 setzen, dann wird heutiges Datum genommen",
-  "monat": 4,
+  "monat": 9,
   "jahr": 2023,
 
   "_comment2": "Bundesland: BB = Brandenburg oder BE = Berlin",
