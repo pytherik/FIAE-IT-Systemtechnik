@@ -40,11 +40,6 @@ INSERT INTO Kunde (Kunde_ID, Firma, Strasse, Plz, Ort) VALUES
 
 
 
-
-
-
-
-
 /* 10 Hersteller */
 
 create table Hersteller
