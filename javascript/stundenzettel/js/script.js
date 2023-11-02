@@ -1,3 +1,21 @@
+/*
+* Author: Christoph Böttger
+* Date: 21.04.2022
+* Modified by: Erik Berndt
+* Date: 02.11.2023
+*/
+
+let heute = new Date();
+if (config.monat === 0) config.monat = heute.getMonth() + 1;
+if (config.jahr === 0) config.jahr = heute.getFullYear();
+config.arbeitBeginn = new Array(31).fill(twoDigits(config.stundeBeginn) + ':' + twoDigits(config.minuteBeginn) + ' Uhr');
+config.arbeitEnde = new Array(31).fill(twoDigits(config.stundeEnde) + ':' + twoDigits(config.minuteEnde) + ' Uhr');
+const startDate = new Date(0, 0, 0, config.stundeBeginn, config.minuteBeginn, 0);
+const endDate = new Date(0, 0, 0, config.stundeEnde, config.minuteEnde, 0);
+const diff = endDate.getTime() - startDate.getTime();
+config.diffStunden = new Array(31).fill(Number(diff / 3600000).toString());
+
+
 function generateInputElements(id, numberOfInputs) {
   const container = document.getElementById(id);
   let html = '';
@@ -108,16 +126,7 @@ function prevMonth() {
 }
 
 function updateInputs() {
-  // Daten neu berechnen
-  const monatId = config.monat.toString() + config.jahr.toString();
-  const zeitraum = twoDigits(config.monat) + ' / ' + config.jahr.toString();
-  const tageMonat = endOfMonth(config.monat, config.jahr);
-  const wochenenden = weekendDays(config.monat, config.jahr);
-  const feiertage = beweglicheFeiertage(config.monat, config.jahr)
-      .concat(unbeweglicheFeiertage(config.monat, config.bundesland));
-
-  const monthData = JSON.parse(localStorage.getItem(monatId));
-  console.log(monthData);
+  const { zeitraum, tageMonat, wochenenden, feiertage, monthData } = provideConfiguration();
 
   const arbeitBeginn = monthData ? monthData.arbeitsbeginn : config.arbeitBeginn;
   const arbeitEnde = monthData ? monthData.arbeitsende : config.arbeitEnde;
@@ -132,29 +141,11 @@ function updateInputs() {
   fillInputElements("bemerkung", tageMonat, bemerkung, wochenenden, feiertage);
 }
 
-let heute = new Date();
-if (config.monat === 0) config.monat = heute.getMonth() + 1;
-if (config.jahr === 0) config.jahr = heute.getFullYear();
-config.arbeitBeginn = new Array(31).fill(twoDigits(config.stundeBeginn) + ':' + twoDigits(config.minuteBeginn) + ' Uhr');
-config.arbeitEnde = new Array(31).fill(twoDigits(config.stundeEnde) + ':' + twoDigits(config.minuteEnde) + ' Uhr');
-const startDate = new Date(0, 0, 0, config.stundeBeginn, config.minuteBeginn, 0);
-const endDate = new Date(0, 0, 0, config.stundeEnde, config.minuteEnde, 0);
-const diff = endDate.getTime() - startDate.getTime();
-config.diffStunden = new Array(31).fill(Number(diff / 3600000).toString());
-
 // Inputs erstellen
 createInputs()
 
 function createInputs() {
-  const monatId = config.monat.toString() + config.jahr.toString();
-  const zeitraum = twoDigits(config.monat) + ' / ' + config.jahr.toString();
-  const tageMonat = endOfMonth(config.monat, config.jahr);
-  const wochenenden = weekendDays(config.monat, config.jahr);
-  const feiertage = beweglicheFeiertage(config.monat, config.jahr)
-      .concat(unbeweglicheFeiertage(config.monat, config.bundesland));
-
-  const monthData = JSON.parse(localStorage.getItem(monatId));
-  console.log(monthData);
+  const { zeitraum, tageMonat, wochenenden, feiertage, monthData } = provideConfiguration();
 
   const arbeitBeginn = monthData ? monthData.arbeitsbeginn : config.arbeitBeginn;
   const arbeitEnde = monthData ? monthData.arbeitsende : config.arbeitEnde;
@@ -167,21 +158,29 @@ function createInputs() {
   document.getElementById("praktikumsstelle").value = config.firma;
   document.getElementById("zeitraum").value = zeitraum;
 
-  // Arbeitsbeginn
   generateInputElements("arbeitsbeginn", tageMonat);
   fillInputElements("arbeitsbeginn", tageMonat, arbeitBeginn, wochenenden, feiertage);
 
-  // Arbeitsende
   generateInputElements("arbeitsende", tageMonat);
   fillInputElements("arbeitsende", tageMonat, arbeitEnde, wochenenden, feiertage);
 
-  // Zeitstunden
   generateInputElements("zeitstunden", tageMonat);
   fillInputElements("zeitstunden", tageMonat, diffStunden, wochenenden, feiertage);
 
-  // Bemerkung
   generateInputElements("bemerkung", tageMonat);
   fillInputElements("bemerkung", tageMonat, bemerkung, wochenenden, feiertage);
+}
+
+function provideConfiguration() {
+  const monatId = config.monat.toString() + config.jahr.toString();
+  const zeitraum = twoDigits(config.monat) + ' / ' + config.jahr.toString();
+  const tageMonat = endOfMonth(config.monat, config.jahr);
+  const wochenenden = weekendDays(config.monat, config.jahr);
+  const feiertage = beweglicheFeiertage(config.monat, config.jahr)
+      .concat(unbeweglicheFeiertage(config.monat, config.bundesland));
+
+  const monthData = JSON.parse(localStorage.getItem(monatId));
+  return { zeitraum, tageMonat, wochenenden, feiertage, monthData }
 }
 
 function saveMonth() {
