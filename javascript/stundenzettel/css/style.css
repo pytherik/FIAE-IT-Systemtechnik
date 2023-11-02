@@ -1,0 +1,103 @@
+#page-A4 {
+    background: white;
+    display: block;
+    margin: 0 auto 0.5cm auto;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    width: 21cm;
+    height: 29.7cm;
+    position: relative;
+}
+.hintergrund {
+    width: 100%;
+    height: 100%;
+}
+#kopf>input {
+    position: absolute;
+    /*border: 1px solid pink;*/
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding: 0 5px; /* default: 1px 2px */
+    height: 23px;
+}
+#teilnehmer, #praktikumsstelle {
+    left: 160px;
+    width: 303px;
+}
+#kunden-nr, #zeitraum {
+    left: 563px;
+    width: 155px;
+}
+#zeitraum[disabled] {
+    color: black;
+}
+#teilnehmer, #kunden-nr {
+    top: 166px;
+}
+#praktikumsstelle, #zeitraum {
+    top: 189px;
+}
+#container {
+    position: absolute;
+    top: 236px;
+    left: 56px;
+    width: 682px;
+    height: 743px;
+    /*border: 1px solid orange;*/
+    border: 1px solid transparent;
+}
+#container>div>input {
+    background-color: transparent;
+    border: none;
+    padding: 0 5px;
+    width: calc(100% - 10px);
+    height: 23px;
+    outline-color: orange;
+    margin-top: 0.4%; /* when using %: margin is calculated against width */
+}
+#container>div>input.gray {
+    background-color: rgb(244, 242, 239);
+}
+#container>#bemerkung>input {
+    margin-top: 0.17%;
+}
+#arbeitsbeginn, #arbeitsende, #zeitstunden, #bemerkung {
+    position: absolute;
+    top: 19px;
+    /*border: 1px solid darkmagenta;*/
+    border: 1px solid transparent;
+    height: 723px;
+}
+#arbeitsbeginn {
+    left: 41px;
+    width: 84px;
+}
+#arbeitsende {
+    left: 144px;
+    width: 83px;
+}
+#zeitstunden {
+    left: 227px;
+    width: 83px;
+}
+#bemerkung {
+    left: 310px;
+    width: 196px;
+}
+#buttonNav {
+    position: fixed;
+}
+@media print {
+    body, #page-A4 {
+        margin: 0;
+        box-shadow: unset;
+    }
+    .hintergrund {
+        image-resolution: 600dpi;
+    }
+    input, #container, #arbeitsbeginn, #arbeitsende, #zeitstunden, #bemerkung {
+        border-color: transparent;
+    }
+    button {
+        display: none;
+    }
+}
