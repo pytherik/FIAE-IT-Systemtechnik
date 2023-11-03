@@ -192,10 +192,9 @@ function saveMonth() {
   const month = {
     arbeitsbeginn: valuesArbeitsbeginn,
     arbeitsende: valuesArbeitsende,
+    zeitstunden: valuesZeitstunden,
     bemerkung: valuesBemerkung,
-    zeitstunden: valuesZeitstunden
   };
-
   localStorage.setItem(monatId, JSON.stringify(month));
 }
 
